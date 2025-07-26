@@ -1,0 +1,41 @@
+Poletíme?
+Pojď se mnou lásko má
+
+{chorus_start}
+[G]Pojď se mnou lásko [Ami]má, 
+[C]já ukážu ti cestu reali[G]tou je nádher[D]ná
+budem [G]dřít si holou řiť, tak jak se [Ami]má
+a [C]od zdi ke zdi [D]šourat se my [G]dva.
+{chorus_end}
+
+{verse_1_start}
+Mám vlh[Ami]kej byt bez oken, ve kte[G]rým jsem spokojen
+Mám pánvič[Ami]ku, kastróly na WC [G]šváby a v mouce moly
+mám matra[Ami]ci i přikrývku umím vajíč[G]ka i polívku
+hlavně [Ami]umím obejmout, ale nechci tě [G]zbytečně dojmout
+{verse_1_end}
+
+{verse_2_start}
+Tvoje [Ami]přání rozkazem, mrtvou [G]kočkou vytřu zem
+a když budeš [Ami]chtít na výlet, můžeš k [G]botníku a zpět
+a když [Ami]budeš mít hlad, nebu[G]du se ti jen smát.
+Bude [Ami]to co vyhodili do kon[G]tyšů u Billy
+{verse_2_end}
+
+{verse_3_start}
+Víš, [Ami] byl jsem milionář, ale [G]ztratil jsem svou tvář
+A pak mě [Ami]Bůh zase našel, a dal mi z [G]cigaret kašel
+a tak jdu [Ami]cestou necestou, a ty buď [G]moji nevěstou
+občas v [Ami]dobrým, a hlavně v zlým a na konci [G]se ti oběsím. Možná
+{verse_3_end}
+
+{text_start}
+{chorus}
+{verse_1}
+{chorus}
+{verse_2}
+{chorus}
+{verse_3}
+{chorus}
+{chorus}
+{text_end}

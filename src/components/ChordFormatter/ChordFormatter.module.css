@@ -1,0 +1,53 @@
+:root{
+    --fontSize: 16px; 
+}
+
+.chords {
+    color: var(--mui-palette-primary-main);
+    font-weight: bold;
+    position: relative;
+    top: calc(var(--fontSize) * -1.5);
+    width: 0;
+    display: inline-block;
+}
+
+/* .lyrics {
+    font-size: 2em;
+} */
+
+.lyricsWrapper {
+    margin: 0;
+    text-align: left;
+    text-wrap: auto;
+}
+
+.chorus {
+    border-left: var(--mui-palette-primary-main) 2.5px solid !important;
+    padding-left: 1rem;
+}
+
+.verse {
+    border-left: var(--mui-palette-Button-inheritContainedBg) 2.5px solid !important;
+    padding-left: 1rem;
+}
+
+.interlude {
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    border: none !important;
+    line-height: unset !important;
+    margin: 0 !important;
+}
+
+.section {
+    text-wrap-style: balance;
+    text-align: left;
+    line-height: calc(var(--fontSize) * 3);
+    padding: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--mui-palette-divider);
+    font-size: var(--fontSize);
+}
