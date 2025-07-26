@@ -1,0 +1,49 @@
+Divokej Bill
+Rozárka
+
+{verse_1_start}
+[Ami]Nikdy ne[F]řikej, že víš jak mi [Emi]je s prázdnym
+[Ami]žaludkem, v žilách víc [Dmi]vína než [Emi]krve.
+[Ami]Píšu tvůj [F]osud, [G] propustku [Ami]do pekel,
+pálim ti [Dmi]cejch a v rukou mám [Emi]kosu, Rozár[Ami]ko.
+{verse_1_end}
+
+{verse_2_start}
+[F]Řikej, víš jak mi [Emi]je s prázdnym
+[Ami]žaludkem, v žilách víc [Dmi]vína než [Emi]krve.
+[Ami]Píšu tvůj [F]osud, [G] propustku [Ami]do pekel,
+pálim ti [Dmi]cejch a v rukou mám [Emi]kosu, Rozár[Ami]ko.
+{verse_2_end}
+
+{verse_3_start}
+[Ami]Tisíckrát v [F]noci budí ze [Emi]spaní zlej
+[Ami]pocit, že sklání se [Dmi]někdo nad [Emi]tebou.
+[Ami]Pijem na zdra[F]vý [G]i na ty [Ami]bolavý
+z nás, [Dmi] dostal je čas, maj to [Emi]za sebou, Rozár[Am]ko
+{verse_3_end}
+
+{verse_4_start}
+A v [F]noci budí ze [Emi]spaní zlej
+[Ami]pocit, že sklání se [Dmi]někdo nad [Emi]tebou.
+[Ami]Pijem na zdra[F]vý [G]i na ty [Ami]bolavý
+z nás, [Dmi]dostal je čas, maj to [Emi]za sebou, Rozár[Ami]ko.
+{verse_4_end}
+
+{verse_5_start}
+[Ami]Pijem na zdra[F]vý [G]i na ty [Ami]bolavý
+z nás, [Emi] Rozár[Ami]ko.
+Pijem na zdra[F]vý [G]i na ty [Ami]bolavý
+z nás, [Emi] Rozár[Ami]ko.
+Pijem na zdra[F]vý [G]i na ty [Ami]bolavý
+z nás, [Emi] Rozár[Ami]ko.
+Pijem na zdravý i na ty bolavý
+z nás.
+{verse_5_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{verse_3}
+{verse_4}
+{verse_5}
+{text_end}

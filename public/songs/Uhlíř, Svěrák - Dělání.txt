@@ -1,0 +1,34 @@
+Jaroslav Uhlíř, Zdeněk Svěrák
+Dělání
+
+{chorus_start}
+[G]Dělání, [A7]dělání, [D] všechny smutky [G]zahání,
+[Em]dělání, [A7] dělání je [D]lék. [D7]
+[G]Dělání, [A7] dělání,[D] to nám úsměv [G]zachrání,
+[Em]dělání, [A7] dělání je [D]lék.
+{chorus_end}
+
+{verse_1_start}
+[D]Když máš srdce zjihlé, [G] když máš potíže,
+[D]tak dej cihlu k cihle,[G] těsto do díže,
+[Em]upeč[A7] třeba chleba[D], postav třeba zeď,
+[G]žal se [A7]krásně vstřebá,
+[D]začni [D7]s tím hned teď,
+[G]začni s [A7]tím hned [D]teď. [D7]
+{verse_1_end}
+
+{verse_2_start}
+[D]Když máš srdce zjihlé,[G] když máš potíže,
+[D]tak dej cihlu k cihle,[G] těsto do díže,
+[Em]upeč[A7] třeba chleba[D], postav [Hm]třeba zeď,
+[G]žal se [A7]krásně vstřebá,
+[D]začni [D7]s tím hned teď,
+[G]začni s [A7]tím hned [D]teď. [D7]
+{verse_2_end}
+
+{text_start}
+{verse_1}
+{chorus}
+{verse_2}
+{chorus}
+{text_end}
