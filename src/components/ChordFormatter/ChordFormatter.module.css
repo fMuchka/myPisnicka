@@ -3,16 +3,6 @@
     --chordVisibility: "unset"; 
 }
 
-.chords {
-    color: var(--mui-palette-primary-main);
-    font-weight: bold;
-    position: relative;
-    top: calc(var(--fontSize) * -1.5);
-    width: 0;
-    display: inline-block;
-    visibility: var(--chordVisibility);
-}
-
 /* .lyrics {
     font-size: 2em;
 } */

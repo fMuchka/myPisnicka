@@ -1,0 +1,55 @@
+.chord {
+    color: var(--mui-palette-primary-main);
+    font-weight: bold;
+    position: relative;
+    top: calc(var(--fontSize) * -1.5);
+    width: 0;
+    display: inline-block;
+    visibility: var(--chordVisibility);
+}
+
+
+.chordDiagramModal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--mui-palette-background-paper);
+    border: 2px solid #000;
+    box-shadow: var(--mui-shadows-24);
+    padding: calc(4 * var(--mui-spacing));
+    width: 70%;
+    max-width: 600px;
+    height: 80vh;
+    overflow-x: auto;
+}
+
+.chordDiagramWrapper * path {
+    stroke: var(--mui-palette-primary-main);
+}
+
+.chordDiagramWrapper * rect {
+    fill: var(--mui-palette-primary-main);
+}
+
+.chordDiagramWrapper * rect ~ text {
+    fill: var(--mui-palette-background-default);
+}
+
+.chordDiagramWrapper * circle:not([fill="transparent"]) {
+    fill:  var(--mui-palette-primary-main);
+}
+
+.chordDiagramWrapper * circle[fill="transparent"] {
+    stroke: var(--mui-palette-primary-main);
+}
+
+.chordDiagramWrapper * text {
+    fill: var(--mui-palette-primary-main);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+.chordDiagramWrapper * circle:not([fill="transparent"]) ~ text {
+    fill: var(--mui-palette-background-default);
+}
+
