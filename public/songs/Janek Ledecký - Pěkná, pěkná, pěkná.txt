@@ -1,0 +1,60 @@
+Janek Ledecký
+Pěkná, pěkná, pěkná
+
+
+{verse_1_start}
+[A]Pro tvůj [Hm7]dech já [A]skočím po zá[Hm7]dech
+[A]z mostu co [Hm7]střídá [A]jména[Hm7]
+[A]pro tvý [Hm7]vlasy vstoupím [A]do Armády [Hm7]spásy
+[Cmaj7]ať padne měna jsi tak [E] pěkná, pěkná, pěkná
+{verse_1_end}
+
+{verse_2_start}
+[A]Pro tvůj [Hm7]hlas chvíli [A]pozastavím [Hm7]čas
+[A]mám v [Hm7]Greenwichi svý [A]známý[Hm7]
+[A]pro tvý [Hm7]nohy najdu v[A] sobě skrytý [Hm7]vlohy
+[Cmaj7]nejsou to fámy jsi tak[E] pěkná, pěkná, pěkná
+{verse_2_end}
+
+
+{verse_3_start}
+[A]Pro tvůj [Hm7]nos po [A]žhavím uhlí [Hm7]bos
+[A]já přejdu[Hm7] tam a [A]zpátky[Hm7]
+[A]pro tvůj [Hm7]smích v létě [A]opatřím ti [Hm7]sníh
+[Cmaj7]noci jsou krátký a ty[E] pěkná, pěkná, pěkná
+{verse_3_end}
+
+{verse_4_start}
+[D]Možná že [Em7]vrásky [D]nezasta[Em7]vím
+[D]a stříbrem [Em7]vlasy ti [D]ztěžknou[Em7]
+[D]a cizí [Em7]krásky [D]dobudou [Em7]Řím
+[Fmaj7]budou ho drancovat [G6]pálit a milovat
+{verse_4_end}
+
+{verse_5_start}
+[A]I kdybych vzplál jak pocho[Hm7]deň nikdy [A]nezapomeň
+[Cmaj7]pro mě jseš dál[E] pěkná, pěkná, pěkná
+{verse_5_end}
+
+{text_start}
+
+[A]  [Hm7]  [A]  [Hm7]
+[A]  [Hm7]  [A]  [Hm7]
+{verse_1}
+
+[A]  [Hm7]  [A]  [Hm7]
+[A]  [Hm7]  [A]  [Hm7]
+{verse_2}
+
+[A]  [Hm7]  [A]  [Hm7]
+[D]  [Em7]  [D]  [Em7]
+[D]  [Em7]  [D]  [Em7]
+{verse_3}
+
+[A]  [Hm7]  [A]  [Hm7]
+{verse_4}
+{verse_5}
+
+[A]  [Hm7]  [A]  [Hm7]
+[A]  [Hm7]  [A]  [Hm7]
+{text_end}
