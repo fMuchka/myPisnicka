@@ -1,5 +1,6 @@
 :root{
-    --fontSize: 16px; 
+    --fontSize: 16px;
+    --chordVisibility: "unset"; 
 }
 
 .chords {
@@ -9,6 +10,7 @@
     top: calc(var(--fontSize) * -1.5);
     width: 0;
     display: inline-block;
+    visibility: var(--chordVisibility);
 }
 
 /* .lyrics {

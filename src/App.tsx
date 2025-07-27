@@ -11,6 +11,8 @@ import ScrollToggle from './components/ScrollToggle/ScrollToggle';
 import FontSizeToggle from './components/FontSizeToggle/FontSizeToggle';
 import { CookieAcceptState, CookieKeys } from './enums';
 import CookieDialog from './components/CookieDialog/CookieDialog';
+import ChordDetailsToggle from './components/ChordDetailsToggle/ChordDetailsToggle';
+import { HSystem } from './components/ChordDetailsToggle/enums';
 function App() {
 
   const [songs, setSongs] = useState<RefinedSong[]>();
@@ -21,6 +23,9 @@ function App() {
   const [colorScheme, setColorScheme] = useState<"dark" | "light" | "system" | undefined>(mode);
   const [defaultFontSize, setDefaultFontSize] = useState<number>(16);
   const [defaultScrollSpeed, setDefaultScrollSpeed] = useState<number>(1);
+  const [transposition, setTransposition] = useState<number>(0);
+  const [hSystem, setHSystem] = useState<HSystem>(HSystem.CZECH);
+
 
   const [cookieAcceptState, setCookieAcceptState] = useState<CookieAcceptState>(CookieAcceptState.NONE);
 
@@ -126,11 +131,12 @@ function App() {
         <Container className="App" maxWidth="md" >
           <Stack spacing={1} alignItems="center" justifyContent="center" sx={{ mb: 4, mt: 2 }}>           
             <ThemeToggle cookieAcceptState={cookieAcceptState} primaryColor={primaryColor} setPrimaryColor={setPrimaryColor} setColorScheme={setColorScheme} colorScheme={colorScheme} />
+            <ChordDetailsToggle hSystem={hSystem} setHSystem={setHSystem} transposition={transposition} setTransposition={setTransposition} />
             <FontSizeToggle cookieAcceptState={cookieAcceptState} DEFAULT_FONT_SIZE={defaultFontSize}/>
-            <ScrollToggle cookieAcceptState={cookieAcceptState} DEFAULT_SCROLL_SPEED={defaultScrollSpeed}/>
+            <ScrollToggle cookieAcceptState={cookieAcceptState} DEFAULT_SCROLL_SPEED={defaultScrollSpeed} />
           </Stack>
           <SongSelector selectedSong={selectedSong} setSelectedSong={setSelectedSong} songs={songs} />
-          <ChordFormatter song={selectedSong} />
+          <ChordFormatter hSystem={hSystem} song={selectedSong} transposition={transposition} />
         </Container>
 
         <CookieDialog cookieAcceptState={cookieAcceptState} setCookieAcceptState={setCookieAcceptState} />
