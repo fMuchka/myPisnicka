@@ -1,4 +1,4 @@
-import { Box, ToggleButtonGroup, ToggleButton, Accordion, AccordionDetails, AccordionSummary, Typography, Stack, useColorScheme, RadioGroup, Radio } from "@mui/material";
+import { Box, Accordion, AccordionDetails, AccordionSummary, Typography, Stack, useColorScheme, RadioGroup, Radio } from "@mui/material";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import PaletteIcon from '@mui/icons-material/Palette';
@@ -13,7 +13,7 @@ const ThemeToggle = (props: ThemeToggleProps) => {
   
   const { setColorScheme } = useColorScheme();
   
-  const handleModeChange = (_event: React.MouseEvent<HTMLElement>, newMode: 'light' | 'dark') => {
+  const handleModeChange = (_event: ChangeEvent<HTMLInputElement>, newMode: 'light' | 'dark') => {
     props.setColorScheme(newMode);
     setColorScheme(newMode);
 
@@ -56,19 +56,18 @@ const ThemeToggle = (props: ThemeToggleProps) => {
         </AccordionSummary>
         <AccordionDetails>
           <Stack spacing={2}>
-            <ToggleButtonGroup
+            <Typography variant="body2" color="text.secondary">
+                Barevné schéma
+            </Typography>
+            <RadioGroup
+              sx={{ display: "flex", flexDirection: "row" }}
               aria-labelledby="theme-toggle"
               value={props.colorScheme}
-              exclusive
-              onChange={handleModeChange}   
+              onChange={(e, value) => handleModeChange(e, value as "light" | "dark")}   
             >
-              <ToggleButton value="light" aria-label="light">
-                <LightModeIcon />
-              </ToggleButton>
-              <ToggleButton value="dark" aria-label="dark">
-                <DarkModeIcon />
-              </ToggleButton>
-            </ToggleButtonGroup>
+              <Radio value="light" aria-label="light" icon={<LightModeIcon />} checkedIcon={<LightModeIcon />} />
+              <Radio value="dark" aria-label="dark" icon={<DarkModeIcon />} checkedIcon={<DarkModeIcon />} />
+            </RadioGroup>
 
             <Typography variant="body2" color="text.secondary">
               Primární barva
