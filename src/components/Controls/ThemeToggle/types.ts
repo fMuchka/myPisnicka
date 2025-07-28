@@ -1,8 +1,8 @@
-import type { CookieAcceptState } from '../../enums';
+import type { CookieAcceptState } from '../../../enums';
 import type {
   PrimaryLightThemeColor,
   PrimaryDarkThemeColor,
-} from '../../theme/enums';
+} from '../../../theme/enums';
 
 export type ThemeToggleProps = {
   primaryColor: PrimaryLightThemeColor | PrimaryDarkThemeColor;
