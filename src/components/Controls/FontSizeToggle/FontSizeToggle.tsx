@@ -1,7 +1,7 @@
 import { ArrowDropDown, FormatSize, Remove, Add } from "@mui/icons-material";
 import { Box, Accordion, AccordionSummary, Typography, AccordionDetails, ButtonGroup, Button } from "@mui/material";
 import { useEffect, useState } from "react";
-import { CookieAcceptState, CookieKeys } from "../../enums";
+import { CookieAcceptState, CookieKeys } from "../../../enums";
 import type { FontSizeToggleProps } from "./types";
 
 const FontSizeToggle = (props: FontSizeToggleProps) => {

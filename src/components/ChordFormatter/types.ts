@@ -1,5 +1,5 @@
 import type { RefinedSong } from '../../utils/rawSongRefiner';
-import type { HSystem } from '../ChordDetailsToggle/enums';
+import type { HSystem } from '../Controls/ChordDetailsToggle/enums';
 
 export type ChordFormatterProps = {
   song: RefinedSong | null;

@@ -4,10 +4,10 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import PaletteIcon from '@mui/icons-material/Palette';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Circle } from '@mui/icons-material';
-import { PrimaryDarkThemeColor, PrimaryLightThemeColor } from "../../theme/enums";
+import { PrimaryDarkThemeColor, PrimaryLightThemeColor } from "../../../theme/enums";
 import type { ThemeToggleProps } from "./types";
 import type { ChangeEvent } from "react";
-import { CookieAcceptState, CookieKeys } from "../../enums";
+import { CookieAcceptState, CookieKeys } from "../../../enums";
 
 const ThemeToggle = (props: ThemeToggleProps) => {
   

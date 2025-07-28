@@ -2,7 +2,7 @@ import { ArrowDropDown, TextRotateVertical, Add, Remove } from "@mui/icons-mater
 import { Accordion, AccordionSummary, AccordionDetails, Box, Button, Typography, ButtonGroup } from "@mui/material";
 import { useState, useRef, useEffect } from "react";
 import type { ScrollToggleProps } from "./types";
-import { CookieAcceptState, CookieKeys } from "../../enums";
+import { CookieAcceptState, CookieKeys } from "../../../enums";
 
 
 const ScrollToggle = (props: ScrollToggleProps) => {

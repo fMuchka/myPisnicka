@@ -1,7 +1,7 @@
 import type { ChordProps } from "./types";
 import styles from './Chord.module.css';
 import { Box, Divider, Modal, Stack } from "@mui/material";
-import { HSystem } from "../ChordDetailsToggle/enums";
+import { HSystem } from "../Controls/ChordDetailsToggle/enums";
 import { useState } from "react";
 
 // @ts-expect-error TODO: Fix types import

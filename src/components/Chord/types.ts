@@ -1,4 +1,4 @@
-import type { HSystem } from '../ChordDetailsToggle/enums';
+import type { HSystem } from '../Controls/ChordDetailsToggle/enums';
 
 export type ChordProps = {
   chord: string;
