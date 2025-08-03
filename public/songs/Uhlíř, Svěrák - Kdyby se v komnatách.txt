@@ -1,0 +1,30 @@
+Jaroslav Uhlíř, Zdeněk Svěrák
+Kdyby se v komnatách
+
+{chorus_start}
+[C7]Kdyby se v [F]komnatách, běhoun jak [C]hrom natáh'
+a na něm [Dm]akrobati [G]začali [C]kejklovati,
+[C7]kdyby nám [F]v paláci, pištěli [C]dudáci,
+to by se [Dm]krásně žilo, [G] to by byl [C]ráj.
+{chorus_end}
+
+{verse_1_start}
+[C]K životu na zámku [Gm]mám jednu poznámku
+[F]je tu neveselo, je tu [C]truchlivo.
+[C]V ostatních královstvích [Gm]nezní tak málo smích,
+[F]není neveselo, není [C]truchlivo
+{verse_1_end}
+
+{verse_2_start}
+[C]Kde není muzika, [Gm] tam duše naříká,
+[F]tam je neveselo, tam je [C]truchlivo.
+[C]Chtěla bych dvůr pestrý, [Gm] kde znějí orchestry,
+[F]pěkně naveselo,žádné [C]truchlivo
+{verse_2_end}
+
+{text_start}
+{verse_1}
+{chorus}
+{verse_2}
+{chorus}
+{text_end}

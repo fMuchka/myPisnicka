@@ -1,0 +1,49 @@
+Hop Trop
+Tři kříže
+
+{chorus_start}
+Jen tři [F]kříže z bí[C]lýho kame[Am]ní
+někdo [Dm]do písku [C]posklá[Dm]dal.
+Slzy v [F]očích měl a v [C]ruce znave[Am]ný,
+lodní [Dm]deník, co [C]sám do něj [Dm]psal.
+{chorus_end}
+
+{verse_1_start}
+[Dm]Dávám sbohem všem [C]břehům prokla[Am]tejm,
+který v [Dm]drápech má [C]ďábel [Dm]sám,
+bílou přídí [C]šalupa My [Am]Grave
+mířím k [Dm]útesům, [C] který [Dm]znám.
+{verse_1_end}
+
+{verse_2_start}
+[Dm]První kříž má [C]pod sebou jen [Am]hřích,
+samý [Dm]pití a r[C]vačky [Dm]jen.
+Chřestot nožů, při [C]kterym přejde s[Am]mích,
+srdce-[Dm]kámen a [C]jméno S[Dm]ten.
+{verse_2_end}
+
+{verse_3_start}
+[Dm]Já, Bob Green, mám [C]tváře zjizve[Am]ný,
+štěkot [Dm]psa zněl, [C] když jsem se [Dm]smál.
+Druhej kříž mám [C]a spím v podze[Am]mí,
+že jsem [Dm]falešný[C] karty [Dm]hrál.
+{verse_3_end}
+
+{verse_4_start}
+[Dm]Třetí kříž snad [C]vyvolá jen v[Am]ztek,
+Fatty [Dm]Rogers těm [C]dvoum život [Dm]vzal.
+Svědomí měl, [C]vedle nich si [Am]klek. [Dm]
+"Já vím, trestat je [C]lidský, ale [Am]odpouštět božsk[Dm]ý.
+[C]Ať mi tedy bůh odpustí."[Dm]
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{chorus}
+{verse_2}
+{chorus}
+{verse_3}
+{chorus}
+{verse_4}
+{chorus}
+{text_end}

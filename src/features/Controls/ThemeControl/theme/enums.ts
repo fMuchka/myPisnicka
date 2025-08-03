@@ -13,3 +13,8 @@ export enum PrimaryLightThemeColor {
   YELLOW = '#f57f17',
   PURPLE = '#4a148c',
 }
+
+export enum ColorScheme {
+  DARK = 'dark',
+  LIGHT = 'light',
+}

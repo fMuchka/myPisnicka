@@ -1,86 +1,88 @@
-import type { ChordFormatterProps } from "./types";
+import type { ChordFormatterProps } from './types';
 import styles from './ChordFormatter.module.css';
-import { type JSX } from "react";
-import type { RefinedSong } from "../../utils/rawSongRefiner";
-import React from "react";
-import Chord from "../Chord/Chord";
+import { type JSX } from 'react';
+import type { RefinedSong } from '../../utils/rawSongRefiner';
+import React from 'react';
+import Chord from '../Chord/Chord';
 
 export const ChordFormatter = (props: ChordFormatterProps) => {
+  function formatChords(song: RefinedSong) {
+    const result: JSX.Element[] = [];
 
-    function formatChords(song: RefinedSong) {
-    
-        const result: JSX.Element[] = [];
+    song.text.forEach((e) => {
+      if (e.includes('chorus')) {
+        replaceSection(song.chorus, 'chorus');
+      } else if (e.includes('verse')) {
+        const verseIndex = e.split('_')[1] ? parseInt(e.split('_')[1]) - 1 : 0;
+        replaceSection(song.verses[verseIndex], 'verse');
+      } else {
+        replaceSection(e.split('  '), 'interlude');
+      }
+    });
 
-        song.text.forEach((e) => {
-            if (e.includes("chorus")) {
-                replaceSection(song.chorus, "chorus");
-            } else if (e.includes("verse")) {
-                const verseIndex = e.split('_')[1] ? parseInt(e.split('_')[1]) - 1 : 0;
-                replaceSection(song.verses[verseIndex], "verse");
+    function replaceSection(
+      text: string[],
+      sectionType: 'chorus' | 'verse' | 'interlude'
+    ) {
+      const replacedSection: JSX.Element[] = [];
+
+      text.forEach((line, idx) => {
+        let i = 0;
+        let lyrics = '';
+
+        while (i < line.length) {
+          if (line[i] === '[') {
+            const end = line.indexOf(']', i);
+            if (end !== -1) {
+              const chord = line.substring(i + 1, end);
+
+              replacedSection.push(
+                <React.Fragment key={`${idx}_${i}`}>{lyrics}</React.Fragment>
+              );
+
+              lyrics = '';
+
+              replacedSection.push(
+                <Chord key={`chord_${idx}_${i}`} chord={chord} />
+              );
+
+              i = end + 1;
             } else {
-                replaceSection(e.split("  "), "interlude");
+              i++;
             }
-        })
-
-        function replaceSection(text: string[], sectionType: "chorus" | "verse" | "interlude") {
-            const replacedSection: JSX.Element[] = [];
-
-            text.forEach((line, idx) => {
-                let i = 0;
-                let lyrics = "";
-
-                while (i < line.length) {
-                    if (line[i] === '[') {
-                        const end = line.indexOf(']', i);
-                        if (end !== -1) {
-                            const chord = line.substring(i + 1, end);
-
-                            replacedSection.push(
-                                <React.Fragment key={`${idx}_${i}`}>{ lyrics }</React.Fragment>
-                            );
-
-                            lyrics = "";
-
-                            replacedSection.push(
-                                <Chord key={`chord_${idx}_${i}`} chord={chord} transposition={props.transposition} hSystem={props.hSystem} />
-                            )
-                                   
-                            i = end + 1;
-                        } else {     
-                            i++;
-                        }
-                    } else {
-                        lyrics += line[i];
-                        i++;
-                    }
-                }
-
-                if (lyrics.length > 0) {
-                    replacedSection.push(
-                        <React.Fragment key={`${idx}_${i}`}>{ lyrics }</React.Fragment>
-                    );
-
-                    lyrics = "";
-                }
-
-                replacedSection.push(
-                    <br key={`br${idx}`}></br>
-                );
-            });
-
-            result.push(
-                <div key={result.length} className={`${styles[sectionType]} ${styles["section"]}`}>
-                    {replacedSection}
-                </div>
-            );
+          } else {
+            lyrics += line[i];
+            i++;
+          }
         }
 
-        return result;
+        if (lyrics.length > 0) {
+          replacedSection.push(
+            <React.Fragment key={`${idx}_${i}`}>{lyrics}</React.Fragment>
+          );
+
+          lyrics = '';
+        }
+
+        replacedSection.push(<br key={`br${idx}`}></br>);
+      });
+
+      result.push(
+        <div
+          key={result.length}
+          className={`${styles[sectionType]} ${styles['section']}`}
+        >
+          {replacedSection}
+        </div>
+      );
     }
 
-    if (!props.song) {
-        return <span>Vybral jsi píseň?</span>;
-    }
-    
-    return <>{formatChords(props.song)}</>;
-}
+    return result;
+  }
+
+  if (!props.song) {
+    return <span>Vybral jsi píseň?</span>;
+  }
+
+  return <>{formatChords(props.song)}</>;
+};

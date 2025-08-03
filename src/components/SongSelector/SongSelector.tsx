@@ -1,6 +1,14 @@
-import { Autocomplete, darken, lighten, styled, TextField } from "@mui/material";
-import type { RefinedSong } from "../../utils/rawSongRefiner";
-import type { SongSelectorProps } from "./types";
+import {
+  Autocomplete,
+  darken,
+  lighten,
+  styled,
+  TextField,
+} from '@mui/material';
+import type { RefinedSong } from '../../utils/rawSongRefiner';
+import type { SongSelectorProps } from './types';
+import { useDispatch } from 'react-redux';
+import { setFirstChord } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -18,48 +26,52 @@ const GroupItems = styled('ul')({
 });
 
 const SongSelector = (props: SongSelectorProps) => {
-    const { songs, selectedSong, setSelectedSong } = props;
+  const { songs, selectedSong, setSelectedSong } = props;
 
-    const handleSongSelectorChange = (_event: React.SyntheticEvent<Element, Event>, value: { value: string | undefined, label: string | undefined } | null) => {
-        const songId = value?.value;
-        const selected = songs?.find(s => s.id === songId)
+  const dispatch = useDispatch();
 
-        if (selected !== undefined) {
-            setSelectedSong(selected);
-        }
+  const handleSongSelectorChange = (
+    _event: React.SyntheticEvent<Element, Event>,
+    value: { value: string | undefined; label: string | undefined } | null
+  ) => {
+    const songId = value?.value;
+    const selected = songs?.find((s) => s.id === songId);
+
+    if (selected !== undefined) {
+      dispatch(setFirstChord({ root: '', suffix: '' }));
+      setSelectedSong(selected);
     }
-    
-    return (
-        <Autocomplete
-            color="primary"
-            value={{ label: selectedSong?.id, value: selectedSong?.id }}
-            
-            options={songsList(songs)}
-            groupBy={(option) => {
-                if (option.label === undefined) {
-                    return 'Ups...';
-                }
+  };
 
-                return option.label.split(' - ')[0]
-            }}
-            renderInput={(params) => <TextField {...params} label="Song" />}
-            renderGroup={(params) => (
-                <li key={params.key}>
-                    <GroupHeader>{params.group}</GroupHeader>
-                    <GroupItems>{params.children}</GroupItems>
-                </li>
-            )}
-            onChange={handleSongSelectorChange}
-      />
-    )
-}
+  return (
+    <Autocomplete
+      color="primary"
+      value={{ label: selectedSong?.id, value: selectedSong?.id }}
+      options={songsList(songs)}
+      groupBy={(option) => {
+        if (option.label === undefined) {
+          return 'Ups...';
+        }
+
+        return option.label.split(' - ')[0];
+      }}
+      renderInput={(params) => <TextField {...params} label="Song" />}
+      renderGroup={(params) => (
+        <li key={params.key}>
+          <GroupHeader>{params.group}</GroupHeader>
+          <GroupItems>{params.children}</GroupItems>
+        </li>
+      )}
+      onChange={handleSongSelectorChange}
+    />
+  );
+};
 
 function songsList(songs: RefinedSong[]) {
-    return songs.map(song => ({
-        label: song.id,
-        value: song.id,
-    }));
+  return songs.map((song) => ({
+    label: song.id,
+    value: song.id,
+  }));
 }
-
 
 export default SongSelector;
