@@ -1,0 +1,9 @@
+.chordPreview {
+  justify-content: center;
+  place-content: space-evenly;
+}
+
+.chordPreview > * {
+  width: unset !important;
+  top: unset !important;
+}

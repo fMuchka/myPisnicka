@@ -8,7 +8,10 @@ import {
 import type { RefinedSong } from '../../utils/rawSongRefiner';
 import type { SongSelectorProps } from './types';
 import { useDispatch } from 'react-redux';
-import { setFirstChord } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
+import {
+  resetCurrentChords,
+  setFirstChord,
+} from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -39,6 +42,7 @@ const SongSelector = (props: SongSelectorProps) => {
 
     if (selected !== undefined) {
       dispatch(setFirstChord({ root: '', suffix: '' }));
+      dispatch(resetCurrentChords());
       setSelectedSong(selected);
     }
   };

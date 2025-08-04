@@ -10,6 +10,10 @@ export interface ChordDetailsState {
     suffix: string;
     root: string;
   };
+  currentChords: {
+    suffix: string;
+    root: string;
+  }[];
 }
 
 const initialState: ChordDetailsState = {
@@ -20,6 +24,7 @@ const initialState: ChordDetailsState = {
     root: '',
     suffix: '',
   },
+  currentChords: [],
 };
 
 const chordDetailsSlice = createSlice({
@@ -47,6 +52,23 @@ const chordDetailsSlice = createSlice({
     ) => {
       state.firstChord = action.payload;
     },
+
+    setCurrentChords: (
+      state,
+      action: PayloadAction<
+        {
+          suffix: string;
+          root: string;
+        }[]
+      >
+    ) => {
+      state.firstChord = action.payload[0];
+      state.currentChords = action.payload;
+    },
+
+    resetCurrentChords: (state) => {
+      state.currentChords = [];
+    },
   },
 });
 
@@ -55,6 +77,8 @@ export const {
   setHSystem,
   setChordVisibility,
   setFirstChord,
+  setCurrentChords,
+  resetCurrentChords,
 } = chordDetailsSlice.actions;
 
 export default chordDetailsSlice.reducer;

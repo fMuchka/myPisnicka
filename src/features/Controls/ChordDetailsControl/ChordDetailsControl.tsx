@@ -15,7 +15,7 @@ import {
   Radio,
   Slider,
 } from '@mui/material';
-import type { ChangeEvent } from 'react';
+import { useCallback, useEffect, useState, type ChangeEvent } from 'react';
 import { ChordVisibility, HSystem, Notes } from './enums';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
@@ -24,12 +24,16 @@ import {
   setHSystem,
   setChordVisibility,
 } from './chordDetailsSlice';
+import Chord from '../../../components/Chord/Chord';
+import styles from './ChordDetailsControl.module.css';
+import { transposeChord } from '../../../utils/transposeChord';
 
 const ChordDetailsToggle = () => {
-  const { hSystem, transposition, chordVisibility, firstChord } = useSelector(
-    (state: RootState) => state.chordDetailsReducer
-  );
+  const { hSystem, transposition, chordVisibility, firstChord, currentChords } =
+    useSelector((state: RootState) => state.chordDetailsReducer);
   const dispatch = useDispatch();
+
+  const [transposedChords, setTransposedChords] = useState(currentChords);
 
   const handleChordVisibilityChange = (
     _event: ChangeEvent<HTMLInputElement>,
@@ -50,11 +54,21 @@ const ChordDetailsToggle = () => {
     dispatch(setHSystem(newState));
   };
 
+  useEffect(() => {
+    const transposedChords: typeof currentChords = [];
+    currentChords.forEach((e) => {
+      const tChord = transposeChord(e.root + e.suffix, hSystem, transposition);
+      transposedChords.push({ suffix: tChord.suffix, root: tChord.root });
+    });
+
+    setTransposedChords(transposedChords);
+  }, [transposition, hSystem]);
+
   const handleTranspositionChange = (transposition: number) => {
     dispatch(setTransposition(transposition));
   };
 
-  const getTranspositionMarks = () => {
+  const getTranspositionMarks = useCallback(() => {
     const notes = [
       { value: -6, label: Notes.F_SHARP },
       { value: -5, label: Notes.G },
@@ -90,7 +104,7 @@ const ChordDetailsToggle = () => {
     }
 
     return notes;
-  };
+  }, [firstChord.root, firstChord.suffix, hSystem]);
 
   return (
     <Box
@@ -187,10 +201,20 @@ const ChordDetailsToggle = () => {
                 max={5}
                 marks={getTranspositionMarks()}
                 step={1}
-                defaultValue={transposition}
+                defaultValue={0}
                 onChange={(_e, value) => handleTranspositionChange(value)}
               />
             </Box>
+
+            <Stack direction={'row'} className={styles.chordPreview}>
+              {transposedChords.map((chord, idx) => (
+                <Chord
+                  chord={chord.root + chord.suffix}
+                  key={idx}
+                  useRichDisplay={true}
+                />
+              ))}
+            </Stack>
           </Stack>
         </AccordionDetails>
       </Accordion>

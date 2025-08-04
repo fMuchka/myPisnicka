@@ -1,28 +1,19 @@
 import type { ChordProps } from './types';
 import styles from './Chord.module.css';
-import { Box, Divider, Modal, Stack, Typography } from '@mui/material';
+import { Box, Button, Divider, Modal, Stack, Typography } from '@mui/material';
 import {
   Notes,
   HSystem,
 } from '../../features/Controls/ChordDetailsControl/enums';
 import { useState } from 'react';
-
+import CloseIcon from '@mui/icons-material/Close';
 // @ts-expect-error TODO: Fix types import
 import TomChord from '@tombatossals/react-chords/lib/Chord';
 import guitarChords from '@tombatossals/chords-db/lib/guitar.json';
 import type { RootState } from '../../app/store';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFirstChord } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
+import { useSelector } from 'react-redux';
 
 const Chord = (props: ChordProps) => {
-  const {
-    hSystem,
-    transposition: semitones,
-    firstChord,
-  } = useSelector((state: RootState) => state.chordDetailsReducer);
-
-  const dispatch = useDispatch();
-
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [diagramChord, setDiagramChord] = useState<string>('');
 
@@ -37,91 +28,21 @@ const Chord = (props: ChordProps) => {
 
   const richDisplay = (chord: string) => (
     <span
-      className={styles.chord}
+      className={`${styles.chord} ${styles.richDisplay}`}
       onClick={() => handleClickRichDisplay(chord)}
     >
       {chord}
     </span>
   );
-
-  function transposeChord() {
-    const { chord } = props;
-
-    // mapping flats → sharps for lookup
-    const enharmonicMap: { [key: string]: string } = {
-      Db: Notes.C_SHARP,
-      Eb: Notes.D_SHARP,
-      Gb: Notes.F_SHARP,
-      Ab: Notes.G_SHARP,
-      Bb: Notes.A_SHARP,
-    };
-
-    // Czech input → internal sharp names
-    const inputMap: { [key: string]: string } = {
-      H: Notes.B,
-      [Notes.B]: Notes.A_SHARP,
-    };
-
-    // internal → Czech output names
-    const outputMap: { [key: string]: string } = {
-      [Notes.A_SHARP]: Notes.B,
-      [Notes.B]: 'H',
-    };
-
-    // canonical sharp-based chromatic scale
-    const notes = [
-      Notes.C,
-      Notes.C_SHARP,
-      Notes.D,
-      Notes.D_SHARP,
-      Notes.E,
-      Notes.F,
-      Notes.F_SHARP,
-      Notes.G,
-      Notes.G_SHARP,
-      Notes.A,
-      Notes.A_SHARP,
-      Notes.B,
-    ];
-
-    // split root (e.g. "Eb", "F#") from the rest ("m7", "maj")
-    const match = chord.match(/^([A-H][b#]?)(.*)$/);
-    if (!match) {
-      // throw new Error(`Invalid chord format: "${chord}"`);
-      return plainDisplay(chord);
-    }
-    // eslint-disable-next-line prefer-const
-    let [, root, suffix] = match;
-
-    if (firstChord.root === '') {
-      dispatch(setFirstChord({ root, suffix }));
-    }
-
-    if (inputMap[root]) root = inputMap[root];
-    else if (enharmonicMap[root]) root = enharmonicMap[root];
-
-    const oldIndex = notes.indexOf(root as Notes);
-    if (oldIndex === -1) {
-      return plainDisplay(chord);
-    }
-
-    // shift and wrap within 0–11
-    const newIndex = (oldIndex + semitones + 12) % 12;
-    let newRoot = notes[newIndex];
-
-    // convert back to Czech B/H if needed
-    if (outputMap[newRoot] && hSystem === HSystem.CZECH)
-      newRoot = outputMap[newRoot] as Notes;
-
-    return richDisplay(newRoot + suffix);
-  }
-
   return (
     <>
       {openModal && (
         <ChordDiagram chord={diagramChord} setOpenModal={setOpenModal} />
       )}
-      {transposeChord()}
+
+      {props.useRichDisplay
+        ? richDisplay(props.chord)
+        : plainDisplay(props.chord)}
     </>
   );
 };
@@ -149,8 +70,7 @@ const ChordDiagram = (props: ChordDiagramProps) => {
       [Notes.G_SHARP]: 'Ab',
       [Notes.A]: 'A',
       [Notes.A_SHARP]: 'Bb',
-      [hSystem === HSystem.CZECH ? Notes.B : Notes.A_SHARP]: 'B',
-      [Notes.B]: 'B',
+      [hSystem === HSystem.WORLD ? Notes.B : Notes.A_SHARP]: 'B',
       H: 'B',
     };
 
@@ -160,7 +80,7 @@ const ChordDiagram = (props: ChordDiagramProps) => {
     const [, root, suffix] = match;
 
     const isMajor = suffix === '';
-    const isMinor = suffix.includes('m');
+    const isMinor = suffix === 'm' || suffix === 'mi';
 
     const index = isMajor
       ? 0
@@ -182,7 +102,14 @@ const ChordDiagram = (props: ChordDiagramProps) => {
       name: 'Guitar',
       keys: [],
       tunings: {
-        standard: [Notes.E, Notes.A, Notes.D, Notes.G, Notes.B, Notes.E],
+        standard: [
+          Notes.E,
+          Notes.A,
+          Notes.D,
+          Notes.G,
+          [hSystem === HSystem.CZECH ? 'H' : Notes.B],
+          Notes.E,
+        ],
       },
     };
     const lite = false; // defaults to false if omitted
@@ -196,6 +123,17 @@ const ChordDiagram = (props: ChordDiagramProps) => {
           aria-describedby="svg displays of chord shapes"
         >
           <Box className={styles['chordDiagramModal']}>
+            <Button
+              variant="outlined"
+              sx={{
+                position: 'absolute',
+                top: '16px',
+                right: '16px',
+              }}
+              onClick={() => props.setOpenModal(false)}
+            >
+              <CloseIcon></CloseIcon>
+            </Button>
             <Stack className={styles['chordDiagramWrapper']}>
               <Typography variant="h4" color="primary">
                 {props.chord}

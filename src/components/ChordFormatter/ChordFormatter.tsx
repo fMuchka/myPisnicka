@@ -4,9 +4,37 @@ import { type JSX } from 'react';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
 import React from 'react';
 import Chord from '../Chord/Chord';
+import { useDispatch, useSelector } from 'react-redux';
+import type { RootState } from '../../app/store';
+import { setCurrentChords } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
+import { transposeChord } from '../../utils/transposeChord';
 
 export const ChordFormatter = (props: ChordFormatterProps) => {
-  function formatChords(song: RefinedSong) {
+  const {
+    hSystem,
+    transposition: semitones,
+    currentChords,
+  } = useSelector((state: RootState) => state.chordDetailsReducer);
+
+  const dispatch = useDispatch();
+
+  const uniqueChords = new Map<string, boolean>();
+
+  const dispatchChords = () => {
+    if (currentChords.length === 0) {
+      const chords: { root: string; suffix: string }[] = [];
+
+      uniqueChords.forEach((_val, key) => {
+        const [root, suffix] = key.split('_');
+        chords.push({ root, suffix });
+      });
+
+      dispatch(setCurrentChords(chords));
+      uniqueChords.clear();
+    }
+  };
+
+  const formatChords = (song: RefinedSong) => {
     const result: JSX.Element[] = [];
 
     song.text.forEach((e) => {
@@ -41,9 +69,19 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
               );
 
               lyrics = '';
+              const transposedChord = transposeChord(
+                chord,
+                hSystem,
+                semitones,
+                uniqueChords
+              );
 
               replacedSection.push(
-                <Chord key={`chord_${idx}_${i}`} chord={chord} />
+                <Chord
+                  key={`chord_${idx}_${i}`}
+                  chord={transposedChord.root + transposedChord.suffix}
+                  useRichDisplay={transposedChord.useRichDisplay}
+                />
               );
 
               i = end + 1;
@@ -77,12 +115,11 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
       );
     }
 
+    dispatchChords();
+
     return result;
-  }
+  };
 
-  if (!props.song) {
-    return <span>Vybral jsi píseň?</span>;
-  }
-
+  if (props.song === null) return <span>Vybral jsi píseň?</span>;
   return <>{formatChords(props.song)}</>;
 };
