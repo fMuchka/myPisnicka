@@ -1,8 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
-import { ChordFormatter } from '../components/ChordFormatter/ChordFormatter';
-import fileLoader from '../utils/fileLoader';
-import rawSongRefiner, { type RefinedSong } from '../utils/rawSongRefiner';
-import SongSelector from '../components/SongSelector/SongSelector';
+import { useEffect, useMemo } from 'react';
 import {
   Container,
   CssBaseline,
@@ -31,7 +27,6 @@ import { CookieAcceptState, CookieKeys } from '../features/Cookies/enums';
 import CookieDialog from '../features/Cookies/CookieDialog';
 import { KeyboardArrowUp } from '@mui/icons-material';
 import ScrollTop from '../components/MUIAppBarUtils/ScrollTop/ScrollTop';
-import LoadingSongScreen from '../components/LoadingSongScreen/LoadingSongScreen';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from './store';
 import {
@@ -46,6 +41,12 @@ import {
 } from '../features/Controls/ScrollControl/scrollSlice';
 import { setFontSize } from '../features/Controls/FontSizeControl/fontSizeSlice';
 import { updateCookieAcceptState } from '../features/Cookies/cookieSlice';
+import { BrowserRouter, Route } from 'react-router';
+import SongView from '../routes/SongView/SongView';
+import { Routes } from 'react-router';
+import SongListView from '../routes/SongListView/SongListView';
+import { loadSongs } from '../features/Songs/songsSlice';
+import InfoView from '../routes/InfoView/InfoView';
 
 function App() {
   const { primaryColor, colorScheme } = useSelector(
@@ -54,12 +55,11 @@ function App() {
   const { isScrolling } = useSelector(
     (state: RootState) => state.scrollReducer
   );
+  const { songs } = useSelector((state: RootState) => state.songReducer);
+
   const dispatch = useDispatch();
 
   const { setColorScheme: setColorSchemeMUI } = useColorScheme();
-
-  const [songs, setSongs] = useState<RefinedSong[]>();
-  const [selectedSong, setSelectedSong] = useState<RefinedSong | null>(null);
 
   useEffect(() => {
     let cookiesPresentCheck = false;
@@ -115,6 +115,12 @@ function App() {
     };
   }, [isScrolling, dispatch]);
 
+  useEffect(() => {
+    if (!songs) {
+      loadSongs(dispatch);
+    }
+  }, [songs]);
+
   // Dynamically create theme based on primaryColor state
   const theme = useMemo(() => {
     if (colorScheme == 'dark') {
@@ -156,40 +162,18 @@ function App() {
     }
   }, [primaryColor, colorScheme, dispatch, setColorSchemeMUI]);
 
-  useEffect(() => {
-    async function loadSongs() {
-      const refinedSongs: RefinedSong[] = [];
-
-      const songsRaw = await fileLoader.loadFiles();
-      songsRaw.forEach((rawSong) => {
-        refinedSongs.push(rawSongRefiner.refine(rawSong));
-      });
-
-      setSongs(refinedSongs);
-      setSelectedSong(refinedSongs[0]);
-    }
-
-    if (!songs) {
-      loadSongs();
-    }
-  }, [songs]);
-
-  if (!songs) {
-    return <LoadingSongScreen />;
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
-        <TopBar />
-
         <Container maxWidth="md" sx={{ marginTop: '5rem' }}>
-          <SongSelector
-            selectedSong={selectedSong}
-            setSelectedSong={setSelectedSong}
-            songs={songs}
-          />
-          <ChordFormatter song={selectedSong} />
+          <BrowserRouter>
+            <TopBar />
+            <Routes>
+              <Route path="/my-pisnicka/" element={<SongView />} />
+              <Route path="/my-pisnicka/ListView" element={<SongListView />} />
+              <Route path="/my-pisnicka/Info" element={<InfoView />} />
+            </Routes>
+          </BrowserRouter>
         </Container>
 
         <ScrollTop>
