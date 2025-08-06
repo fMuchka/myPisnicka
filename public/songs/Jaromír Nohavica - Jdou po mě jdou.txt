@@ -1,5 +1,7 @@
-Jaromír Nohavica
-Jdou po mně jdou
+Author:Jaromír Nohavica
+Title:Jdou po mně jdou
+
+Tags: České, Táborová
 
 {chorus_start}
 Jdou po mně, [D] jdou, [G] jdou, [D] jdou
@@ -20,7 +22,7 @@ na půdě [F#m]půdy jsem [Hm]míval svou [A]skrýš
 
 {verse_2_start}
 Když mi dát [D]nechceš, já [G]vezmu si [D]sám
-zámek jde [F#m]lehce a [Hma]dresu [A]znám
+zámek jde [F#m]lehce a [Hm]adresu [A]znám
 [G]zlato jak [D]zlato, [A]dolar či [Hm]frank
 [G]tak jsem šel [D]na to do [G]National [D]Bank
 [G]zlato jak [D]zlato, [A]dolar či [Hm]frank

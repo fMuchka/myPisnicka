@@ -1,5 +1,7 @@
-Divokej Bill
-Malování
+Author:Divokej Bill
+Title:Malování
+
+Tags: České
 
 {chorus_start}
 [G]To je to tvoje [Am]malování, [F]vzdušnejch [G]zámků,

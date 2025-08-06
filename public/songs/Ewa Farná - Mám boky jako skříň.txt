@@ -1,5 +1,7 @@
-Ewa Farná
-Mám boky jako skříň
+Author:Ewa Farná
+Title:Mám boky jako skříň
+
+Tags: České
 
 {chorus_start}
 Moje [H]máma mi říkala

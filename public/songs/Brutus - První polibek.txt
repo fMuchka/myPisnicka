@@ -1,5 +1,7 @@
-Brutus
-První polibek
+Author:Brutus
+Title:První polibek
+
+Tags:České, Ploužák
 
 {chorus_start}
 [G]Proč tě [H7]zlákal první [Emi]polibek, [C]
@@ -30,11 +32,11 @@ jenom si [G]myslíš, že tě [D7]nemá nikdo [G]rád. [D7]
 jsi [G]smutná a [D7]třeba pláčeš[G]. [D7]
 [G]Každá dívka věří,[H7] že k ní [Emi]jednou přijde princ, [C]
 ten by ji vzal [G]za ruku a [D7]řekl by, lásko[G] mám tě rád. [D7]
-[G]Ve skutečnosti[H7] [Emi] je to ovšem jiné, [C]
+[G]Ve skutečnos[H7]ti  je[Emi] to ovšem jiné, [C]
 žádný princ nepřijde[G] a neřek[D7]ne ta tři krásná [G]slova. [D7]
 [G]Život je [H7]pro tebe jako hřbitov,[Emi] nebo louka bez kvítí, [C]
 [G]najednou se něco [D7]stane,[G] zahrady světa rozkve[D7]tou
-a [G]ty si uvědomíš,[H7] že tě [Emi]má [C]někdo
+a [G]ty si uvědomíš,[H7] že tě [Emi]má ně[C]kdo
 [G]konečně [D7]moc [G]báječně [D7]rád.
 {verse_3_end}
 

@@ -1,5 +1,7 @@
-Noc na Karlštejně
-Hoja hoj
+Author:Noc na Karlštejně
+Title:Hoja hoj
+
+Tags: České, Pohádky
 
 {chorus_start}
 [A]Hoja hoj, [D] hoja hoj [E7]v králi máme [A]zastání

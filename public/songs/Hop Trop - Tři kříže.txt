@@ -1,5 +1,7 @@
-Hop Trop
-Tři kříže
+Author:Hop Trop
+Title:Tři kříže
+
+Tags: České, Táborová
 
 {chorus_start}
 Jen tři [F]kříže z bí[C]lýho kame[Am]ní

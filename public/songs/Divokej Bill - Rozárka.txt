@@ -1,5 +1,7 @@
-Divokej Bill
-Rozárka
+Author:Divokej Bill
+Title:Rozárka
+
+Tags: České
 
 {verse_1_start}
 [Ami]Nikdy ne[F]řikej, že víš jak mi [Emi]je s prázdnym

@@ -1,6 +1,7 @@
-Janek Ledecký
-Pěkná, pěkná, pěkná
+Author:Janek Ledecký
+Title:Pěkná, pěkná, pěkná
 
+Tags: České, Ploužák
 
 {verse_1_start}
 [A]Pro tvůj [Hm7]dech já [A]skočím po zá[Hm7]dech
