@@ -25,8 +25,10 @@ import {
   resetScrollSpeed,
   stopScroll,
 } from './scrollSlice';
+import type { ControlProps } from '../../../components/AppBars/SideBar/types';
+import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
 
-const ScrollToggle = () => {
+const ScrollToggle = (props: ControlProps) => {
   const { scrollSpeed } = useSelector(
     (state: RootState) => state.scrollReducer
   );
@@ -59,7 +61,11 @@ const ScrollToggle = () => {
         minHeight: '56px',
       }}
     >
-      <Accordion sx={{ width: '100%' }}>
+      <Accordion
+        expanded={props.expandedControl === ListOfControls.SCROLL}
+        onChange={() => props.setExpandedControl(ListOfControls.SCROLL)}
+        sx={{ width: '100%' }}
+      >
         <AccordionSummary
           expandIcon={<ArrowDropDown />}
           aria-controls="panel2-content"

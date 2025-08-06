@@ -6,12 +6,13 @@ import {
   TextField,
 } from '@mui/material';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
-import type { SongSelectorProps } from './types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   resetCurrentChords,
   setFirstChord,
 } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
+import type { RootState } from '../../app/store';
+import { setSelectedSong } from './songsSlice';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -28,8 +29,10 @@ const GroupItems = styled('ul')({
   padding: 0,
 });
 
-const SongSelector = (props: SongSelectorProps) => {
-  const { songs, selectedSong, setSelectedSong } = props;
+const SongSelector = () => {
+  const { selectedSong, songs } = useSelector(
+    (state: RootState) => state.songReducer
+  );
 
   const dispatch = useDispatch();
 
@@ -43,7 +46,7 @@ const SongSelector = (props: SongSelectorProps) => {
     if (selected !== undefined) {
       dispatch(setFirstChord({ root: '', suffix: '' }));
       dispatch(resetCurrentChords());
-      setSelectedSong(selected);
+      dispatch(setSelectedSong(selected));
     }
   };
 
@@ -51,7 +54,7 @@ const SongSelector = (props: SongSelectorProps) => {
     <Autocomplete
       color="primary"
       value={{ label: selectedSong?.id, value: selectedSong?.id }}
-      options={songsList(songs)}
+      options={songsList(songs as RefinedSong[])}
       groupBy={(option) => {
         if (option.label === undefined) {
           return 'Ups...';

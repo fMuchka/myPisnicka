@@ -24,8 +24,10 @@ import { CookieAcceptState, CookieKeys } from '../../Cookies/enums';
 import type { RootState } from '../../../app/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { setColorScheme, setPrimaryColor } from './themeSlice';
+import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
+import type { ControlProps } from '../../../components/AppBars/SideBar/types';
 
-const ThemeToggle = () => {
+const ThemeToggle = (props: ControlProps) => {
   const { colorScheme, primaryColor } = useSelector(
     (state: RootState) => state.themeReducer
   );
@@ -75,7 +77,11 @@ const ThemeToggle = () => {
         minHeight: '56px',
       }}
     >
-      <Accordion sx={{ width: '100%' }}>
+      <Accordion
+        expanded={props.expandedControl === ListOfControls.THEME}
+        onChange={() => props.setExpandedControl(ListOfControls.THEME)}
+        sx={{ width: '100%' }}
+      >
         <AccordionSummary
           expandIcon={<ArrowDropDownIcon />}
           aria-controls="theme-content"

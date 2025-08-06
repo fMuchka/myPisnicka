@@ -27,8 +27,10 @@ import {
 import Chord from '../../../components/Chord/Chord';
 import styles from './ChordDetailsControl.module.css';
 import { transposeChord } from '../../../utils/transposeChord';
+import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
+import type { ControlProps } from '../../../components/AppBars/SideBar/types';
 
-const ChordDetailsToggle = () => {
+const ChordDetailsToggle = (props: ControlProps) => {
   const { hSystem, transposition, chordVisibility, firstChord, currentChords } =
     useSelector((state: RootState) => state.chordDetailsReducer);
   const dispatch = useDispatch();
@@ -119,7 +121,11 @@ const ChordDetailsToggle = () => {
         minHeight: '56px',
       }}
     >
-      <Accordion sx={{ width: '100%' }}>
+      <Accordion
+        expanded={props.expandedControl === ListOfControls.CHORD_DETAILS}
+        onChange={() => props.setExpandedControl(ListOfControls.CHORD_DETAILS)}
+        sx={{ width: '100%' }}
+      >
         <AccordionSummary
           expandIcon={<ArrowDropDown />}
           aria-controls="panel2-content"

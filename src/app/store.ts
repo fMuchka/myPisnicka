@@ -4,6 +4,7 @@ import scrollReducer from '../features/Controls/ScrollControl/scrollSlice';
 import fontSizeReducer from '../features/Controls/FontSizeControl/fontSizeSlice';
 import chordDetailsReducer from '../features/Controls/ChordDetailsControl/chordDetailsSlice';
 import cookieReducer from '../features/Cookies/cookieSlice';
+import songReducer from '../features/Songs/songsSlice';
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     fontSizeReducer,
     chordDetailsReducer,
     cookieReducer,
+    songReducer,
   },
 });
 

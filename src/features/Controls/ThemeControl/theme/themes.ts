@@ -77,7 +77,7 @@ export const greenLightTheme = createTheme({
   colorSchemes: { light: true, dark: true },
   palette: {
     primary: {
-      main: PrimaryDarkThemeColor.GREEN,
+      main: PrimaryLightThemeColor.GREEN,
     },
   },
 });

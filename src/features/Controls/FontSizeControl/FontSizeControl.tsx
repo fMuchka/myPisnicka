@@ -18,8 +18,10 @@ import {
   resetFontSize,
   initialState,
 } from './fontSizeSlice';
+import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
+import type { ControlProps } from '../../../components/AppBars/SideBar/types';
 
-const FontSizeToggle = () => {
+const FontSizeToggle = (props: ControlProps) => {
   const { fontSize } = useSelector((state: RootState) => state.fontSizeReducer);
   const { cookieAcceptState } = useSelector(
     (state: RootState) => state.cookieReducer
@@ -47,7 +49,11 @@ const FontSizeToggle = () => {
         minHeight: '56px',
       }}
     >
-      <Accordion sx={{ width: '100%' }}>
+      <Accordion
+        expanded={props.expandedControl === ListOfControls.FONT_SIZE}
+        onChange={() => props.setExpandedControl(ListOfControls.FONT_SIZE)}
+        sx={{ width: '100%' }}
+      >
         <AccordionSummary
           expandIcon={<ArrowDropDown />}
           aria-controls="panel2-content"

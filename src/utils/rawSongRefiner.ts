@@ -2,6 +2,7 @@ type RawSong = string;
 export type RefinedSong = {
   author: string;
   title: string;
+  tags: string[];
   chorus: string[];
   verses: string[][];
   text: string[];
@@ -10,17 +11,29 @@ export type RefinedSong = {
 
 function refine(rawSong: RawSong): RefinedSong {
   const lines = rawSong.split('\n');
-  // Author is first line
-  const author = lines.shift() || 'UNKNOWN AUTHOR';
+  // const author = lines.shift() || 'UNKNOWN AUTHOR';
+  const author =
+    lines.find((e) => e.includes('Author:'))?.split(':')[1] || 'UNKNOWN AUTHOR';
 
   // Title is second line
-  const title = lines.shift() || 'UNKNOWN SONG TITLE';
+  const title =
+    lines.find((e) => e.includes('Title:'))?.split(':')[1] ||
+    'UNKNOWN SONG TITLE';
 
   const chorus = extractChorus(lines);
   const verses = extractVerses(lines);
   const text = extractText(lines);
+  const tags =
+    lines
+      .find((e) => e.includes('Tags:'))
+      ?.split(':')[1]
+      .split(',') || [];
+
+  tags.forEach((e, idx) => (tags[idx] = e.trim()));
+
   return {
     author,
+    tags,
     title,
     chorus,
     verses,
