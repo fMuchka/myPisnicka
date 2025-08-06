@@ -34,7 +34,7 @@ const Navigation = (props: NavigationProps) => {
           direction={'row'}
           justifyContent={'space-between'}
           width={'35%'}
-          minWidth={400}
+          minWidth={350}
         >
           <div
             style={{
@@ -75,7 +75,10 @@ const Navigation = (props: NavigationProps) => {
               placeContent: 'start',
               padding: '16px',
             }}
-            onClick={() => navigate('/my-pisnicka/', { viewTransition: true })}
+            onClick={() => {
+              navigate('/my-pisnicka/', { viewTransition: true });
+              props.setOpenNavigation(false);
+            }}
             fullWidth
             startIcon={<LibraryMusic />}
           >
@@ -91,9 +94,10 @@ const Navigation = (props: NavigationProps) => {
               placeContent: 'start',
               padding: '16px',
             }}
-            onClick={() =>
-              navigate('/my-pisnicka/ListView', { viewTransition: true })
-            }
+            onClick={() => {
+              navigate('/my-pisnicka/ListView', { viewTransition: true });
+              props.setOpenNavigation(false);
+            }}
             fullWidth
             startIcon={<PlaylistPlay />}
           >
@@ -109,9 +113,10 @@ const Navigation = (props: NavigationProps) => {
               placeContent: 'start',
               padding: '16px',
             }}
-            onClick={() =>
-              navigate('/my-pisnicka/Info', { viewTransition: true })
-            }
+            onClick={() => {
+              navigate('/my-pisnicka/Info', { viewTransition: true });
+              props.setOpenNavigation(false);
+            }}
             fullWidth
             startIcon={<Info />}
           >

@@ -115,13 +115,13 @@ const SongListView = () => {
 
   return (
     <>
-      <Stack spacing={2} direction={'row'}>
-        <Stack spacing={2}>
+      <Stack spacing={5} direction={'row'}>
+        <Stack spacing={2} direction={'column'}>
           <Typography variant="body1" color="text.secondary">
             Filtr
           </Typography>
           <RadioGroup
-            sx={{ display: 'flex', flexDirection: 'row' }}
+            sx={{ display: 'flex', flexDirection: 'column' }}
             aria-labelledby="tag filter type"
             value={shouldIncludeAllFilters}
             onChange={() =>
@@ -138,23 +138,26 @@ const SongListView = () => {
             </Typography>
           </RadioGroup>
         </Stack>
-        {Object.values(SongTags).map((t, tIdx) => (
-          <Chip
-            size="small"
-            variant={tagFilter.includes(t) ? 'outlined' : 'filled'}
-            sx={{
-              color: TAG_COLOR_MAP(t as SongTags, colorScheme),
-              marginLeft: '0.5em',
-            }}
-            onClick={() => filterByTag(t)}
-            label={t}
-            key={tIdx}
-          />
-        ))}
+
+        <Stack spacing={2} width={'50%'}>
+          {Object.values(SongTags).map((t, tIdx) => (
+            <Chip
+              size="small"
+              variant={tagFilter.includes(t) ? 'filled' : 'outlined'}
+              sx={{
+                color: TAG_COLOR_MAP(t as SongTags, colorScheme),
+                marginLeft: '0.5em',
+              }}
+              onClick={() => filterByTag(t)}
+              label={t}
+              key={tIdx}
+            />
+          ))}
+        </Stack>
       </Stack>
 
       <Divider sx={{ margin: '0.5rem 0 2rem 0' }}></Divider>
-      <Stack spacing={2}>
+      <Stack spacing={2} marginBottom={5}>
         {displaySongs?.map((song, idx) => (
           <Button
             sx={{ placeContent: 'space-between', textAlign: 'start' }}
@@ -167,7 +170,7 @@ const SongListView = () => {
               {song.tags.map((t, tIdx) => (
                 <Chip
                   size="small"
-                  variant={'outlined'}
+                  variant={'filled'}
                   sx={{
                     color: TAG_COLOR_MAP(t.trim() as SongTags, colorScheme),
                     marginLeft: '0.5em',
