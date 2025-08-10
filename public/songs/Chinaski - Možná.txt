@@ -1,0 +1,56 @@
+Author:Chinaski
+Title:Možná
+
+Tags:České
+
+{chorus_start}
+[Aadd9]Možná se ti [Bsus4]zdá
+slova [C#m]jsou zmatený
+[Aadd9]dělám, co se [Bsus4]dá
+věřím [C#m]na usmíření
+[Aadd9]možná se ti [Bsus4]zdá
+možná [C#m]máš tušení
+[Aadd9]dělám, co se [Bsus4]dá
+věřím [F#7sus4]na usmíření 
+{chorus_end}
+
+{verse_1_start}
+[F#m]Víš, kde mám svý [A]slabý místa, [E]vím, že o nich [Badd9]víš
+[F#m]každopádně [A]si buď jistá, [E]ještě o mně [Badd9]uslyšíš
+[F#m]víš, kde mám svý [A]starý šrámy [E]v sobě ukry[Badd9]tý
+[F#m]zůstane to [A]mezi námi [E]nadosmrti [Badd9]zabitý 
+{verse_1_end}
+
+{verse_2_start}
+[F#m]Možná, že se [A]k tobě vážně [E]vůbec neho[Badd9]dím
+[F#m]kdybych to byl [A]býval věděl, [E]tak sem necho[Badd9]dím
+[F#m]důvody jsou [A]známý, nejsou [E]zas tak složi[Badd9]tý
+[F#m]zůstane to [A]mezi námi [E]nadosmrti [Badd9]zabitý
+{verse_2_end}
+
+{verse_3_start}
+[F#m]Zůstane to [A]s námi nejspíš [E]pořád tako[Badd9]vý
+[F#m]uvidíme, [A]čas nám ve fi[E]nále napo[Badd9]ví
+[F#m]jak to bude [A]dál, je dneska [E]nedůle[Badd9]žitý
+[F#m]zůstane to [A]mezi námi [E]nadosmrti [Badd9]zabitý
+{verse_3_end}
+
+{verse_4_start}
+[F#m]Mo[A]žná, kdo [E]ví[Badd9]
+už nic [F#m]  neří[A]kám[E]..........[Badd9]
+[F#m]zůstanem [A]napořád [E]spolu[Badd9]
+navždycky [F#m]každej [A]sám[E]..........[Badd9]
+{verse_4_end}
+
+
+
+{text_start}
+{verse_1}
+{chorus}
+{verse_2}
+{chorus}
+[MEZIHRA]
+{verse_3}
+{verse_4}
+{chorus}
+{text_end}

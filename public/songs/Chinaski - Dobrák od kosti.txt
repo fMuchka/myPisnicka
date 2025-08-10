@@ -1,0 +1,62 @@
+Author:Chinaski
+Title:Dobrák od kosti
+
+Tags:České
+
+{chorus_start}
+Je to [D]vážně silná káva, [A]pláč a nebo vztek 
+[G]nic už s tím nenaděláš
+[D]nech mě jenom hádat, jak jsi [A]hebká na dotek
+[G]krásná a nedospělá
+{chorus_end}
+
+{verse_1_start}
+[D]Má milá [A]jak ti je, tak [G]jak ti je?
+[D] Jsem ten, kdo [A]jednou tvý [G]tělo zakryje[Cadd9]
+[D]Jsem ten, [A]kdo tě jednou [G]oddělá
+[D]potkala's [A]zkrátka koho's [G]neměla[Cadd9]
+{verse_1_end}
+
+{verse_2_start}
+[D]Jsi budoucí [A]krev v mojí [G]posteli
+[D]jsem ten, kdo tě [A]jednou jisto[G]jistě zastřelí[Cadd9]
+[D]Jsem ten kdo ty [A]tvoje krásný oči [G]jednou zatlačí
+[D]jsi moje [A]všechno a mě to [G]nestačí[Cadd9]
+
+{verse_2_end}
+
+{verse_3_start}
+[D]Víš, [A] všechno má aspoň [G]malý kaz
+[D]jsem ten, kdo ti [A]jednou [G]zlomí vaz[Cadd9]
+[D]Má milá [A]vždyť mě znáš jsem dobrák [G]od kosti
+[D]a ty jsi [A]ta co mi to jednou [G]všechno odpus[Cadd9]tí
+{verse_3_end}
+
+{verse_4_start}
+[D]Sejde z očí sejde z mysli
+jenom [A]blázen věří na nesmysly
+[G]láska je čaroděj a ticho prý léčí
+ale zákon hovoří jasnou řečí
+{verse_4_end}
+
+{verse_5_start}
+[D]Má milá [A]jak ti je, tak [G]jak ti je?
+[D]jsem ten, kdo [A]jednou tvý [G]tělo zakryje
+{verse_5_end}
+
+
+
+{text_start}
+
+[D]     [A]     [G]
+[D]     [A]     [G]
+{verse_1}
+[D]     [A]     [G]
+{verse_2}
+{chorus}
+{verse_3}
+{verse_4}
+{chorus}
+{chorus}
+{verse_5}
+{text_end}

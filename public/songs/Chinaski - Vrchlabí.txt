@@ -1,0 +1,50 @@
+Author:Chinaski
+Title:Vrchlabí
+
+Tags:České
+
+{chorus_start}
+Pořád [C]jsem to [G]já, pořád [Am]jsme to [F]my
+pár přátel [C]na ces[G]tách od jara [Am]do zi[F]my
+přes [C]všechen [G]čas, všech[Am]ny ty [F]dny
+přes všechno [C]trápe[G]ní, pořád [Am]jsme to Fmy
+{chorus_end}
+
+{verse_1_start}
+Jela jsem s [C]Marcelou a Martou[C]
+po koncertě [F]autem domů z Vrchlabí[D]
+milí [C]páni, nemáte [C]nejmenší zdání
+co [F]všechno tři holky pobaví[D]
+hustě [F]sněží[C]
+cestu [Dm]klikatou, dlouhou, [Fsus2]krájíme krok za krokem
+{verse_1_end}
+
+{verse_2_start}
+Mobilní [C]noční babí sněm[C]
+dvoustopá [Am7]oáza, čtyřtaktní [D]zázemí
+nad námi [C]Velkej vůz a my v [C]něm
+v Jičíně [Am7]střídáme se v říze[D]ní
+uprostřed [F]noci zbloudi[C]lí
+ať počí[Dm7]tám jak počí[F]tám
+{verse_2_end}
+
+{verse_3_start}
+Hustě [C]sněží, cestu [C]klikatou dlouhou
+[F]krájíme krok za kro[D]kem
+náš [C]tým [C]neohrožených žen[Am7] ............. [D]...  
+náš [C]tým [C]neohrožených žen[Am7] ............. [D]...  
+náš [C]tým [C]neohrožených žen[Am7]
+vstříc novým Vrchlabím vždy s [D]úsměvem
+{verse_3_end}
+
+{text_start}
+{verse_1}
+[C]   [G]   [Am]  [F]   
+[C]   [G]   [Am]  [F]
+{verse_2}
+{chorus}
+{verse_3}
+{chorus}
+{chorus}
+{chorus}
+{text_end}

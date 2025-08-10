@@ -7,7 +7,7 @@ Tags:České, Ploužák
 [G]Proč tě [H7]zlákal první [Emi]polibek, [C]
 první [G]polibek[D7], ale ne ten [G]máminej. [D7]
 [G]Na toho [H7]kluka teď už [Emi]nemyslíš, [C]
-teď už [G]nemyslíš[D7], chce se ti [G]plakat. 
+teď už [G]nemyslíš[D7], chce se ti [G]plakat. [D7]
 {chorus_end}
 
 {verse_1_start}
@@ -29,7 +29,7 @@ jenom si [G]myslíš, že tě [D7]nemá nikdo [G]rád. [D7]
 {verse_3_start}
 [RECITATIV]
 [G]Někdy si myslíš,[H7] že tě nemá [Emi]nikdo rád, [C]
-jsi [G]smutná a [D7]třeba pláčeš[G]. [D7]
+jsi [G]smutná a [D7]třeba pláčeš[G] .... [D7]
 [G]Každá dívka věří,[H7] že k ní [Emi]jednou přijde princ, [C]
 ten by ji vzal [G]za ruku a [D7]řekl by, lásko[G] mám tě rád. [D7]
 [G]Ve skutečnos[H7]ti  je[Emi] to ovšem jiné, [C]
@@ -41,6 +41,9 @@ a [G]ty si uvědomíš,[H7] že tě [Emi]má ně[C]kdo
 {verse_3_end}
 
 {text_start}
+
+[G]     [H7]    [Emi]   [C]
+[G]     [D7]    [G]     [D7]
 {verse_1}
 {chorus}
 {verse_2}
