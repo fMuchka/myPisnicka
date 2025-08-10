@@ -7,6 +7,7 @@ export type RefinedSong = {
   verses: string[][];
   text: string[];
   id: string;
+  firstChord: string;
 };
 
 function refine(rawSong: RawSong): RefinedSong {
@@ -38,6 +39,7 @@ function refine(rawSong: RawSong): RefinedSong {
     chorus,
     verses,
     text,
+    firstChord: '',
     id: `${author} - ${title}`,
   };
 }

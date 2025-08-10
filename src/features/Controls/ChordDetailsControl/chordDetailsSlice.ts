@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { ChordVisibility, HSystem } from './enums';
+import { ChordVisibility, HSystem, Notes } from './enums';
+import type { RootState } from '../../../app/store';
 
 export interface ChordDetailsState {
   chordVisibility: ChordVisibility;
-  transposition: number;
+  transpositionMap: { [key: string]: Notes };
   hSystem: HSystem;
   firstChord: {
     suffix: string;
@@ -18,7 +19,7 @@ export interface ChordDetailsState {
 
 const initialState: ChordDetailsState = {
   chordVisibility: ChordVisibility.UNSET,
-  transposition: 0,
+  transpositionMap: {},
   hSystem: HSystem.CZECH,
   firstChord: {
     root: '',
@@ -35,22 +36,20 @@ const chordDetailsSlice = createSlice({
       state.chordVisibility = action.payload;
     },
 
-    setTransposition: (state, action: PayloadAction<number>) => {
-      state.transposition = action.payload;
+    setTransposition: (state, action: PayloadAction<[string, Notes]>) => {
+      state.transpositionMap[action.payload[0]] = action.payload[1];
     },
 
     setHSystem: (state, action: PayloadAction<HSystem>) => {
       state.hSystem = action.payload;
     },
 
-    setFirstChord: (
-      state,
-      action: PayloadAction<{
-        suffix: string;
-        root: string;
-      }>
-    ) => {
-      state.firstChord = action.payload;
+    setFirstChordRoot: (state, action: PayloadAction<string>) => {
+      state.firstChord.root = action.payload;
+    },
+
+    setFirstChordSuffix: (state, action: PayloadAction<string>) => {
+      state.firstChord.suffix = action.payload;
     },
 
     setCurrentChords: (
@@ -72,11 +71,15 @@ const chordDetailsSlice = createSlice({
   },
 });
 
+export const transpositionMap = (state: RootState) =>
+  state.chordDetailsReducer.transpositionMap;
+
 export const {
   setTransposition,
   setHSystem,
   setChordVisibility,
-  setFirstChord,
+  setFirstChordRoot,
+  setFirstChordSuffix,
   setCurrentChords,
   resetCurrentChords,
 } = chordDetailsSlice.actions;

@@ -1,9 +1,16 @@
 .chordPreview {
   justify-content: center;
   place-content: space-evenly;
+  overflow-x: auto;
+  max-width: 350px;
 }
 
 .chordPreview > * {
   width: unset !important;
+  height: 35px;
   top: unset !important;
+  border: 1px solid currentColor;
+  border-color: var(--variant-outlinedBorder, currentColor);
+  align-content: center;
+  text-align: center;
 }

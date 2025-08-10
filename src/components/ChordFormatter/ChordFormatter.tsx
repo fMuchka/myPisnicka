@@ -5,20 +5,28 @@ import type { RefinedSong } from '../../utils/rawSongRefiner';
 import React from 'react';
 import Chord from '../Chord/Chord';
 import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from '../../app/store';
+import { currentSongTransposition, type RootState } from '../../app/store';
 import { setCurrentChords } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
-import { transposeChord } from '../../utils/transposeChord';
+import {
+  getToneCountDifference,
+  transposeChord,
+} from '../../utils/transposeChord';
+import { setSelectedSongFirstChord } from '../../features/Songs/songsSlice';
+import type { Notes } from '../../features/Controls/ChordDetailsControl/enums';
 
 export const ChordFormatter = (props: ChordFormatterProps) => {
-  const {
-    hSystem,
-    transposition: semitones,
-    currentChords,
-  } = useSelector((state: RootState) => state.chordDetailsReducer);
+  const { hSystem, currentChords } = useSelector(
+    (state: RootState) => state.chordDetailsReducer
+  );
+
+  const { selectedSong } = useSelector((state: RootState) => state.songReducer);
+
+  const currentTransposition = useSelector(currentSongTransposition);
 
   const dispatch = useDispatch();
 
   const uniqueChords = new Map<string, boolean>();
+  let firstChordSet = false;
 
   const dispatchChords = () => {
     if (currentChords.length === 0) {
@@ -69,10 +77,20 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
               );
 
               lyrics = '';
+
+              if (selectedSong?.firstChord === '' && firstChordSet === false) {
+                dispatch(setSelectedSongFirstChord(chord));
+                firstChordSet = true;
+              }
+
               const transposedChord = transposeChord(
                 chord,
                 hSystem,
-                semitones,
+                getToneCountDifference(
+                  selectedSong?.firstChord as Notes,
+                  currentTransposition,
+                  hSystem
+                ),
                 uniqueChords
               );
 

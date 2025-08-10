@@ -1,5 +1,68 @@
 import { HSystem, Notes } from '../features/Controls/ChordDetailsControl/enums';
 
+// mapping flats → sharps for lookup
+const enharmonicMap: { [key: string]: string } = {
+  Db: Notes.C_SHARP,
+  Eb: Notes.D_SHARP,
+  Gb: Notes.F_SHARP,
+  Ab: Notes.G_SHARP,
+  Bb: Notes.A_SHARP,
+};
+
+// Czech input → internal sharp names
+const inputMap: { [key: string]: string } = {
+  H: Notes.B,
+  [Notes.B]: Notes.A_SHARP,
+};
+
+// internal → Czech output names
+const outputMap: { [key: string]: string } = {
+  [Notes.A_SHARP]: Notes.B,
+  [Notes.B]: 'H',
+};
+
+// canonical sharp-based chromatic scale
+const notes = [
+  Notes.C,
+  Notes.C_SHARP,
+  Notes.D,
+  Notes.D_SHARP,
+  Notes.E,
+  Notes.F,
+  Notes.F_SHARP,
+  Notes.G,
+  Notes.G_SHARP,
+  Notes.A,
+  Notes.A_SHARP,
+  Notes.B,
+];
+
+export const getToneCountDifference = (
+  originalTone: Notes | undefined,
+  newTone: Notes | undefined,
+  hSystem: HSystem
+) => {
+  if (originalTone === undefined || newTone === undefined) return 0;
+
+  const ogToneCorrected =
+    hSystem === HSystem.CZECH
+      ? inputMap[originalTone] !== undefined
+        ? inputMap[originalTone]
+        : originalTone
+      : originalTone;
+  const newToneCorrected =
+    hSystem === HSystem.CZECH
+      ? inputMap[newTone] !== undefined
+        ? inputMap[newTone]
+        : newTone
+      : newTone;
+
+  const ogIndex = notes.findIndex((e) => e === ogToneCorrected);
+  const newIndex = notes.findIndex((e) => e === newToneCorrected);
+
+  return newIndex - ogIndex;
+};
+
 export const transposeChord = (
   chord: string,
   hSystem: HSystem,
@@ -10,47 +73,9 @@ export const transposeChord = (
   suffix: string;
   useRichDisplay: boolean;
 } => {
-  // mapping flats → sharps for lookup
-  const enharmonicMap: { [key: string]: string } = {
-    Db: Notes.C_SHARP,
-    Eb: Notes.D_SHARP,
-    Gb: Notes.F_SHARP,
-    Ab: Notes.G_SHARP,
-    Bb: Notes.A_SHARP,
-  };
-
-  // Czech input → internal sharp names
-  const inputMap: { [key: string]: string } = {
-    H: Notes.B,
-    [Notes.B]: Notes.A_SHARP,
-  };
-
-  // internal → Czech output names
-  const outputMap: { [key: string]: string } = {
-    [Notes.A_SHARP]: Notes.B,
-    [Notes.B]: 'H',
-  };
-
-  // canonical sharp-based chromatic scale
-  const notes = [
-    Notes.C,
-    Notes.C_SHARP,
-    Notes.D,
-    Notes.D_SHARP,
-    Notes.E,
-    Notes.F,
-    Notes.F_SHARP,
-    Notes.G,
-    Notes.G_SHARP,
-    Notes.A,
-    Notes.A_SHARP,
-    Notes.B,
-  ];
-
   // split root (e.g. "Eb", "F#") from the rest ("m7", "maj")
   const match = chord.match(/^([A-H][b#]?)(.*)$/);
   if (!match) {
-    // return <Chord key={renderKey} chord={chord} useRichDisplay={false} />;
     return { root: chord, suffix: '', useRichDisplay: false };
   }
   // eslint-disable-next-line prefer-const

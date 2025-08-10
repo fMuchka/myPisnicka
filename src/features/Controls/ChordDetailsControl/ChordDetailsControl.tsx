@@ -13,29 +13,52 @@ import {
   Stack,
   RadioGroup,
   Radio,
-  Slider,
+  ToggleButtonGroup,
+  ToggleButton,
+  FormControlLabel,
+  Button,
 } from '@mui/material';
-import { useCallback, useEffect, useState, type ChangeEvent } from 'react';
+import { useEffect, type ChangeEvent } from 'react';
 import { ChordVisibility, HSystem, Notes } from './enums';
 import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from '../../../app/store';
+import { currentSongTransposition, type RootState } from '../../../app/store';
 import {
   setTransposition,
   setHSystem,
   setChordVisibility,
+  setCurrentChords,
 } from './chordDetailsSlice';
 import Chord from '../../../components/Chord/Chord';
 import styles from './ChordDetailsControl.module.css';
-import { transposeChord } from '../../../utils/transposeChord';
+import {
+  getToneCountDifference,
+  transposeChord,
+} from '../../../utils/transposeChord';
 import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
 import type { ControlProps } from '../../../components/AppBars/SideBar/types';
+import useTranspositionMarks from '../../../hooks/useTranspositionMarks';
 
 const ChordDetailsToggle = (props: ControlProps) => {
-  const { hSystem, transposition, chordVisibility, firstChord, currentChords } =
-    useSelector((state: RootState) => state.chordDetailsReducer);
+  const { hSystem, chordVisibility, currentChords, firstChord } = useSelector(
+    (state: RootState) => state.chordDetailsReducer
+  );
+
+  const { selectedSong } = useSelector((state: RootState) => state.songReducer);
+
+  const currentTransposition = useSelector(currentSongTransposition);
+
   const dispatch = useDispatch();
 
-  const [transposedChords, setTransposedChords] = useState(currentChords);
+  const transpositionMarks = useTranspositionMarks();
+
+  const handleResetTransposition = () => {
+    dispatch(
+      setTransposition([
+        selectedSong?.id as string,
+        selectedSong?.firstChord as Notes,
+      ])
+    );
+  };
 
   const handleChordVisibilityChange = (
     _event: ChangeEvent<HTMLInputElement>,
@@ -56,63 +79,46 @@ const ChordDetailsToggle = (props: ControlProps) => {
     dispatch(setHSystem(newState));
   };
 
-  useEffect(() => {
+  const handleTranspositionChange = (
+    _e: unknown,
+    newFirstChord: Notes | null
+  ) => {
+    if (newFirstChord !== null) {
+      dispatch(
+        setTransposition([selectedSong?.id as string, newFirstChord as Notes])
+      );
+    }
+  };
+
+  const updateCurrentChords = () => {
     const transposedChords: typeof currentChords = [];
+
     currentChords.forEach((e) => {
-      const tChord = transposeChord(e.root + e.suffix, hSystem, transposition);
+      const tChord = transposeChord(
+        e.root + e.suffix,
+        hSystem,
+        getToneCountDifference(
+          firstChord.root as Notes,
+          currentTransposition,
+          hSystem
+        )
+      );
       transposedChords.push({ suffix: tChord.suffix, root: tChord.root });
     });
 
-    setTransposedChords(transposedChords);
-  }, [transposition, hSystem]);
-
-  const handleTranspositionChange = (transposition: number) => {
-    dispatch(setTransposition(transposition));
+    dispatch(setCurrentChords(transposedChords));
   };
 
-  const getTranspositionMarks = useCallback(() => {
-    const notes = [
-      { value: -6, label: Notes.F_SHARP },
-      { value: -5, label: Notes.G },
-      { value: -4, label: Notes.G_SHARP },
-      { value: -3, label: Notes.A },
-      { value: -2, label: hSystem === HSystem.CZECH ? Notes.B : Notes.A_SHARP },
-      { value: -1, label: hSystem === HSystem.CZECH ? 'H' : Notes.B },
-      { value: 0, label: Notes.C },
-      { value: 1, label: Notes.C_SHARP },
-      { value: 2, label: Notes.D },
-      { value: 3, label: Notes.D_SHARP },
-      { value: 4, label: Notes.E },
-      { value: 5, label: Notes.F },
-    ];
-
-    const chordIndex = notes.findIndex((e) => e.label === firstChord.root);
-
-    if (chordIndex !== -1) {
-      const val = notes[chordIndex].value;
-      notes.forEach((e) => {
-        e.value += -1 * val;
-
-        if (e.value > 5) {
-          e.value += -12;
-        }
-
-        if (e.value < -6) {
-          e.value += 12;
-        }
-
-        e.label += firstChord.suffix;
-      });
-    }
-
-    return notes;
-  }, [firstChord.root, firstChord.suffix, hSystem]);
+  useEffect(() => {
+    updateCurrentChords();
+  }, [hSystem, currentTransposition]);
 
   return (
     <Box
       sx={{
         display: 'flex',
         width: '100%',
+        maxWidth: '400px',
         alignItems: 'center',
         justifyContent: 'center',
         bgcolor: 'background.default',
@@ -147,10 +153,13 @@ const ChordDetailsToggle = (props: ControlProps) => {
         <AccordionDetails>
           <Stack spacing={2}>
             <Typography variant="body2" color="text.secondary">
-              Viditelnost
+              Viditelnost akordů
             </Typography>
             <RadioGroup
-              sx={{ display: 'flex', flexDirection: 'row' }}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+              }}
               aria-labelledby="chord-visibility-toggle"
               value={chordVisibility}
               onChange={(e, value) =>
@@ -170,50 +179,76 @@ const ChordDetailsToggle = (props: ControlProps) => {
                 checkedIcon={<VisibilityOff />}
               />
             </RadioGroup>
+            <Typography variant="body2" color="text.secondary">
+              Zápis H a B
+            </Typography>
             <RadioGroup
               sx={{ display: 'flex', flexDirection: 'row' }}
               aria-labelledby="hSystem-toggle"
               value={hSystem}
               onChange={(e, value) => handleHSystemChange(e, value as HSystem)}
             >
-              <Typography variant="body2" color="text.secondary">
-                Anglosaské B / A#
-                <Radio value={HSystem.WORLD} aria-label="world" />
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                České/německé H / B
-                <Radio value={HSystem.CZECH} aria-label="czech" />
-              </Typography>
+              <FormControlLabel
+                value={HSystem.WORLD}
+                aria-label="world"
+                control={<Radio size="small" sx={{ fontSize: '8px' }} />}
+                label="Anglosaské B / A#"
+                labelPlacement="top"
+              />
+              <FormControlLabel
+                value={HSystem.CZECH}
+                aria-label="czech"
+                control={<Radio size="small" />}
+                label="České (německé) H / B"
+                labelPlacement="top"
+              />
             </RadioGroup>
             <Typography variant="body2" color="text.secondary">
-              Transpozice: {transposition}
+              Transpozice
             </Typography>
 
             <Box
               sx={{
-                padding: '5px',
-                width: '90%',
                 display: 'flex',
                 alignSelf: 'center',
+                flexDirection: 'column',
+                paddingBottom: '1rem',
+                width: '100%',
               }}
             >
-              <style>
-                {`.MuiSlider-markLabel {
-                  font-size: 12px;
-                }`}
-              </style>
-              <Slider
-                min={-6}
-                max={5}
-                marks={getTranspositionMarks()}
-                step={1}
-                defaultValue={0}
-                onChange={(_e, value) => handleTranspositionChange(value)}
-              />
+              <Button
+                style={{ marginBottom: '1rem', width: '80px' }}
+                variant="outlined"
+                onClick={() => handleResetTransposition()}
+                disabled={
+                  selectedSong?.firstChord ===
+                  firstChord.root + firstChord.suffix
+                }
+              >
+                Reset
+              </Button>
+              <ToggleButtonGroup
+                color="primary"
+                value={firstChord == null ? '' : firstChord.root}
+                disabled={firstChord == null}
+                exclusive
+                onChange={handleTranspositionChange}
+                sx={{ gridTemplateColumns: 'repeat(6, 1fr)', display: 'grid' }}
+              >
+                {transpositionMarks.map((e) => (
+                  <ToggleButton value={e.value}>{e.label}</ToggleButton>
+                ))}
+              </ToggleButtonGroup>
             </Box>
 
-            <Stack direction={'row'} className={styles.chordPreview}>
-              {transposedChords.map((chord, idx) => (
+            <Typography variant="body2" color="text.secondary">
+              Akordy v písni
+            </Typography>
+            <Stack
+              className={styles.chordPreview}
+              sx={{ gridTemplateColumns: 'repeat(3, 1fr)', display: 'grid' }}
+            >
+              {currentChords.map((chord, idx) => (
                 <Chord
                   chord={chord.root + chord.suffix}
                   key={idx}

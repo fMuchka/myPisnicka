@@ -9,7 +9,8 @@ import type { RefinedSong } from '../../utils/rawSongRefiner';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   resetCurrentChords,
-  setFirstChord,
+  setFirstChordRoot,
+  setFirstChordSuffix,
 } from '../../features/Controls/ChordDetailsControl/chordDetailsSlice';
 import type { RootState } from '../../app/store';
 import { setSelectedSong } from './songsSlice';
@@ -44,7 +45,8 @@ const SongSelector = () => {
     const selected = songs?.find((s) => s.id === songId);
 
     if (selected !== undefined) {
-      dispatch(setFirstChord({ root: '', suffix: '' }));
+      dispatch(setFirstChordRoot(''));
+      dispatch(setFirstChordSuffix(''));
       dispatch(resetCurrentChords());
       dispatch(setSelectedSong(selected));
     }
@@ -60,9 +62,15 @@ const SongSelector = () => {
           return 'Ups...';
         }
 
-        return option.label.split(' - ')[0];
+        const authorWithSongNumber: string = option.label.split(' - ')[0];
+        const delimiterPosition = authorWithSongNumber.indexOf(')');
+        const author = authorWithSongNumber
+          .substring(delimiterPosition + 1)
+          .trim();
+
+        return author;
       }}
-      renderInput={(params) => <TextField {...params} label="Song" />}
+      renderInput={(params) => <TextField {...params} label="Píseň" />}
       renderGroup={(params) => (
         <li key={params.key}>
           <GroupHeader>{params.group}</GroupHeader>
