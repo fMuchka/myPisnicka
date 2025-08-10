@@ -1,6 +1,9 @@
 import { Button, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 const InfoView = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Typography variant="h5">My Písnička</Typography>
@@ -52,7 +55,9 @@ const InfoView = () => {
         sx={{ marginBottom: '3rem' }}
         variant="outlined"
         fullWidth
-        href="/my-pisnicka/ListView"
+        onClick={() =>
+          navigate('/my-pisnicka/ListView', { viewTransition: true })
+        }
       >
         Přejít na písně
       </Button>
