@@ -221,8 +221,10 @@ const ChordDetailsToggle = (props: ControlProps) => {
                 variant="outlined"
                 onClick={() => handleResetTransposition()}
                 disabled={
-                  selectedSong?.firstChord ===
-                  firstChord.root + firstChord.suffix
+                  firstChord == null
+                    ? true
+                    : selectedSong?.firstChord ===
+                      firstChord.root + firstChord.suffix
                 }
               >
                 Reset
