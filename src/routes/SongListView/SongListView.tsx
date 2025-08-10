@@ -56,7 +56,7 @@ const SongListView = () => {
   const dispatch = useDispatch();
 
   const handleSongClick = (song: RefinedSong) => {
-    navigate('/my-pisnicka/', { viewTransition: true });
+    navigate('/my-pisnicka/SongView', { viewTransition: true });
     dispatch(setSelectedSong(song));
   };
 
@@ -94,7 +94,7 @@ const SongListView = () => {
 
       if (textFilter !== '') {
         songsFilteredByText = songsFilteredByText.filter((e) =>
-          e.id.includes(textFilter)
+          e.id.toUpperCase().includes(textFilter.toUpperCase())
         );
       }
 
@@ -183,14 +183,16 @@ const SongListView = () => {
           onChange={(e) => filterByText(e)}
         />
         {displaySongs?.map((song, idx) => (
-          <Button
-            sx={{ placeContent: 'space-between', textAlign: 'start' }}
-            key={idx}
-            onClick={() => handleSongClick(song)}
-            fullWidth
-          >
-            {song.id}
-            <Stack direction={'row'} justifyContent={'right'}>
+          <>
+            <Button
+              sx={{ placeContent: 'space-between', textAlign: 'start' }}
+              key={idx}
+              onClick={() => handleSongClick(song)}
+              fullWidth
+            >
+              {song.id}
+            </Button>
+            <Stack direction={'row'}>
               {song.tags.map((t, tIdx) => (
                 <Chip
                   size="small"
@@ -204,7 +206,7 @@ const SongListView = () => {
                 />
               ))}
             </Stack>
-          </Button>
+          </>
         ))}
       </Stack>
     </>

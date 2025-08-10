@@ -31,6 +31,7 @@ const SideBar = (props: SideBarProps) => {
   return (
     <Drawer
       anchor={'right'}
+      sx={{ maxWidth: '400px' }}
       open={props.openDrawer}
       onClose={() => props.setOpenDrawer(false)}
     >

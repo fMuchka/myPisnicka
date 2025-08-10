@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
 const InfoView = () => {
   return (
@@ -47,6 +47,15 @@ const InfoView = () => {
       <Typography variant="h5" marginBottom={'1rem'} textAlign={'end'}>
         .fm97
       </Typography>
+
+      <Button
+        sx={{ marginBottom: '3rem' }}
+        variant="outlined"
+        fullWidth
+        href="/my-pisnicka/ListView"
+      >
+        Přejít na písně
+      </Button>
     </>
   );
 };

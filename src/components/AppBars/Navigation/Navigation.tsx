@@ -76,13 +76,13 @@ const Navigation = (props: NavigationProps) => {
               padding: '16px',
             }}
             onClick={() => {
-              navigate('/my-pisnicka/', { viewTransition: true });
+              navigate('/my-pisnicka/SongView', { viewTransition: true });
               props.setOpenNavigation(false);
             }}
             fullWidth
             startIcon={<LibraryMusic />}
           >
-            Hlavní stránka
+            Přehrání písně
           </Button>
         </Paper>
 
