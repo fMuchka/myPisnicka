@@ -3,25 +3,36 @@ import HideOnScroll from '../../MUIAppBarUtils/HideOnScroll/HideOnScroll';
 import SideBar from '../SideBar/SideBar';
 import { useState } from 'react';
 import { Menu, Tune } from '@mui/icons-material';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
 
-import { startScroll } from '../../../features/Controls/ScrollControl/scrollSlice';
 import { useLocation } from 'react-router';
 import Navigation from '../Navigation/Navigation';
+import { useAutoScroll } from '../../../hooks/useAutoScroll';
 
 const TopBar = () => {
   const { primaryColor, colorScheme } = useSelector(
     (state: RootState) => state.themeReducer
   );
+
+  const { scrollStartDelay } = useSelector(
+    (state: RootState) => state.scrollReducer
+  );
+
   const location = useLocation();
 
-  const dispatch = useDispatch();
+  const { startScroll } = useAutoScroll();
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const getColor = () => (colorScheme == 'dark' ? primaryColor : '#FFFFFF');
+
+  const handleScrollStart = () => {
+    setTimeout(() => {
+      startScroll();
+    }, scrollStartDelay * 1000);
+  };
 
   return (
     <HideOnScroll>
@@ -56,17 +67,23 @@ const TopBar = () => {
             </Button>
 
             <Button
-              onClick={() => dispatch(startScroll())}
+              onClick={() => handleScrollStart()}
               size="small"
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
+                flexDirection: 'column',
                 color: getColor(),
                 visibility:
-                  location.pathname === '/my-pisnicka/' ? 'visible' : 'hidden',
+                  location.pathname === '/my-pisnicka/SongView'
+                    ? 'visible'
+                    : 'hidden',
               }}
             >
               Zapni posun
+              <span style={{ fontSize: '0.7rem' }}>
+                (se zpožděním {scrollStartDelay}s)
+              </span>
             </Button>
 
             <Button

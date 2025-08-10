@@ -35,10 +35,7 @@ import {
 } from '../features/Controls/ThemeControl/themeSlice';
 import TopBar from '../components/AppBars/TopBar/TopBar';
 
-import {
-  setScrollSpeed,
-  stopScroll,
-} from '../features/Controls/ScrollControl/scrollSlice';
+import { setScrollSpeed } from '../features/Controls/ScrollControl/scrollSlice';
 import { setFontSize } from '../features/Controls/FontSizeControl/fontSizeSlice';
 import { updateCookieAcceptState } from '../features/Cookies/cookieSlice';
 import { BrowserRouter, Route } from 'react-router';
@@ -47,6 +44,7 @@ import { Routes } from 'react-router';
 import SongListView from '../routes/SongListView/SongListView';
 import { loadSongs } from '../features/Songs/songsSlice';
 import InfoView from '../routes/InfoView/InfoView';
+import { useAutoScroll } from '../hooks/useAutoScroll';
 
 function App() {
   const { primaryColor, colorScheme } = useSelector(
@@ -58,6 +56,8 @@ function App() {
   const { songs } = useSelector((state: RootState) => state.songReducer);
 
   const dispatch = useDispatch();
+
+  const { stopScroll } = useAutoScroll();
 
   const { setColorScheme: setColorSchemeMUI } = useColorScheme();
 
@@ -95,13 +95,9 @@ function App() {
   useEffect(() => {
     if (!isScrolling) return;
 
-    let lastScrollY = window.scrollY;
     const handleUserScroll = () => {
       // If scroll position changes by user, stop autoscroll
-      if (Math.abs(window.scrollY - lastScrollY) > 10) {
-        dispatch(stopScroll());
-      }
-      lastScrollY = window.scrollY;
+      stopScroll();
     };
 
     window.addEventListener('wheel', handleUserScroll, { passive: true });
@@ -113,7 +109,7 @@ function App() {
       window.removeEventListener('touchmove', handleUserScroll);
       window.removeEventListener('keydown', handleUserScroll);
     };
-  }, [isScrolling, dispatch]);
+  }, [isScrolling, stopScroll]);
 
   useEffect(() => {
     if (!songs) {
@@ -169,8 +165,9 @@ function App() {
           <BrowserRouter>
             <TopBar />
             <Routes>
-              <Route path="/my-pisnicka/" element={<SongView />} />
               <Route path="/my-pisnicka/ListView" element={<SongListView />} />
+              <Route path="/my-pisnicka/SongView" element={<SongView />} />
+              <Route path="/my-pisnicka/" element={<InfoView />} />
               <Route path="/my-pisnicka/Info" element={<InfoView />} />
             </Routes>
           </BrowserRouter>

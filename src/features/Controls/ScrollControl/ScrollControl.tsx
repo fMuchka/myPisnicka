@@ -21,15 +21,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
 import {
   decrementScrollSpeed,
+  decrementScrollStartDelay,
   incrementScrollSpeed,
+  incrementScrollStartDelay,
   resetScrollSpeed,
-  stopScroll,
+  resetScrollStartDelay,
 } from './scrollSlice';
 import type { ControlProps } from '../../../components/AppBars/SideBar/types';
 import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
+import { useAutoScroll } from '../../../hooks/useAutoScroll';
 
 const ScrollToggle = (props: ControlProps) => {
-  const { scrollSpeed } = useSelector(
+  const { scrollSpeed, scrollStartDelay } = useSelector(
     (state: RootState) => state.scrollReducer
   );
   const { cookieAcceptState } = useSelector(
@@ -37,9 +40,14 @@ const ScrollToggle = (props: ControlProps) => {
   );
   const dispatch = useDispatch();
 
-  const handleReset = () => {
+  const { stopScroll } = useAutoScroll();
+
+  const handleResetScrollSpeed = () => {
     dispatch(resetScrollSpeed());
-    dispatch(stopScroll());
+    stopScroll();
+  };
+  const handleResetScrollStartDelay = () => {
+    dispatch(resetScrollStartDelay());
   };
 
   useEffect(() => {
@@ -93,7 +101,7 @@ const ScrollToggle = (props: ControlProps) => {
             <ButtonGroup>
               <Button
                 disabled={scrollSpeed === 1}
-                onClick={() => handleReset()}
+                onClick={() => handleResetScrollSpeed()}
               >
                 Reset
               </Button>
@@ -107,6 +115,27 @@ const ScrollToggle = (props: ControlProps) => {
                 disabled={scrollSpeed === 10}
                 onClick={() => dispatch(incrementScrollSpeed())}
               >
+                <Add />
+              </Button>
+            </ButtonGroup>
+
+            <Typography variant="body2" color="text.secondary">
+              Zpoždění posunu po zapnutí: {scrollStartDelay}s
+            </Typography>
+            <ButtonGroup>
+              <Button
+                disabled={scrollStartDelay === 3}
+                onClick={() => handleResetScrollStartDelay()}
+              >
+                Reset
+              </Button>
+              <Button
+                disabled={scrollStartDelay === 0}
+                onClick={() => dispatch(decrementScrollStartDelay())}
+              >
+                <Remove />
+              </Button>
+              <Button onClick={() => dispatch(incrementScrollStartDelay())}>
                 <Add />
               </Button>
             </ButtonGroup>

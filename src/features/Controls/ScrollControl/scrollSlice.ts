@@ -4,47 +4,23 @@ export interface ScrollState {
   scrollSpeed: number;
   isScrolling: boolean;
   scrollIntervalId: NodeJS.Timeout | null;
+  scrollStartDelay: number;
 }
 
 const initialState: ScrollState = {
   scrollSpeed: 1,
   isScrolling: false,
   scrollIntervalId: null,
+  scrollStartDelay: 3,
 };
 
 export const scrollSlice = createSlice({
   name: 'scroll',
   initialState,
   reducers: {
-    startScroll: (state) => {
-      if (state.isScrolling || state.scrollSpeed === 0) return;
-
-      state.isScrolling = true;
-
-      const scrollSpeed = state.scrollSpeed;
-
-      state.scrollIntervalId = setInterval(() => {
-        const { scrollTop, scrollHeight, clientHeight } =
-          document.documentElement;
-
-        const scrollStep = 0.5 * scrollSpeed;
-        if (scrollTop + clientHeight >= scrollHeight - 1) {
-          state.isScrolling = false;
-          return;
-        }
-        window.scrollBy({ top: scrollStep, behavior: 'smooth' });
-      }, 62);
+    setScrollStatus: (state, action: PayloadAction<boolean>) => {
+      state.isScrolling = action.payload;
     },
-
-    stopScroll: (state) => {
-      if (state.scrollIntervalId) {
-        clearInterval(state.scrollIntervalId);
-        state.scrollIntervalId = null;
-      }
-
-      state.isScrolling = false;
-    },
-
     incrementScrollSpeed: (state) => {
       state.scrollSpeed++;
     },
@@ -60,15 +36,31 @@ export const scrollSlice = createSlice({
     setScrollSpeed: (state, action: PayloadAction<number>) => {
       state.scrollSpeed = action.payload;
     },
+
+    incrementScrollStartDelay: (state) => {
+      state.scrollStartDelay += 0.5;
+    },
+
+    decrementScrollStartDelay: (state) => {
+      if (state.scrollStartDelay > 0) state.scrollStartDelay -= 0.5;
+    },
+
+    resetScrollStartDelay: (state) => {
+      state.scrollStartDelay = initialState.scrollStartDelay;
+    },
   },
 });
 
 export const {
+  setScrollStatus,
   decrementScrollSpeed,
   incrementScrollSpeed,
+  incrementScrollStartDelay,
+  decrementScrollStartDelay,
   resetScrollSpeed,
+  resetScrollStartDelay,
   setScrollSpeed,
-  startScroll,
-  stopScroll,
+  // startScroll,
+  // stopScroll,
 } = scrollSlice.actions;
 export default scrollSlice.reducer;

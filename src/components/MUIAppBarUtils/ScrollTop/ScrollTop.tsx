@@ -1,12 +1,11 @@
 import { useScrollTrigger, Fade, Box } from '@mui/material';
 import type { ScrollTopProps } from './types';
-import { useDispatch } from 'react-redux';
-import { stopScroll } from '../../../features/Controls/ScrollControl/scrollSlice';
+import { useAutoScroll } from '../../../hooks/useAutoScroll';
 
 const ScrollTop = (props: ScrollTopProps) => {
   const { children } = props;
 
-  const dispatch = useDispatch();
+  const { stopScroll } = useAutoScroll();
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -17,7 +16,7 @@ const ScrollTop = (props: ScrollTopProps) => {
     event.preventDefault();
     event.stopPropagation();
 
-    dispatch(stopScroll());
+    stopScroll();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
