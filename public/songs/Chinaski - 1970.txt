@@ -1,0 +1,53 @@
+Author:Chinaski
+Title:1970
+
+Tags:České
+
+{verse_1_start}
+[D]Nevím jestli je to [Emi]znát, možná by bylo lepší lhát[F#mi],  
+jsem silnej ročník se[G]dmdesát, tak začni počítat.
+
+[D]Nechci tu hloupě vzp[Emi]omínat, koho taky dneska zajímá[F#mi],  
+silnej ročník se[G]dmdesát, tak začni počítat.
+
+[D]Tenkrát tu bejval [Emi]jinej stát a já byl blbej na [F#mi]kvadrát,  
+jsem silnej ročník se[G]dmdesát, třeba například…[A]
+{verse_1_end}
+
+{chorus_1_start}
+[A]Naši mi vždycky říka[Hmi]li, jen nehas co tě nepá[G]lí,  
+jakej pán takovej [D]krám.  [A]
+[A]Naši mi vždycky říka[Hmi]li, co můžeš sleduj zpovzdá[G]lí,  
+a nikdy nebojuj [D]sám.  
+{chorus_1_end}
+
+{verse_2_start}
+[D]Nevím jestli je to [Emi]znát, možná by bylo lepší lhát[F#mi],  
+jsem silnej ročník se[G]dmdesát, nemohl jsem si vybírat.  
+[D]Tak mi to přestaň vy[Emi]čítat, naříkat co jsem za pří[F#mi]pad,  
+jsem silnej ročník se[G]dmdesát a [G]možná, že jsem rád. [A] 
+{verse_2_end}
+
+{verse_3_start}
+Čas [G]pádí, čas letí, těžko ta [A]léta vrátíš zpět  
+a tak i [D]Husákovy děti dospěly [Emi]do Kristových let  
+Čas [G]pádí, čas letí a je to [A]zvláštní svět  
+a tak i [D]Husákovy děti dospěly [Emi]do Kristových [G]let  
+{verse_3_end}
+
+{verse_4_start}
+Čas [G]pádí, čas letí, těžko ta [A]léta vrátíš zpět  
+a tak i [D]Husákovy děti dospěly [Emi]do Kristových let  
+Čas [G]pádí, čas letí a je to [A]zvláštní svět  
+a tak i [D]Husákovy děti dospěly [Emi]do Kristových [G]let  
+[G]Čas pádí, čas letí…  
+{verse_4_end}
+
+{text_start}
+{verse_1}  
+{chorus_1}  
+{verse_2}  
+{chorus_1}  
+{verse_3}  
+{verse_4}  
+{text_end}

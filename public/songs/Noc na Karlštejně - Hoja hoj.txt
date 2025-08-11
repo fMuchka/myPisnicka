@@ -3,13 +3,12 @@ Title:Hoja hoj
 
 Tags: České, Pohádky
 
-{chorus_start}
+{chorus_1_start}
 [A]Hoja hoj, [D] hoja hoj [E7]v králi máme [A]zastání
 [A]hoja hoj, [D] hoja hoj [E7]Bůh nás zachrá[A]ní
 [A]hoja hoj, [D] hoja hoj [E7]hmoždíře a [A]palcáty
 [A]hoja hoj, [D] hoja hoj [E7]holky voka[A]tý
-
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 [A]Chceš-li [E]na světě [H]býti převe[E]sel
@@ -34,10 +33,10 @@ Tags: České, Pohádky
 {text_start}
 {verse_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {verse_3}
 {verse_4}
-{chorus}
-{chorus}
-{chorus}
+{chorus_1}
+{chorus_1}
+{chorus_1}
 {text_end}

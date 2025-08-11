@@ -3,47 +3,47 @@ Title:Budu všechno co si budeš přát
 
 Tags: České
 
-{chorus_start}
+{chorus_1_start}
 [G]Bláznem, co staví na poušti [D]most
-a v dešti tančí [H]pro radost,
-[Em]budu všechno co si budeš [C]přát.[D]
+a v dešti [D7]tančí [H7]pro radost[Em],
+budu vše[Em]chno co si budeš [C]přát.[D]
 [G]Slunečním světlem a půlnoční [D]tmou,
-Tvou stopou v písku [Hm]ztracenou.
-[Em]Budu všechno co si budeš [C]přát
-[D]a ještě k tomu rád!
-{chorus_end}
+Tvou stopou v [D7]písku[H7] ztrace[Em]nou.
+Budu všec[Em]hno co si budeš [C]přát
+[D]a ještě k tomu [G]rád!
+{chorus_1_end}
 
 {verse_1_start}
-[G]Záplavou, [G7] uprostřed [D]pouště všedních dní[G],
-[G]houslistou[G7], Cco Tvoje [D]struny rozezní[Em],
-[Em]můžu [C]být,[D] když si to budeš přát.[G]
+[G]Zápla[G7]vou, [C] uprostřed [D]pouště všedních dní[G],
+[G]housli[G7]stou, [C] co Tvoje [D]struny rozezní[Em],
+můžu [C]být, [D] když si to budeš přát.[G]
 {verse_1_end}
 
 {verse_2_start}
-[G]Požárem,[G7] co rozpá[D]lí Tě do běla, [G]
-[G]zlodějem,[G7] co státní [D]banku udělá[Em],
+[G]Požár[G7]em, [C] co rozpá[D]lí Tě do běla, [G]
+[G]zlodě[G7]jem, [C] co státní [D]banku udělá[Em],
 [Em]můžu [C]být, [D] když si to budeš přát.[G]
 {verse_2_end}
 
 {verse_3_start}
-[G]Šachistou,[G7] co pátým [D]tahem dává mat[G],
-[G]svítáním,[G7] ve tmě, kde [D]začala ses bát,[Em]
-[Em]můžu [C]být, [D]když si to budeš přát[G].
+[G]Šachis[G7]tou, [C] co pátým ta[D]hem dává mat[G],
+[G]svítá[G7]ním, [C] ve tmě, kde za[D]čala ses bát,[Em]
+můžu [C]být, [D] když si to budeš přát[G].
 {verse_3_end}
 
 {verse_4_start}
-[G]Má[G7]š to mí[C]t, k[D]dyž si to budeš přát!
-[G]Má[G7]š to mí[C]t, k[D]dyž si to budeš přát!
-[G]Má[G7]š to mí[C]t, k[D]dyž si to budeš přát!
-[G]Má[G7]š to mí[C]t, k[D]dyž si to budeš přát!
+[G]Má[G7]š to mí[C]t, [D]když si to budeš [G]přát!
+[G]Má[G7]š to mí[C]t, [D]když si to budeš [G]přát!
+[G]Má[G7]š to mí[C]t, [D]když si to budeš [G]přát!
+[G]Má[G7]š to mí[C]t, [D]když si to budeš [G]přát!
 {verse_4_end}
 
 {text_start}
 {verse_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {verse_3}
-{chorus}
-{chorus}
+{chorus_1}
+{chorus_1}
 {verse_4}
 {text_end}

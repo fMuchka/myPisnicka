@@ -33,29 +33,26 @@ Tags: České, Ploužák
 {verse_4_end}
 
 {verse_5_start}
-[A]I kdybych vzplál jak pocho[Hm7]deň nikdy [A]nezapomeň
+I kdybych [A]vzplál jak pocho[Hm7]deň nikdy [A]nezapomeň[Hm7]
 [Cmaj7]pro mě jseš dál[E] pěkná, pěkná, pěkná
+[A]......[Hm7].........[A]......[Hm7]
+[Cmaj7]zůstaneš dál[E] pěkná, pěkná, pěkná.
+[A]......[Hm7].........[A]......[Hm7]
 {verse_5_end}
 
 {text_start}
 
-[A]  [Hm7]  [A]  [Hm7]
-[A]  [Hm7]  [A]  [Hm7]
+[A][Hm7][A][Hm7]
+[A][Hm7][A][Hm7]
 {verse_1}
-
-[A]  [Hm7]  [A]  [Hm7]
-[A]  [Hm7]  [A]  [Hm7]
+[A][Hm7][A][Hm7]
+[A][Hm7][A][Hm7]
 {verse_2}
-
-[A]  [Hm7]  [A]  [Hm7]
-[D]  [Em7]  [D]  [Em7]
-[D]  [Em7]  [D]  [Em7]
+[A][Hm7][A][Hm7]
+[D][Em7][D][Em7]
+[D][Em7][D][Em7]
 {verse_3}
-
-[A]  [Hm7]  [A]  [Hm7]
+[A][Hm7][A][Hm7]
 {verse_4}
 {verse_5}
-
-[A]  [Hm7]  [A]  [Hm7]
-[A]  [Hm7]  [A]  [Hm7]
 {text_end}

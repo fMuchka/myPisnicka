@@ -1,0 +1,47 @@
+Author:Chinaski
+Title:První signální
+
+Tags:České, Ploužák
+
+{chorus_1_start}
+Za [Hm]spoustu dní, možná za [D]spoustu let
+až se mi [A]rozední, budu ti [E]vyprávět
+na první [Hm]signální, jak jsem [D]vobletěl svět
+jak tě to [A]vomámí a [E]nepustí zpět
+jaký si to [G]uděláš, [C]takový to [Em7]máš
+jaký si to [G]uděláš, [C]takový to [Em7]máš
+{chorus_1_end}
+
+{verse_1_start}
+Až si [A]zejtra ráno [D]řeknu zase: [F#m]jednou provždy dost
+[A]právem se mi [D]budeš tiše [F#m]smát
+jak [A]omluvit si [D]svoji slabost, [F#m]nenávist a zlost
+když [A]za všechno si [D]můžu vlastně [F#m]sám
+{verse_1_end}
+
+{verse_2_start}
+Až se [A]dneska večer [D]budu tvářit [F#m]zas jak Karel Gott
+[A]budu zpívat [D]vampapidam[F#m]pam
+všechna [A]sláva, polní [D]tráva, ale [F#m]peníz přijde vhod
+[A]jak jsem si to [D]udělal, tak to [F#m]mám
+{verse_2_end}
+
+{chorus_2_start}
+Nánana [Hm]nánana, nánana [D]nánana
+nánana [A]nánana, nánana [E]nánana
+nánana [Hm]nánana, nánana [D]nánana
+nánana [A]nánana, nánana [E]nánana
+jaký si to [G]uděláš, [C]takový to [Em7]máš
+jaký si to [G]uděláš, [C]takový to [Em7]máš
+{chorus_2_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+[G][C][Em7]
+[G][C][Em7]
+{chorus}
+{chorus_2}
+{text_end}

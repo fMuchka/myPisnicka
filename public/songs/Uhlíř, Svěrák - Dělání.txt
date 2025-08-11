@@ -3,12 +3,12 @@ Title:Dělání
 
 Tags: České, Pohádky
 
-{chorus_start}
+{chorus_1_start}
 [G]Dělání, [A7]dělání, [D] všechny smutky [G]zahání,
 [Em]dělání, [A7] dělání je [D]lék. [D7]
 [G]Dělání, [A7] dělání,[D] to nám úsměv [G]zachrání,
 [Em]dělání, [A7] dělání je [D]lék.
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 [D]Když máš srdce zjihlé, [G] když máš potíže,
@@ -30,7 +30,7 @@ Tags: České, Pohádky
 
 {text_start}
 {verse_1}
-{chorus}
+{chorus_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {text_end}

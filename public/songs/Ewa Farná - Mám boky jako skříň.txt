@@ -3,43 +3,43 @@ Title:Mám boky jako skříň
 
 Tags: České
 
-{chorus_start}
-Moje [H]máma mi říkala
-neboj se malič[C#m]ká
-moje [F#]máma mi říkala
-krásná jsi celič[H]ká
+{chorus_1_start}
+Moje [F#]máma mi říkala
+neboj se malič[G#mi]ká
+moje [C#]máma mi říkala
+krásná jsi celič[F#]ká
 i Když doma mě chválí
-tak na Miss mě nevza[C#m]li
-čert to [F#]vem, vždyť můj život je sladký, jak BON PA[H]RI
-{chorus_end}
+tak na Miss mě nevza[G#mi]li
+čert to [C#]vem, vždyť můj život je sladký, jak BON PA[F#]RI
+{chorus_1_end}
 
 {verse_1_start}
 Mám prostě od Pánbíčka
-[H]boky jako skříň, jako skříň, co naplat
-když [C#m]k tomu ráda jím, ráda jím, co naplat
-o [F#]liposukci vím, dobře vím, však za plat 
-si [H]život osladím, osladím. 
+[F#]boky jako skříň, jako skříň, co naplat
+když [G#mi]k tomu ráda jím, ráda jím, co naplat
+o [C#]liposukci vím, dobře vím, však za plat 
+si [F#]život osladím, osladím. 
 {verse_1_end}
 
 {verse_2_start}
-[H]Noviny pročítám, no to je síla
-[C#m]prý zase přibírám, málo se hlídám
-[F#]prostě si trsám, trsám, až vzduchem lítaj prsa
-[H]kašlu vám na půst, vždyť ženský má být kus
+[F#]Noviny pročítám, no to je síla
+[G#mi]prý zase přibírám, málo se hlídám
+[C#]prostě si trsám, trsám, až vzduchem lítaj prsa
+[F#]kašlu vám na půst, vždyť ženský má být kus
 {verse_2_end}
 
 {verse_3_start}
-[H]S vozíkem projíždím labyrint Tesca,
-[C#m]hledám svý XXL, všude jen S-ka.
-[F#]a míjím tyčky, tyčky, samý bulimičky,
-[H]zhubněte si na kost, ale já mám toho dost.
+[F#]S vozíkem projíždím labyrint Tesca,
+[G#mi]hledám svý XXL, všude jen S-ka.
+[C#]a míjím tyčky, tyčky, samý bulimičky,
+[F#]zhubněte si na kost, ale já mám toho dost.
 {verse_3_end}
 
 {verse_4_start}
-To víš, [H]kluci chtěj
-na noc barbíny co [C#m]nemyslej
-a když jim [F#]není hej
-přicu[H]pitaj na tvůj práh
+To víš, [F#]kluci chtěj
+na noc barbíny co [G#mi]nemyslej
+a když jim [C#]není hej
+přicu[F#]pitaj na tvůj práh
 chtěj zahřát a maj hlad
 {verse_4_end}
 
@@ -47,12 +47,11 @@ chtěj zahřát a maj hlad
 {verse_1}
 {verse_2}
 {verse_3}
-{chorus}
+{chorus_1}
 {verse_1}
-{chorus}
+{verse_4}
+{chorus_1}
 {verse_1}
 {verse_1}
 {verse_1}
-
-[H]Tarara, papam
 {text_end}

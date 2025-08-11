@@ -3,7 +3,7 @@ Title:Malování
 
 Tags: České
 
-{chorus_start}
+{chorus_1_start}
 [G]To je to tvoje [Am]malování, [F]vzdušnejch [G]zámků,
 [Am]malování po zdech [F]holejma [G]rukama
 tě [Am]nezachrání, už [F]máš na kah[G]ánku
@@ -12,7 +12,7 @@ Je to [Am]za náma, ty čteš [F]poslední [G]stránku,
 [Am]za náma,[F] na z[G]ádech,
 [Am]za náma, už [F]máš na kah[G]ánku,
 [Am]mezi náma, [F] mi taky d[Dm]ošel d[Em]ech
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 [Am]Nesnaž se, znáš se, [F] řekni mi [G]co je ji[Am]ný,
@@ -35,9 +35,9 @@ noci dlouhý [F]jsou plný [G]touhy a [Am]lásky nás tří[F]
 {text_start}
 {verse_1}
 {verse_2}
-{chorus}
-[Am]  [F]  [G]  [Am]
-[Dm]  [Em]
-{chorus}
+{chorus_1}
+[Am][F][G][Am]
+[Dm][Em]
+{chorus_1}
 {verse_3}
 {text_end}

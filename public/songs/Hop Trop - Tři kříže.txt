@@ -3,12 +3,12 @@ Title:Tři kříže
 
 Tags: České, Táborová
 
-{chorus_start}
+{chorus_1_start}
 Jen tři [F]kříže z bí[C]lýho kame[Am]ní
 někdo [Dm]do písku [C]posklá[Dm]dal.
 Slzy v [F]očích měl a v [C]ruce znave[Am]ný,
 lodní [Dm]deník, co [C]sám do něj [Dm]psal.
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 [Dm]Dávám sbohem všem [C]břehům prokla[Am]tejm,
@@ -41,11 +41,11 @@ Svědomí měl, [C]vedle nich si [Am]klek. [Dm]
 
 {text_start}
 {verse_1}
-{chorus}
+{chorus_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {verse_3}
-{chorus}
+{chorus_1}
 {verse_4}
-{chorus}
+{chorus_1}
 {text_end}

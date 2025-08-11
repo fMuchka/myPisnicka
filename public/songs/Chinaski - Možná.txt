@@ -3,54 +3,54 @@ Title:Možná
 
 Tags:České
 
-{chorus_start}
-[Aadd9]Možná se ti [Bsus4]zdá
+{chorus_1_start}
+[A]Možná se ti [H]zdá
 slova [C#m]jsou zmatený
-[Aadd9]dělám, co se [Bsus4]dá
-věřím [C#m]na usmíření
-[Aadd9]možná se ti [Bsus4]zdá
+[A]dělám, co se [H]dá
+věřím [F#m]na usmíření
+[A]možná se ti [H]zdá
 možná [C#m]máš tušení
-[Aadd9]dělám, co se [Bsus4]dá
-věřím [F#7sus4]na usmíření 
-{chorus_end}
+[A]dělám, co se [H]dá
+věřím [F#]na usmíření 
+{chorus_1_end}
 
 {verse_1_start}
-[F#m]Víš, kde mám svý [A]slabý místa, [E]vím, že o nich [Badd9]víš
-[F#m]každopádně [A]si buď jistá, [E]ještě o mně [Badd9]uslyšíš
-[F#m]víš, kde mám svý [A]starý šrámy [E]v sobě ukry[Badd9]tý
-[F#m]zůstane to [A]mezi námi [E]nadosmrti [Badd9]zabitý 
+[F#m]Víš, kde mám svý [A]slabý místa, [E]vím, že o nich [H]víš
+[F#m]každopádně [A]si buď jistá, [E]ještě o mně [H]uslyšíš
+[F#m]víš, kde mám svý [A]starý šrámy [E]v sobě ukry[H]tý
+[F#m]zůstane to [A]mezi námi [E]nadosmrti [H]zabitý 
 {verse_1_end}
 
 {verse_2_start}
-[F#m]Možná, že se [A]k tobě vážně [E]vůbec neho[Badd9]dím
-[F#m]kdybych to byl [A]býval věděl, [E]tak sem necho[Badd9]dím
-[F#m]důvody jsou [A]známý, nejsou [E]zas tak složi[Badd9]tý
-[F#m]zůstane to [A]mezi námi [E]nadosmrti [Badd9]zabitý
+[F#m]Možná, že se [A]k tobě vážně [E]vůbec neho[H]dím
+[F#m]kdybych to byl [A]býval věděl, [E]tak sem necho[H]dím
+[F#m]důvody jsou [A]známý, nejsou [E]zas tak složi[H]tý
+[F#m]zůstane to [A]mezi námi [E]nadosmrti [H]zabitý
 {verse_2_end}
 
 {verse_3_start}
-[F#m]Zůstane to [A]s námi nejspíš [E]pořád tako[Badd9]vý
-[F#m]uvidíme, [A]čas nám ve fi[E]nále napo[Badd9]ví
-[F#m]jak to bude [A]dál, je dneska [E]nedůle[Badd9]žitý
-[F#m]zůstane to [A]mezi námi [E]nadosmrti [Badd9]zabitý
+[F#m]Zůstane to [A]s námi nejspíš [E]pořád tako[H]vý
+[F#m]uvidíme, [A]čas nám ve fi[E]nále napo[H]ví
+[F#m]jak to bude [A]dál, je dneska [E]nedůle[H]žitý
+[F#m]zůstane to [A]mezi námi [E]nadosmrti [H]zabitý
 {verse_3_end}
 
 {verse_4_start}
-[F#m]Mo[A]žná, kdo [E]ví[Badd9]
-už nic [F#m]  neří[A]kám[E]..........[Badd9]
-[F#m]zůstanem [A]napořád [E]spolu[Badd9]
-navždycky [F#m]každej [A]sám[E]..........[Badd9]
+[F#m]Mo[A]žná, kdo [E]ví[H]
+už nic [F#m]  neří[A]kám[E]..........[H]
+[F#m]zůstanem [A]napořád [E]spolu[H]
+navždycky [F#m]každej [A]sám[E]..........[H]
 {verse_4_end}
 
 
 
 {text_start}
 {verse_1}
-{chorus}
+{chorus_1}
 {verse_2}
-{chorus}
+{chorus_1}
 [MEZIHRA]
 {verse_3}
 {verse_4}
-{chorus}
+{chorus_1}
 {text_end}

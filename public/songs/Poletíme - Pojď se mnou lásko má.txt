@@ -3,12 +3,12 @@ Title:Pojď se mnou lásko má
 
 Tags: České, Táborová
 
-{chorus_start}
+{chorus_1_start}
 [G]Pojď se mnou lásko [Ami]má, 
 [C]já ukážu ti cestu reali[G]tou je nádher[D]ná
 budem [G]dřít si holou řiť, tak jak se [Ami]má
 a [C]od zdi ke zdi [D]šourat se my [G]dva.
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 Mám vlh[Ami]kej byt bez oken, ve kte[G]rým jsem spokojen
@@ -32,12 +32,12 @@ občas v [Ami]dobrým, a hlavně v zlým a na konci [G]se ti oběsím. Možná
 {verse_3_end}
 
 {text_start}
-{chorus}
+{chorus_1}
 {verse_1}
-{chorus}
+{chorus_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {verse_3}
-{chorus}
-{chorus}
+{chorus_1}
+{chorus_1}
 {text_end}

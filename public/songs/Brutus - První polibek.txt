@@ -3,12 +3,12 @@ Title:První polibek
 
 Tags:České, Ploužák
 
-{chorus_start}
+{chorus_1_start}
 [G]Proč tě [H7]zlákal první [Emi]polibek, [C]
 první [G]polibek[D7], ale ne ten [G]máminej. [D7]
 [G]Na toho [H7]kluka teď už [Emi]nemyslíš, [C]
 teď už [G]nemyslíš[D7], chce se ti [G]plakat. [D7]
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 Když ti [G]máma dvacku [H7]dá a [Emi]můžeš přijít až v [C]osm,
@@ -42,10 +42,10 @@ a [G]ty si uvědomíš,[H7] že tě [Emi]má ně[C]kdo
 
 {text_start}
 
-[G]     [H7]    [Emi]   [C]
-[G]     [D7]    [G]     [D7]
+[G][H7][Emi][C]
+[G][D7][G][D7]
 {verse_1}
-{chorus}
+{chorus_1}
 {verse_2}
 {chorus}
 {verse_3}

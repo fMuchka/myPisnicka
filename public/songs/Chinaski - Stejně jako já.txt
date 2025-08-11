@@ -1,0 +1,60 @@
+Author:Chinaski
+Title:Stejně jako já
+
+Tags:České
+
+{chorus_1_start}
+A [Hm]ty mi to [E]vyčítáš
+a [G]já se vůbec [F]nebráním
+a [Hm]ty se na mě [E]podíváš
+a [G]já vím, že v podstatě jseš na tom stejně jako [D]já
+{chorus_1_end}
+
+{chorus_2_start}
+A [Hm]já ti to [E]vyčítám
+a [G]ty se vůbec Fnebráníš
+a [Hm]já se na tě [E]podívám
+a ty [G]víš, že v podstatě jseš na tom stejně jako [D]já
+v podstatě jseš na tom stejně jako [G]já
+v podstatě jseš na tom [C]stejně jako [D]já
+v podstatě jseš na tom stejně jako [G]já[C]
+{chorus_2_end}
+
+{verse_1_start}
+Do práce [D]nevstávám, svou ženu nemiluju
+svinstva si [G]nepíchám, budoucnost [C]nemaluju
+Po ránu [D]nesnídám, složenky vyhazuju
+milenky [G]nestřídám, slzy si [C]zakazuju
+Špatně se [D]oblíkám, noviny nekupuju
+něco si [G]namlouvám, v něčem si [C]důvěřuju
+Moc dlouho [D]vybírám, těžko se rozhoduju
+a když se [G]do toho dám, ničeho [C]nelituju
+{verse_1_end}
+
+{verse_2_start}
+V podstatě [D]nedalas mi šanci nikdy cokoliv říct
+[G]zabalíš si věci, přijdeš [C]za měsíc
+[D]A já čekám telefon
+snad aspoň [G]zavoláš, jestli [C]já nebo on
+{verse_2_end}
+
+{verse_3_start}
+[D]V podstatě jseš na tom stejně jako [G]já
+v podstatě jseš na tom [C]stejně jako [D]já
+v podstatě jseš na tom stejně jako [G]já
+v podstatě jseš na tom [C]stejně jako [D]já
+{verse_3_end}
+
+{text_start}
+
+[D][G][C]
+[D][G][C]
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_2}
+{chorus_1}
+[D][G][C]
+[D][G][C]
+{verse_3}
+{text_end}

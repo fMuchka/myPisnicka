@@ -3,12 +3,12 @@ Title:Kdyby se v komnatách
 
 Tags: České, Pohádky
 
-{chorus_start}
+{chorus_1_start}
 [C7]Kdyby se v [F]komnatách, běhoun jak [C]hrom natáh'
 a na něm [Dm]akrobati [G]začali [C]kejklovati,
 [C7]kdyby nám [F]v paláci, pištěli [C]dudáci,
 to by se [Dm]krásně žilo, [G] to by byl [C]ráj.
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 [C]K životu na zámku [Gm]mám jednu poznámku
@@ -26,7 +26,7 @@ to by se [Dm]krásně žilo, [G] to by byl [C]ráj.
 
 {text_start}
 {verse_1}
-{chorus}
+{chorus_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {text_end}

@@ -3,13 +3,13 @@ Title:Jdou po mně jdou
 
 Tags: České, Táborová
 
-{chorus_start}
+{chorus_1_start}
 Jdou po mně, [D] jdou, [G] jdou, [D] jdou
 na každým [F#m]rohu ma[Hm]jí fotku [A]mou
 [G]kdyby mě [D]chytli, [A] jó, byl by [Hm]ring
 [G]tma jako v [D]pytli je v [C]celách Sing-[G]Sing
 [A]jé, [D]jé... [GD]
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 Býval jsem [D]chudý jak [G]kostelní [D]myš
@@ -59,10 +59,10 @@ pípu jsem [F#m]utáh a [Hm]straním se [A]žen
 {text_start}
 {verse_1}
 {verse_2}
-{chorus}
+{chorus_1}
 {verse_3}
 {verse_4}
-{chorus}
+{chorus_1}
 {verse_5}
-{chorus}
+{chorus_1}
 {text_end}

@@ -3,12 +3,12 @@ Title:Dobrák od kosti
 
 Tags:České
 
-{chorus_start}
+{chorus_1_start}
 Je to [D]vážně silná káva, [A]pláč a nebo vztek 
 [G]nic už s tím nenaděláš
 [D]nech mě jenom hádat, jak jsi [A]hebká na dotek
 [G]krásná a nedospělá
-{chorus_end}
+{chorus_1_end}
 
 {verse_1_start}
 [D]Má milá [A]jak ti je, tak [G]jak ti je?
@@ -48,15 +48,15 @@ ale zákon hovoří jasnou řečí
 
 {text_start}
 
-[D]     [A]     [G]
-[D]     [A]     [G]
+[D][A][G]
+[D][A][G]
 {verse_1}
-[D]     [A]     [G]
+[D][A][G]
 {verse_2}
-{chorus}
+{chorus_1}
 {verse_3}
 {verse_4}
-{chorus}
-{chorus}
+{chorus_1}
+{chorus_1}
 {verse_5}
 {text_end}
