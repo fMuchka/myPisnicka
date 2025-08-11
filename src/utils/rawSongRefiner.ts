@@ -3,7 +3,7 @@ export type RefinedSong = {
   author: string;
   title: string;
   tags: string[];
-  chorus: string[];
+  chorus: string[][];
   verses: string[][];
   text: string[];
   id: string;
@@ -44,11 +44,17 @@ function refine(rawSong: RawSong): RefinedSong {
   };
 }
 
-function extractChorus(lines: string[]): string[] {
-  const startIndex = lines.indexOf('{chorus_start}');
-  const endIndex = lines.indexOf('{chorus_end}');
+function extractChorus(lines: string[]): string[][] {
+  let chorusIndex = 1;
+  const chorus: string[][] = [];
 
-  const chorus: string[] = lines.slice(startIndex + 1, endIndex);
+  while (lines.indexOf(`{chorus_${chorusIndex}_start}`) !== -1) {
+    const startIndex = lines.indexOf(`{chorus_${chorusIndex}_start}`);
+    const endIndex = lines.indexOf(`{chorus_${chorusIndex}_end}`);
+
+    chorus.push(lines.slice(startIndex + 1, endIndex));
+    chorusIndex++;
+  }
 
   return chorus;
 }

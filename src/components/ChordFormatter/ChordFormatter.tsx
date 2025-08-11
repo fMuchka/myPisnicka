@@ -47,7 +47,8 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
 
     song.text.forEach((e) => {
       if (e.includes('chorus')) {
-        replaceSection(song.chorus, 'chorus');
+        const chorusIndex = e.split('_')[1] ? parseInt(e.split('_')[1]) - 1 : 0;
+        replaceSection(song.chorus[chorusIndex], 'chorus');
       } else if (e.includes('verse')) {
         const verseIndex = e.split('_')[1] ? parseInt(e.split('_')[1]) - 1 : 0;
         replaceSection(song.verses[verseIndex], 'verse');
