@@ -38,7 +38,7 @@ import TopBar from '../components/AppBars/TopBar/TopBar';
 import { setScrollSpeed } from '../features/Controls/ScrollControl/scrollSlice';
 import { setFontSize } from '../features/Controls/FontSizeControl/fontSizeSlice';
 import { updateCookieAcceptState } from '../features/Cookies/cookieSlice';
-import { BrowserRouter, Route } from 'react-router';
+import { HashRouter, Route } from 'react-router';
 import SongView from '../routes/SongView/SongView';
 import { Routes } from 'react-router';
 import SongListView from '../routes/SongListView/SongListView';
@@ -162,15 +162,16 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <Container maxWidth="md" sx={{ marginTop: '5rem' }}>
-          <BrowserRouter>
+          <HashRouter>
             <TopBar />
+
             <Routes>
               <Route path="/my-pisnicka/ListView" element={<SongListView />} />
               <Route path="/my-pisnicka/SongView" element={<SongView />} />
-              <Route path="/my-pisnicka/" element={<InfoView />} />
+              <Route path="" element={<InfoView />} />
               <Route path="/my-pisnicka/Info" element={<InfoView />} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </Container>
 
         <ScrollTop>
