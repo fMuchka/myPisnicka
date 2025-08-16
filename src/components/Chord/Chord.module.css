@@ -2,7 +2,7 @@
   color: var(--mui-palette-primary-main);
   font-weight: bold;
   position: relative;
-  top: calc(var(--fontSize) * -1.5);
+  top: calc(var(--fontSize) * -1.75);
   width: 0;
   display: inline-block;
   visibility: var(--chordVisibility);
