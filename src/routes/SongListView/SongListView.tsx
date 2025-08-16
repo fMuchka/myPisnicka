@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
 import { setSelectedSong } from '../../features/Songs/songsSlice';
 
-import { indigo, red, pink, green } from '@mui/material/colors';
+import { indigo, red, pink, green, amber, cyan } from '@mui/material/colors';
 import { ColorScheme } from '../../features/Controls/ThemeControl/theme/enums';
 import { useEffect, useState, type ChangeEvent } from 'react';
 
@@ -23,6 +23,8 @@ enum SongTags {
   PLOUZAK = 'Ploužák',
   TABOROVA = 'Táborová',
   POHADKY = 'Pohádky',
+  MODERNI = 'Moderní',
+  LIDOVKA = 'Lidovka',
 }
 
 const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
@@ -38,6 +40,11 @@ const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
 
     case SongTags.POHADKY:
       return scheme === ColorScheme.LIGHT ? green[900] : green[100];
+
+    case SongTags.MODERNI:
+      return scheme === ColorScheme.LIGHT ? amber[900] : amber[100];
+    case SongTags.LIDOVKA:
+      return scheme === ColorScheme.LIGHT ? cyan[900] : cyan[100];
   }
 
   return 'gold';
@@ -75,8 +82,9 @@ const SongListView = () => {
   };
 
   function songNameSorter(a: RefinedSong, b: RefinedSong) {
-    const songA = a.id.toUpperCase(); // ignore upper and lowercase
-    const songB = b.id.toUpperCase(); // ignore upper and lowercase
+    // sort by song number, rest is sorted alphabetically on load
+    const songA = parseInt(a.id.split(')')[0]);
+    const songB = parseInt(b.id.split(')')[0]);
     if (songA < songB) {
       return -1;
     }
@@ -134,9 +142,9 @@ const SongListView = () => {
   return (
     <>
       <Stack spacing={5} direction={'row'}>
-        <Stack spacing={2} direction={'column'}>
+        <Stack spacing={2} direction={'column'} width={'100%'}>
           <Typography variant="body1" color="text.secondary">
-            Filtr
+            Filtrovat podle značek
           </Typography>
           <RadioGroup
             sx={{ display: 'flex', flexDirection: 'column' }}
@@ -148,29 +156,29 @@ const SongListView = () => {
           >
             <Typography variant="body2">
               <Radio value={true} aria-label="should include all tags" />
-              Má všechny
+              Obsahuje všechny vybrané
             </Typography>
             <Typography variant="body2">
               <Radio value={false} aria-label="should include at least one" />
-              Má aspoň jeden
+              Obsahuje alespoň jeden
             </Typography>
           </RadioGroup>
-        </Stack>
 
-        <Stack spacing={2} width={'50%'}>
-          {Object.values(SongTags).map((t, tIdx) => (
-            <Chip
-              size="small"
-              variant={tagFilter.includes(t) ? 'filled' : 'outlined'}
-              sx={{
-                color: TAG_COLOR_MAP(t as SongTags, colorScheme),
-                marginLeft: '0.5em',
-              }}
-              onClick={() => filterByTag(t)}
-              label={t}
-              key={tIdx}
-            />
-          ))}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+            {Object.values(SongTags).map((t, tIdx) => (
+              <Chip
+                size="small"
+                variant={tagFilter.includes(t) ? 'filled' : 'outlined'}
+                sx={{
+                  color: TAG_COLOR_MAP(t as SongTags, colorScheme),
+                  margin: '0.5em',
+                }}
+                onClick={() => filterByTag(t)}
+                label={t}
+                key={tIdx}
+              />
+            ))}
+          </div>
         </Stack>
       </Stack>
 
