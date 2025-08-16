@@ -1,0 +1,33 @@
+Author:Wanastowi Vjecy
+Title:Kouzlo
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[D]Miláčku [A]pleteš si pojmy [G]a z lásky [D]zbyly jen dojmy
+[D]vzpomínat i [A]zapomínat [G]a voči při tom [D]zavírat
+[D]není to láska [A]není to zlo, [G] jenom se nám to [D]nepovedlo
+[D]miláčku [A]kde je to kouzlo, [G] to který chtělo [D]při mně stát
+{chorus_1_end}
+
+{verse_1_start}
+[D]Hodíme si [A]mincí trno[G]vou[D]
+[D]oči mých [A]smutků nenech [G]plát - [D] jsem tady
+[D]tvůj vodní [A]hrad je pod vo[G]dou - [D] jó, jó
+[D]votoč se - já [A]vo to budu [G]stát - [D] a umírám...
+{verse_1_end}
+
+{verse_2_start}
+[D]Skřípni mi [A]prsty do tvých [G]dveří[D]
+[D]věřím že [A]věříš - nikdo nám [G]nevěří - né [D]
+[D]schovej [A]hlavu pod polš[G]tář, tak [D]dobře to tam znáš
+[D]tak [A]dobře jako [G]já - [D] usínám...
+{verse_2_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{chorus_1}
+{text_end}

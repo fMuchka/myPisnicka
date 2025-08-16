@@ -1,0 +1,50 @@
+Author:Wanastowi Vjecy
+Title:Bedna od whisky
+
+Tags: České, Táborová
+
+{chorus_1_start}
+[A]Tak kopni do tý [D]bedny, ať [E]panstvo neče[A]ká,
+[A]jsou dlouhý schody do [D]nebe a [E]štreka dale[A]ká
+[A]do nebeskýho [D]báru, já [E]sucho v krku [A]mám,
+[A]tak kopni do tý [D]bedny, ať [E]na cestu [A]se dám[A]....[Ami]
+{chorus_1_end}
+
+{verse_1_start}
+[Ami]Dneska už mně [C]fóry ňák [Ami]nejdou přes [E7]pysky,
+[Ami]stojím s dlouhou [C]kravatou na [Ami]bedně [E7]vod whisky[Ami],
+[Ami]stojím s dlouhým [C]vobojkem jak [Ami]stájovej [E7]pinč,
+tu [Ami]kravatu, co [C]nosím, mi [Ami]navlík' [E7]soudce [Ami]Lynč...[A]
+{verse_1_end}
+
+{verse_2_start}
+[Ami]Mít tak všechny [C]bedny od [Ami]whisky vypi[E7]tý,
+[Ami]postavil bych [C]malej dům na [Ami]louce [E7]ukrytý[Ami],
+[Ami]postavil bych [C]malej dům a z [Ami]vokna koukal [E7]ven
+[Ami]a chlastal bych tam s [C]Bilem a [Ami]chlastal [E7]bych tam [Ami]Ben...[A]
+{verse_2_end}
+
+{verse_3_start}
+[Ami]Kdyby jsi [C]se, hochu, [Ami] jen pořád nech[E7]těl rvát,
+[Ami]nemusel jsi [C]dneska na [Ami]týhle [E7]bedně [Ami]stát,
+[Ami]moh' jsi někde v [C]suchu tu [Ami]svoji whisku [E7]pít,
+[Ami]nemusel jsi [C]hochu na [Ami]krku [E7]laso [Ami]mít... [A]
+{verse_3_end}
+
+{verse_4_start}
+[Ami]Až kopneš do tý [C]bedny, jak [Ami]se to dělá[E7]vá,
+[Ami]do krku mi [C]zůstane jen [Ami]dírka [E7]mrňavá[Ami],
+[Ami]jenom dírka [C]mrňavá a k [Ami]smrti jenom [E7]krok,
+[Ami]má to smutnej [C]konec, a [Ami]whisky [E7]ani [Ami]lok...[A]
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_4}
+{chorus_1}
+{text_end}

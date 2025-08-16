@@ -1,13 +1,13 @@
 Author:Chinaski
 Title:Vrchlabí
 
-Tags:České
+Tags:České, Moderní
 
 {chorus_1_start}
 Pořád [C]jsem to [G]já, pořád [Am]jsme to [F]my
 pár přátel [C]na ces[G]tách od jara [Am]do zi[F]my
 přes [C]všechen [G]čas, všech[Am]ny ty [F]dny
-přes všechno [C]trápe[G]ní, pořád [Am]jsme to Fmy
+přes všechno [C]trápe[G]ní, pořád [Am]jsme to [F]my
 {chorus_1_end}
 
 {verse_1_start}

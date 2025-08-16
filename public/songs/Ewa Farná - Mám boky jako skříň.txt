@@ -1,7 +1,7 @@
 Author:Ewa Farná
 Title:Mám boky jako skříň
 
-Tags: České
+Tags: České, Moderní
 
 {chorus_1_start}
 Moje [F#]máma mi říkala

@@ -1,0 +1,58 @@
+Author:Wanastowi Vjecy
+Title:Julie
+
+Tags: České, Lidovka
+
+{chorus_1_start}
+[F]Jestli máš [C]jablíčko [G]přichysta[Ami]ný,
+můj bílej [C]kabát je [G]zako[D]paný,
+jestli mě [F]chytěj, [C]chytěj daj [G]do kozel[Ami]ce,
+novej maj [C]gericht tam [G]u Kostel[D]ce,
+[F]nebo ta [C]šibenic [G]u Kolí[Ami]na,
+potom má [C]lilie [G]zavzpomí[D]náš,
+na kopci [F]vysoko, [C]vysoko [G]v Hoře Kut[Ami]ný,
+přijde tam [C]na tisíc [G]lidí smut[D]ných,
+[C]na tisíc [G]lidí smu[F]tných.
+{chorus_1_end}
+
+{verse_1_start}
+Dívko, [Ami]ty krás[G]ná jak [C]měsíční [D]svit,
+[Dmi]pojď se mnou [Ami]štěpnicí, [Emi] začíná [Ami]hřmít,
+dívko, [Ami] ty křeh[G]ká jsi [C]jak lili[D]e,
+[Dmi]vykvetlas [Ami]do krásy, [G]má Julie[Ami]!
+
+Děvče [Ami]mý voňa[G]vý jak [C]hrachovej [D]lusk,
+[Dmi]počítej [Ami]hvězdičky [Emi]a pak mě [Ami]pusť,
+voči [Ami]máš mod[G]rý co [C]hortenzi[D]e,
+[Dmi]volá mě [Ami]královna [G]Terezi[Ami]e.
+{verse_1_end}
+
+{verse_2_start}
+Pro ní [Ami]já půj[G]du do [C]patáli[D]e,
+[Dmi]dá-li Pán [Ami]posílí, [Emi] nezabi[Ami]je,
+vojna [Ami]si vzala [G]mě a [C]já si vzal [D]ji,
+[Dmi]v noci se [Ami]slzy mý [G]rozkutá[Ami]lí.
+ 
+A jestli [Ami]tvý srdíč[G]ko [C]pláče ža[D]lem,
+[Dmi]stanu se [Ami]pro tebe [Emi]dezentý[Ami]rem,
+jestli [Ami]tvý o[G]či jsou [C]uplaka[D]ný,
+[Dmi]zahodím [Ami]šavličku [G]v štyry stra[Ami]ny.
+{verse_2_end}
+
+{text_start}
+
+[Am]   [G]    [Am]   [G]
+[Am]   [G]    [F]
+{verse_1}
+{verse_2}
+[Am]    [A]     [G]
+{chorus_1}
+
+[Am]   [G]    [Am]   [G]
+[Am]   [G]    [F]    [G]
+[Am]   [G]    [Am]   [G]
+[Am]   [G]    [F]
+{verse_1}
+[Am]    [A]     [G]
+{chorus_1}
+{text_end}

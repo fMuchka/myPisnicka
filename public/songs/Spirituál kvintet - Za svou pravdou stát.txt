@@ -1,0 +1,65 @@
+Author:Spirituál kvintet
+Title:Za svou pravdou stát
+
+Tags: České, Lidovka, Táborová
+
+
+{verse_1_start}
+Máš [Ami]všechny trumfy mládí a [G]ruce čistý [Ami]máš,
+jen na [Dmi]tobě teď zá[Ami]leží, na ja[E]kou hru se [Ami]dáš.
+{verse_1_end}
+
+{chorus_1_start}
+Musíš za [Ami]svou pravdou [E]stát, musíš [E7]za svou pravdou [Ami]stát
+Musíš za [Ami]svou pravdou [E]stát, musíš [E7]za svou pravdou [Ami]stát
+{chorus_1_end}
+
+{verse_2_start}
+Už víš, [Ami]kolik co stojí, už [G]víš, co bys' rád [Ami]měl,
+už [Dmi]ocenil jsi [Ami]kompromis a pár[E]krát zapo[Ami]mněl
+{verse_2_end}
+
+{chorus_2_start}
+Že máš za [Ami]svou pravdou [E]stát, že máš [E7]za svou pravdou [Ami]stát
+Že máš za [Ami]svou pravdou [E]stát, že máš [E7]za svou pravdou [Ami]stát
+{chorus_2_end}
+
+{verse_3_start}
+Už nejsi [Ami]žádný elév, co [G]prvně do hry [Ami]vpad',
+už [Dmi]víš, jak s králem [Ami]ustoupit a [E]jak s ním dávat [Ami]mat.
+{verse_3_end}
+
+{chorus_3_start}
+Takhle za [Ami]svou pravdou [E]stát, takhle [E7]za svou pravdou [Ami]stát
+Takhle za [Ami]svou pravdou [E]stát, takhle [E7]za svou pravdou [Ami]stát
+{chorus_3_end}
+
+{verse_4_start}
+Teď [Ami]přichází tvá chvíle, teď [G]nahrává ti [Ami]čas,
+tvůj [Dmi]sok poslušně [Ami]neuhnul - a [E]ty mu zlámeš [Ami]vaz!
+{verse_4_end}
+
+{chorus_4_start}
+Neměl za [Ami]svou pravdou [E]stát, neměl [E7]za svou pravdou [Ami]stát
+Neměl za [Ami]svou pravdou [E]stát, neměl [E7]za svou pravdou [Ami]stát
+{chorus_4_end}
+
+{verse_5_start}
+Tvůj [Ami]potomek ctí tátu, ty [G]vštěpuješ mu [Ami]rád,
+to [Dmi]heslo, které [Ami]dobře znáš z dob, kdy [E] jsi býval mlád.
+{verse_5_end}
+
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_2}
+{verse_3}
+{chorus_3}
+{verse_4}
+{chorus_4}
+{verse_5}
+{verse_1}
+{chorus_1}
+{text_end}

@@ -1,0 +1,49 @@
+Author:Brutus
+Title:Dřív než zaplatíš
+
+Tags:České, Moderní
+
+{chorus_1_start}
+Ještě [C]dřív než zapla[G]tíš koupit [Ami]pivo si tu [F]smíš
+Pusť ho [C]do sebe a [G]nechej taky [C]nás...[G]
+Mávej [C]ruce nad hla[G]vou hlavu v [Ami]bedně ukryj [F]svou
+Touhu [C]dlou[G]hou [F]ou [G]ou [C]ou
+{chorus_1_end}
+
+{verse_1_start}
+[C]Úúú[G]úúú pa pa pa [Ami]úúúúú[F] pa pa pa [C]úúú[G]úúú[C]úúú [G]
+[C]Úúú[G]úúú pa pa pa [Ami]úúúúú[F] pa pa pa [C]úúú[G]úúú[C]úúú [G]
+{verse_1_end}
+
+{verse_2_start}
+[C]V sále už se [G]svítí je tu [Ami]hodně těch co [F]znám
+[C]Tady si nikdo [G]nepřipadá [C]sám...[G]
+[C]Když už není [G]zbytí slabší [Ami]venku zkouší [F]trám
+[C]Doneste sem [G]pití žízeň [F]mám
+{verse_2_end}
+
+{verse_3_start}
+[C]Bigbít co se [G]valí z oken [Ami]pilně zavře[F]ných
+[C]Je tu uvnitř [G]trápí uši [C]mý [G]
+[C]Kyslík tady [G]není má svý [Ami]místo určený[F]
+[C]Vzduch je tvrdý víc [G]než jsme zpoce[F]ní
+{verse_3_end}
+
+{verse_4_start}
+[C]Nemůžem se [G]pohnout těla [Ami]hraním zláma[F]ný
+[C]Co to stojí [G]každý dobře [C]ví... [G]
+[C]Kapela je [G]suchá vy jste [Ami]pitím zesláb[F]lí
+[C]Odnesou nás [G]všechny kam bůh [F]ví
+{verse_4_end}
+
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_1}
+{verse_4}
+{chorus_1}
+{text_end}

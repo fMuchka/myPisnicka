@@ -1,0 +1,55 @@
+Author:Chinaski
+Title:Víno
+
+Tags:České, Moderní
+
+{chorus_1_start}
+[D]My máme rádi [A]víno, [C] milujeme [G]krásné ženy a [D]zpěv.
+[D]A na věc jdeme [A]přímo, [C] v žilách nám proudí [G]moravská [D]krev.
+{chorus_1_end}
+
+{chorus_2_start}
+[D]My máme rádi [A]víno, [C] milujeme [G]krásné ženy a [D]zpěv.
+[D]A na věc jdeme [A]přímo, [C] v žilách nám proudí [G]moravská [D]krev.
+[D]My tady totiž [A]máme, [C] všechno co [G]na světě máš [D]rád.
+[D]A ochutnat ti [A]dáme, [C] slunce a ne[G]konečný vino[F#m]hrad.
+{chorus_2_end}
+
+{chorus_3_start}
+[D]My máme rádi [A]víno, [C] milujeme [G]krásné ženy a [D]zpěv.
+[D]A na věc jdeme [A]přímo, [C] v žilách nám proudí [G]moravská [D]krev.
+[D]My tady totiž [A]máme, [C] všechno co [G]na světě máš [D]rád.
+[D]A ochutnat ti [A]dáme, [C] slunce a ne[G]konečný vino[D]hrad.
+{chorus_3_end}
+
+{verse_1_start}
+[D]Zase je pátek a [A]mám toho dost tak beru[C] kramle za zády[G] Černý most
+A [D]pokud mi to D1 [A]dovolí, než minu [C]Jihlavu [G]hodím Prahu za hlavu
+[D]Jedu jak Pražák hlava[A] nehlava mám[C] jediný cíl[G] a přede mnou je Pálava
+[D]Už od Brna jsem jako na[A] trní, ta [C]sladká píseň tak [A4]blízko zní.
+{verse_1_end}
+
+{verse_2_start}
+[D]Jako papír [A]hodím práci a [C]všechny šéfy [G]za hlavu,
+[D]pánové, [A] omlouvám se, ale [C]já mizím na [G]Moravu.
+[D]Najdu tam všechno, [A] co mi doma schází, [C] dobrý lid a [G]klid a řád.
+[D]Najdu tam všechno co [A]na světě mám rád 
+[C]vodu, slunce a [A4]nekonečný vinohrad.
+{verse_2_end}
+
+{verse_3_start}
+[F#mi]Tak se tu žije [G]na padesátý rovnoběž[A]ce v mírném klima našeho podnebí
+[F#mi]Je krásné nemít [G]nikdy dost a [A4]dělat věci jen tak pro radost.
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{chorus_1}
+{verse_2}
+{chorus_2}
+{chorus_3}
+{verse_3}
+{chorus_2}
+{chorus_1}
+{text_end}

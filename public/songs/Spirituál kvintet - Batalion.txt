@@ -1,0 +1,41 @@
+Author:Spirituál kvintet
+Title:Batalion
+
+Tags: České, Lidovka, Táborová
+
+{chorus_1_start}
+[Am]Víno na ku[C]ráž, a [G]pomilovat marky[Am]tánku,
+[Am]zítra do Bur[C]gund, batalion [G]za--[Emi]mí--ří[Am].
+[Am]Víno na ku[C]ráž a [G]k ránu dvě hodiny [Am]spá--nku,
+[Am]díky, díky [C]vám královští [G]ver--[Emi]bí--ři[Am].
+{chorus_1_end}
+
+{verse_1_start}
+[Am]Víno [C]máš a [G]marky[Am]tánku, 
+[Am]dlouhá [C]noc se [G]pro[Emi]hý--ří[Am],
+[Am]víno [C]máš a [G]chvilku [Am]spánku, 
+[C] díky,  [G] díky, [Em]verbí--ři[Am].
+{verse_1_end}
+
+{verse_2_start}
+[Am]Dříve než se [C]rozední, kapitán k [G]osedlání rozkaz dá--[Ami]vá,
+[Am]ostruhami do [C]slabin koně [G]po--[Em]há--ní[Am].
+[Am]Tam na straně [C]polední, čekají [G]ženy, zlaťáky a slá--[Ami]va,
+[Am]do výstřelů z [C]karabin zvon už [G]vy--[Em]zvá--ní[Ami].
+{verse_2_end}
+
+{verse_3_start}
+[Am]Rozprášen je bata[C]lion, poslední [G]vojáci se k zemi [Ami]hrou-tí,
+[Am]na polštáři z kopre[C]tin budou [G]vě--[Em]čně [Am]spát.
+[Am]Neplač sladká Mari[C]on, verbíři [G]nové chlapce přived[Ami]ou-- ti,
+[Am]za královský herme[C]lín, padne [G]kaž[Em]dý-- [Am]rád.
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_1}
+{text_end}

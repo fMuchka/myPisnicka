@@ -1,0 +1,56 @@
+Author:Wanastowi Vjecy
+Title:Slečna Anna je za vodou
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[C]Panebože, vrať mi [Em]vílu,
+[D]nebo jenom trochu její [C]lásky[Em]
+Víš, já [G]musím skočit, [D] mám ji tak [A]rád
+[C]Panebože, dej mi [Em]sílu,
+[D]vzpomenu si na obr[C]ázky
+[Em]Bylo léto[G] devětad[D]evades[A]át
+{chorus_1_end}
+
+{verse_1_start}
+Slečna [Em]Anna je [G]za vodou,
+jsem [Am]sám s hořkou [C]svobodou
+J[Em]á fakt nevím, [G]co bude [Am]dál
+[Em]Dejchám vzduch [G]se zradou,
+Anna to [Am]netuší, nevní[C]má
+[Em]Tak tu musím [G]na mostě [Am]stát
+{verse_1_end}
+
+{verse_2_start}
+Slečna [Em]Anna je [G]za vodou,
+kles[Am]ám černou p[C]ohodou
+V[Em]ážně nevím, [G]co uděl[Am]ám
+Kr[Em]áska se n[G]ezabíjí,
+ona se v [Am]zrcadlech objí[C]má
+Tak [Em]proč chci na tom [G]hnusným mostě st[Am]át
+{verse_2_end}
+
+{verse_3_start}
+[Em]Ne, teď se [G]nerozejdem,
+[Am]ne jenom [C]pro blbej den
+[Em]Anna, srdce [G]a sabot[Am]áž
+[Em]Ne, já to [G]neposbírám,
+[Am]ne, jizvy [C]neotvírám
+[Em]Bez moře [G]neztroskot[Am]áš
+{verse_3_end}
+
+{text_start}
+
+[Em]  [G]  [A]  [C]     
+[Em]  [G]  [C]
+{verse_1}
+{chorus_1}
+[Em]  [C]  [Em]  [C]  [A]
+{verse_2}
+{verse_3}
+{chorus_1}
+[Em]  [C]  [Em]  [C]  [A]
+{verse_1}
+{chorus_1}
+{chorus_1}
+{text_end}

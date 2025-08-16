@@ -1,0 +1,68 @@
+Author:Chinaski
+Title:Dlouhej kouř
+
+Tags:České, Moderní
+
+{chorus_1_start}
+[D]Vam pam tyda pam -[Cadd9] dám si ruce [G]do kapes
+[D]vam pam tyda pam -[Cadd9] dlouhej kouř a [G]pohoda jazz
+[D]vam pam tyda pam -[Cadd9] neštěkne po mě [G]ani pes
+[D]padám a nevím kam -[Cadd9] nečekej, že ti [G]zavolám 
+{chorus_1_end}
+
+{verse_1_start}
+[D]Když budeš hodná, naučím tě [Cadd9]číst, naučím tě [G]číst mezi [D]řádky,
+to pokušení [Cadd9]znáš, tak zapo[G]meň cestu [D]zpátky, hmm.. cestu [Cadd9]zpátky...[G] 
+{verse_1_end}
+
+{verse_2_start}
+[D]Naše noc je mladá, vane jižní [Cadd9]vítr, papírový [G]křídla vzduchem [D]víří,
+řekni co bys [Cadd9]ráda, než nám [G]ráno plány [D]zkříží 
+{verse_2_end}
+
+{verse_3_start}
+Půjdem [Cadd9]nekonečně dlouhou [G]sametově černou [D]tmou,
+půjdem [Cadd9]nekonečně dlouhou [G]sametově černou 
+{verse_3_end}
+
+{verse_3_start}
+[D]Když budeš hodná moje hodná [Cadd9]holka,
+ukážu ti [G]všechny svoje tajný [D]skrýše
+poletíme [Cadd9]vejš, chvíli budem [G]řvát,
+chvíli budem [D]tiše,
+úplně [Cadd9]tiše [G]
+{verse_3_end}
+
+{verse_4_start}
+[D]Vezmu si tě celou, budem se mít [Cadd9]rádi, a když [G]ne,
+tak se ti něco [D]zdálo, a když budem [Cadd9]chtít, šlápnem na zmi[G]zík, všechno bude [D]málo 
+{verse_4_end}
+
+{verse_5_start}
+A tak si ří[A]kám..
+A tak si ří[A]kám..
+A tak si říkám.. 
+{verse_5_end}
+
+{text_start}
+
+[D] [F#m]   [Cadd9]  [G]
+[D] [F#m]   [Cadd9]  [G]
+{verse_1}
+{verse_2}
+{verse_3}
+{chorus_1}
+{verse_4}
+{verse_3}
+{chorus_1}
+
+[D] [Cadd9] [G] [D] [Cadd9] [G]
+[D] [Cadd9] [G] [D] [Cadd9] [G]
+
+[D] [F#m]   [Cadd9] [G]
+[D] [F#m]   [Cadd9] [G]
+[D] [F#m]   [Cadd9] [G]
+[Hmi]   [A]
+{verse_5}
+{chorus_1}
+{text_end}
