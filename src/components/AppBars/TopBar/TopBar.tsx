@@ -33,7 +33,7 @@ const TopBar = () => {
               margin: 'auto',
               placeContent: 'space-between',
               gridTemplateAreas: `'menu song other'`,
-              gridTemplateColumns: '150px 170px 125px',
+              gridTemplateColumns: '1fr 170px 1fr',
             }}
           >
             <Button
@@ -69,7 +69,7 @@ const TopBar = () => {
               }}
               startIcon={<Info />}
             >
-              Info stránka
+              Info
             </Button>
             <Typography
               variant="subtitle2"
