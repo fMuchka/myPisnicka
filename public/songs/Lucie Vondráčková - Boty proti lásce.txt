@@ -1,0 +1,47 @@
+Author:Lucie Vondráčková
+Title:Boty proti lásce
+
+Tags: České, Moderní
+
+{verse_1_start}
+[E]Zas mi říkal, že má něco pro mě
+[E]a to něco, to prý láska je.
+[A]Já však nechci žádnou lásku v domě, [A7] jé
+[E]přináší jen žal a výdaje.
+Mám [G]proti lásce [E]boty
+ty [G]chrání paní [E]svou
+ty [G]boty vždycky [E]jdou
+a všechno hezké pošlapou.
+{verse_1_end}
+
+{verse_2_start}
+[E]Žiju sama díky těmto botám
+[E]žiju sama zásluhou těch bot.
+[A]Často sice klukům hlavy motám, [A7] jé
+[E]botám ale city nejsou vhod.
+V těch [G]botách ráda[E] šlapu
+zvlášt’ [G]po lásce nás [E]dvou
+ty [G]boty vždycky [E]jdou
+a všechno hezké pošlapou
+{verse_2_end}
+
+{verse_3_start}
+[E]Tyhle boty nosím někde v duši
+[E]někde v duši, ne však na nohou.
+[A]Jsou tam dole, kde mi srdce buší [A7]
+[E]od bušení mu však pomohou.
+V těch [G]botách ráda [E]šlapu
+a [G]to se mi prý [E]mstí
+prý v těch [G]botách [E]jdu
+a tak si šlapu po štěstí.
+{verse_3_end}
+
+{text_start}
+[2x12]  [2x11] 
+[2x10]  [2x9] 
+[2x8]   [2x7] 
+[2x6]   [5] [3] [0]
+{verse_1}
+{verse_2}
+{verse_3}
+{text_end}

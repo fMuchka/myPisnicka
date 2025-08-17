@@ -1,0 +1,59 @@
+Author:Tomáš Klus
+Title:Napojen
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[D]Ničeho nelituj, [G] život, co máš, je tvůj
+[D]žij a měj rád, co [A]je
+nechť [D]srdce se rozbijí [G]láskou, tak přijmi ji
+[D]cítíš, jak jsi napojen[A]
+jak jsi napo[D]jen[G]
+přes všechny [D]pochyby život je [A]krásný
+jsi napo[D]--j[G]en a svět je [D]tvá továrna [A]na sny
+{chorus_1_end}
+
+{verse_1_start}
+[D]Vzpomeň, jak's s očima dítěte[G]
+[D]hleděl na letící ptáky[A]
+jak [D]krásné bylo být [G]na světě
+s [D]vědomím, že umíš to taky[A]
+dnes už [Em]nelétáš, neboť oko[G]lí
+zmátlo Tě [Em]strachem, že pády [G]bolí[A]
+{verse_1_end}
+
+{verse_2_start}
+[D]Zastav se, čas nikam [G]nespěchá
+jen [D]rozum nutí ho k běhu[A]
+[D]věř však ty, synu člově[G]ka
+žes [D]nedílná součást pří[A]běhu
+ty jsi [Em]já, jako já tebou [G]jsem
+spole[Em]čná je nám planeta [G]Ze---[A]m
+{verse_2_end}
+
+{verse_3_start}
+Nebe až [D]najde jas ve vodní hladině[G]
+až [D]měsíc opře se o břeh[A]
+a padne [D]hvězda, zkus si přát [G]jediné
+[D]to, aby dopadla dobře[A]
+ztiš se a [Em]poprvé k sobě se [G]obrať
+bez zbraní [Em]a krve porazíš [G]obra[A]
+{verse_3_end}
+
+{verse_4_start}
+[D]Obra, co založil [G]duhy stín
+když [D]před léty zotročil zem[A]
+když [D]člověka bůhvíproč [G]znejistil
+v [D]otázce, kdo vlastně jsem[A]
+poznej, že [Em]být je jedno[G]duché
+Ucítíš [Em]klid, že vše jedno je [G]duchem[A] 
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{verse_4}
+{chorus_1}
+{text_end}

@@ -1,0 +1,47 @@
+Author:Tomáš Klus
+Title:Pocity
+
+Tags: České, Moderní, Ploužák
+
+{chorus_1_start}
+Jenže ty [G]neslyšíš, [D]jenže ty [Em]neposloucháš[C]
+snad ani [G]nevidíš, [D] nebo spíš [Em]nechceš vidět[C]
+a druhejm [G]závidíš [D]a v očích [Em]kapky slaný vody[C]
+zkus změnu, [G] uvidíš, [D]pak [Em]vítej do svobody[C].....[Cadd9]
+{chorus_1_end}
+
+{verse_1_start}
+[G]Z posledních poci[D]tů 
+[Em]poskládám ještě jednu [C]úžasnou chvíli
+[G]je to tím, že jsi [D]tu
+[Em]možná tím, že [C]kdysi jsme byli ty a [G]já
+my dva, dvě [D]nahý těla, tak [Em]neříkej, že [C]jinak jsi to chtěla
+tak [G]neříkej, [D] neříkej, [Em] neříkej mi [C]nic[Cadd9]
+{verse_1_end}
+
+{verse_2_start}
+[G]Stala ses' do no[D]ci
+[Em]z ničeho nic, moje [C]platonická láska
+[G]unaven bezmo[D]cí
+[Em]usínám vedle tebe, [C] něco ve mně praská
+[G]a ranní probuze[D]ní a slova o štěs[Em]tí, neboj se, to nic ne[C]ní
+[G]pohled a vokouzle[D]ní a prázdný náměstí [Em]na znamení[C].....[Cadd9]
+{verse_2_end}
+
+{verse_3_start}
+[G]Jsi anděl, netu[D]šíš
+[Em]anděl, co ze strachu mu [C]utrhali křídla
+[G]a až to ucí[D]tíš
+zkus kašlat [Em]na pravidla[C]
+[G]říkej si o mně, co [D]chceš, [Em] já jsem byl [C]odjakživa blázen
+[G]nevím, co nechá[D]peš, ale [Em]vrať se na zem[C].....[Cadd9]
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_1}
+{text_end}

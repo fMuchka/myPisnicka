@@ -1,0 +1,44 @@
+Author:Tomáš Klus
+Title:Do nebe
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[G]Do nebe do nebe do [D]nebe do nebe, do nebe,
+[Em]Do nebe do nebe do [C]nebe do nebe,
+[G]Do nebe do nebe do [D]nebe do nebe,
+[Em]Do nebezpečna.[C]
+{chorus_1_end}
+
+{verse_1_start}
+Haló P[G]ane, [D] vy s výh[Em]ledem na celej sv[C]ět.
+Co se st[G]ane, [D] když n[Em]eumím dát odpov[C]ěď?
+Snad se ne[G]zlobíte, [D] snad mi to od[Em]pustíte.
+Vždyť v[C]íte, že chci
+{verse_1_end}
+
+{verse_2_start}
+Haló P[G]ane, [D] nad stř[Em]echami panel[C]áků.
+Až[G] déšť ustane, [D] až[Em] uschnou křídla[C] ptákům,
+Budu[G] relativně šťastný, [D] budu[Em] žádaný a krásný, [C]
+Budu[G] obdivován[D] v očích půvabných dám, [Em] ale sám. [C] Půjdu
+{verse_2_end}
+
+{verse_3_start}
+Haló P[G]ane, [D] vy s[Em] šedivými fou[C]sy.
+Jak poznat[G] nepoznané, [D] jak[Em] štěstí[C] nevytrousit?
+Jak se[G] nadechnout[D] a zůstat[Em] živ a zdráv? [C]
+A jestli[G] jít, či plout, [D] to bych[Em] taky věděl[C] rád. Vždyť chci
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{chorus_1}
+{text_end}

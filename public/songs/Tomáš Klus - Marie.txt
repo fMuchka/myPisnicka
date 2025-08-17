@@ -1,0 +1,62 @@
+Author:Tomáš Klus
+Title:Marie
+
+Tags: České, Moderní
+
+{chorus_1_start}
+Já [C]mám Marii [E]rád 
+když má [F]moje bytí [G]spád
+býti [C]věčně na ces[E]tách 
+a kránu [F]spícím plícím [G]život vdecho[C]vat 
+nechtěj mě milovat, [E]nechtěj mě milovat 
+[F]nechtěj mě milovat[G]
+já [C]mám Marie [E]rád 
+když má [F]moje bytí [G]spád
+býti [C]věčně na ces[E]tách 
+a kránu [F]spícím plícím [G]život vdecho[C]vat
+[E]------[F]------[G]
+{chorus_1_end}
+
+{verse_1_start}
+Je [C]den tak [E]pojď Marie ven
+budeme [F]žít a házet [G]šutry do voken
+je [C]dva necháme [E]doma trucovat
+když nechtě[F]jí, nemusí, nebu[G]dem se vnucovat
+jémi[C]ne, všechno [E]zlý jednou pomine
+tak [F]Marie, [G]co ti [C]je?
+[E]------[F]------[G]
+{verse_1_end}
+
+{verse_2_start}
+Všemoc[C]né jsou [E]loutkařovi prsty
+ať jsou [F]tenký nebo tlustý občas [G]přetrhají nit
+a to pak [C]jít a nemít [E]nad sebou svý jistý
+pořád s [F]tváří optimisty listy v [G]žití obracet
+{verse_2_end}
+
+{verse_3_start}
+Je to [C]jed mazat si [E]kolem huby med
+a nesly[F]šet jak se ti [G]bortí svět
+Mari[C]e kdo přeží[E]vá nežije 
+tak ádi[F]jé--[G]
+[C]Marie už zase [E]máš tulení sklony
+jako [F]loni 
+slyším [G]kostelní zvony [C]znít, a to mě zabije 
+[E]a to mě zabije, [F]a to mě zabije, [G]jistojistě
+{verse_3_end}
+
+{verse_4_start}
+Copak [C]nemůže být mezi [E]ženou a mužem
+[F]přátelství, kde není [G]nikdo nic dlužen 
+[C]prostě jen prosté [E]spříznění duší
+[F]aniž by kdokoli [G]cokoli tušil
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{verse_3}
+{chorus_1}
+{verse_4}
+{chorus_1}
+{text_end}

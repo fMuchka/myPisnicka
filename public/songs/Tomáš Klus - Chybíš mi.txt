@@ -1,0 +1,88 @@
+Author:Tomáš Klus
+Title:Chybíš mi
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[Am]Chybíš mi, chybíš mi
+čemu se [Dm]divíš?
+[G]Chybíš mi, chybíš mi
+už zase [C]miz[E]íš
+{chorus_1_end}
+
+{chorus_2_start}
+Příliš [Am]krásná na to
+aby znala opravdový milo[Dm]vání
+příliš [G]krásná na to
+aby uschla na mých vlhkých [C]dlaních[E]
+příliš [Am]krásná na to
+aby znala opravdový milo[Dm]vání
+příliš [G]krásná na to
+aby uschla na mých vlhkých [C]dlaních[E]
+{chorus_2_end}
+
+{verse_1_start}
+[Am]Na malý posteli, ukojen koitem
+[Dm]po nočním veselí ještě pořád vidím dvojitě
+ale v [G]tvým ranním útěku střízlivím bolestně
+[C]v posledním doteku [E]zůstal jsem uvězněn
+[Am]ospalý šašek, já, dítě na věčnost
+[Dm]z nákupních tašek tahalas' upřímnost
+[G]a zbylý city, ukrytý po kapsách
+[C]jsem já a jsi ty, a [E]oba máme strach
+[Am]z toho, že co je, ve skutečnosti není
+[Dm]a že bez boje se láska necení
+[G]že jsme jen dvě nádoby bez dna
+[C]a že se má duše s [E]tvou duší nezná
+{verse_1_end}
+
+{verse_2_start}
+[Am]Poprvé společně, poslední dobou
+[Dm]mlčíme zbytečně, když je to v obou
+tak [G]silný, jak říkáš, tak silný, jak si přeju
+když se k [C]ránu oblíkáš a [E]já se tomu směju
+ale [Am]mám toho dost, všech svých sebeklamů
+vstanu [Dm]dřív, jako host se do tvý hlavy nedostanu
+[G]osude vylez a pojď se se mnou rvát
+tisíc[C]krát musíš vstát, než [E]pochopíš, mám tě 
+[Am]ve všech svých písních, v modlitbách před spaním
+[Dm]pojď se mnou projít opilá svítáním
+[G]slibme si to, co si neslibují jiní
+[C]poprvé v životě k [E]člověku přímí
+{verse_2_end}
+
+{verse_3_start}
+[Am]Zase se sejdem skrytí 
+v opilosti kyslých [Dm]vín
+[G]bezmocní z toho
+jak nevíme, co s [C]tí--m[E]
+[Am]spleteni projdem půlnočním městem
+[Dm]zmateným duším se nabídnem s gestem
+[G]života znalých
+ale v skutečnosti malých [C]lží[E]
+[Am]našla jsi místo mezi duší a srdcem
+a já [Dm]slepě s bílou holí, nesmělý k čemukoli
+dotý[G]kám se tě
+společně s [C]tmou, když usí[E]náš pode [Am]mnou
+{verse_3_end}
+
+{verse_4_start}
+[D]Obra, co založil [G]duhy stín
+když [D]před léty zotročil zem[A]
+když [D]člověka bůhvíproč [G]znejistil
+v [D]otázce, kdo vlastně jsem[A]
+poznej, že [Em]být je jedno[G]duché
+Ucítíš [Em]klid, že vše jedno je [G]duchem[A] 
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{chorus_2}
+{verse_2}
+{chorus_1}
+{chorus_2}
+{verse_3}
+[Am]  [Dm]  [G]  [C]  [E]
+{chorus_2}
+{text_end}

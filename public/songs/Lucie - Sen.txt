@@ -1,0 +1,58 @@
+Author:Lucie
+Title:Sen
+
+Tags: České, Moderní, Ploužák
+
+{chorus_1_start}
+Proud motý[G]lů unáší strach
+Na listy [C]sedá hvězdnej prach
+Proletí [Em]ohněm a mizí stále [D]dál
+Neslyšný [G]kroky stepujou
+V nebeským [C]rytmu swingujou
+Že se [Em]ráno, že se ráno vytra[D]tí
+{chorus_1_end}
+
+{chorus_2_start}
+Proud motý[G]lů unáší strach
+Na listy [C]sedá hvězdnej prach
+Proletí [Em]ohněm a mizí stále [D]dál
+Neslyšný [G]kroky stepujou
+V nebeským [C]rytmu swingujou
+Že se [Em]ráno, že se ráno vytra[D]tí
+Proud motý[G]lů unáší strach
+Na listy [C]sedá hvězdnej prach
+A nový [Em]stíny a nový stíny vypla[D]ší
+{chorus_2_end}
+
+{verse_1_start}
+Stíny [G]dnů a snů
+se k obratníkům [C]stáčí
+Ruce [G]snů - černejch
+Se snaží zakrýt [C]oči
+Světlo [Am]tvý prozradí proč já [G]vím
+S novým [Am]dnem, že se [C]zas navrá[D]tí
+{verse_1_end}
+
+{verse_2_start}
+Mraky se [G]plazí
+Vítr je [C]láme
+Stíny tvý [G]duše
+Rozplynou se v [C]šeru
+Ve vln[Am]ách opouští, po hodinách[G] mizí
+A měsíc[Am] nový stí[C]ny vypla[D]ší
+{verse_2_end}
+
+{verse_3_start}
+Stíny[G] dnů vyrostou a [C]zmizí
+Nebe[G]ský znamení rozsvěcujou [C]hvězdy
+Všechno [Am]ví, zpovzdálí vedou naše [G]kroky
+a měsíc[Am] nový stí[C]ny vypla[D]ší
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_2}
+{text_end}

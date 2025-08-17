@@ -1,0 +1,53 @@
+Author:Lucie
+Title:Amerika
+
+Tags: České, Moderní, Ploužák
+
+{chorus_1_start}
+[Am]Do vlasů mi zabrou[C]kej... pá pa pá [G]pá
+pá [G]pá pá [Em7]pá, pá pa pá [G]pá,
+pá [G]pá pá [Em7]pá, pá pa pá [G]pá
+{chorus_1_end}
+
+{verse_1_start}
+[G]Nandej mi [D]do hlavy tvý [Am]brouky
+[Am]a bůh nám seber bezna[G]děj
+[G]v duši zbylo [D]světlo z jedný [Am]holky
+[Am]tak mi teď za to vyna[G]dej
+{verse_1_end}
+
+{verse_2_start}
+[G]Zima a [D]promarněný [Am]touhy
+[Am]do vrásek stromů padá [G]déšť
+[G]zbejvaj roky [D]asi né moc [Am]dlouhý
+{verse_2_end}
+
+{verse_3_start}
+[G]Tvoje oči [D]jenom žhavý [Am]tóny
+[Am]dotek slunce zapa[G]dá
+[G]horkej vítr [D]rozezní mý [Am]zvony
+{verse_3_end}
+
+{verse_4_start}
+[G]Na obloze [D]křídla tažnejch [Am]ptáků
+[Am]tak už na svý bráchy zavo[G]lej
+[G]na tváře ti [D]padaj slzy z [Am]mraků
+[Am]a bůh nám sebral [G]beznaděj
+{verse_4_end}
+
+{verse_5_start}
+[G]a v duši zbylo [D]světlo z jedný [Am]holky
+[Am]do vrásek stromů padá [G]déšť
+[G]poslední dny, [D]hodiny a [Am]roky
+{verse_5_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_4}
+{verse_5}
+{chorus_1}
+{text_end}
