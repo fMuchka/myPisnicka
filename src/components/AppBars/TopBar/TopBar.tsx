@@ -1,104 +1,103 @@
-import { AppBar, Toolbar, Button } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography } from '@mui/material';
 import HideOnScroll from '../../MUIAppBarUtils/HideOnScroll/HideOnScroll';
-import SideBar from '../SideBar/SideBar';
 import { useState } from 'react';
-import { Menu, Tune } from '@mui/icons-material';
+import { ArrowBack, Audiotrack, Info } from '@mui/icons-material';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
 
-import { useLocation } from 'react-router';
-import Navigation from '../Navigation/Navigation';
-import { useAutoScroll } from '../../../hooks/useAutoScroll';
+import ControlModal from '../../../features/Controls/ControlModal/ControlModal';
+import { useLocation, useNavigate } from 'react-router';
 
 const TopBar = () => {
   const { primaryColor, colorScheme } = useSelector(
     (state: RootState) => state.themeReducer
   );
+  const { selectedSong } = useSelector((state: RootState) => state.songReducer);
 
-  const { scrollStartDelay } = useSelector(
-    (state: RootState) => state.scrollReducer
-  );
-
+  const navigate = useNavigate();
   const location = useLocation();
 
-  const { startScroll } = useAutoScroll();
-
-  const [openDrawer, setOpenDrawer] = useState(false);
-  const [openNavigation, setOpenNavigation] = useState(false);
+  const [openSettings, setOpenSettings] = useState(false);
 
   const getColor = () => (colorScheme == 'dark' ? primaryColor : '#FFFFFF');
-
-  const handleScrollStart = () => {
-    setTimeout(() => {
-      startScroll();
-    }, scrollStartDelay * 1000);
-  };
 
   return (
     <HideOnScroll>
       <AppBar>
         <Toolbar id="toolbar">
-          <Navigation
-            openNavigation={openNavigation}
-            setOpenNavigation={setOpenNavigation}
-          />
-          <SideBar openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
-
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: '50px 200px 60px',
+              display: location.key === 'default' ? 'none' : 'grid',
               width: '100%',
               maxWidth: '1200px',
               margin: 'auto',
               placeContent: 'space-between',
+              gridTemplateAreas: `'menu song other'`,
+              gridTemplateColumns: '1fr 170px 1fr',
             }}
           >
             <Button
               size="small"
               sx={{
-                display: 'flex',
-                justifyContent: 'center',
+                display: location.pathname.includes('ListView')
+                  ? 'none'
+                  : 'flex',
+                justifyContent: 'start',
+                gridArea: 'menu',
                 color: getColor(),
               }}
-              onClick={() => setOpenNavigation(true)}
+              startIcon={<ArrowBack />}
+              onClick={() =>
+                navigate('/my-pisnicka/ListView', { viewTransition: true })
+              }
             >
-              <Menu />
-            </Button>
-
-            <Button
-              onClick={() => handleScrollStart()}
-              size="small"
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                color: getColor(),
-                visibility:
-                  location.pathname === '/my-pisnicka/SongView'
-                    ? 'visible'
-                    : 'hidden',
-              }}
-            >
-              Zapni posun
-              <span style={{ fontSize: '0.7rem' }}>
-                (se zpožděním {scrollStartDelay}s)
-              </span>
+              Písně
             </Button>
 
             <Button
               size="small"
               sx={{
-                display: 'flex',
-                justifyContent: 'center',
+                display: location.pathname.includes('ListView')
+                  ? 'flex'
+                  : 'none',
+                justifyContent: 'start',
+                gridArea: 'menu',
                 color: getColor(),
               }}
-              onClick={() => setOpenDrawer(true)}
+              onClick={() => {
+                navigate('/my-pisnicka/Info', { viewTransition: true });
+              }}
+              startIcon={<Info />}
             >
-              <Tune />
+              Info stránka
+            </Button>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                display: 'grid',
+                gridArea: 'song',
+                maxWidth: '170px',
+                textAlign: 'center',
+              }}
+            >
+              {selectedSong?.id}
+            </Typography>
+            <Button
+              size="small"
+              sx={{
+                display: 'flex',
+                justifyContent: 'end',
+                gridArea: 'other',
+                color: getColor(),
+              }}
+              endIcon={<Audiotrack />}
+              onClick={() => setOpenSettings(true)}
+            >
+              Akordy
             </Button>
           </div>
         </Toolbar>
+        <ControlModal open={openSettings} setOpen={setOpenSettings} />
       </AppBar>
     </HideOnScroll>
   );
