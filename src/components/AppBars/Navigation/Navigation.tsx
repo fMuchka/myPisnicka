@@ -1,9 +1,4 @@
-import {
-  MenuOpen,
-  LibraryMusic,
-  PlaylistPlay,
-  Info,
-} from '@mui/icons-material';
+import { MenuOpen, PlaylistPlay, Info } from '@mui/icons-material';
 import { Drawer, Stack, Button, Paper } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
@@ -67,25 +62,6 @@ const Navigation = (props: NavigationProps) => {
         </Stack>
       </Paper>
       <Stack spacing={1} direction={'column'} textAlign={'start'}>
-        <Paper>
-          <Button
-            sx={{
-              display: 'flex',
-              placeSelf: 'center',
-              placeContent: 'start',
-              padding: '16px',
-            }}
-            onClick={() => {
-              navigate('/my-pisnicka/SongView', { viewTransition: true });
-              props.setOpenNavigation(false);
-            }}
-            fullWidth
-            startIcon={<LibraryMusic />}
-          >
-            Přehrání písně
-          </Button>
-        </Paper>
-
         <Paper>
           <Button
             sx={{
