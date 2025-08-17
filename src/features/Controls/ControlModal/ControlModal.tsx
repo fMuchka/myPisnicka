@@ -1,5 +1,5 @@
 import { Audiotrack, FormatSize, Palette } from '@mui/icons-material';
-import { Modal, Box, Tab, Tabs, Divider } from '@mui/material';
+import { Modal, Box, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import ChordDetailsControl from '../ChordDetailsControl/ChordDetailsControl';
 import ThemeToggle from '../ThemeControl/ThemeControl';
@@ -69,8 +69,6 @@ const ControlModal = (props: ControlModalProps) => {
           <TabPanel value={value} index={2}>
             <FontSizeToggle />
           </TabPanel>
-
-          <Divider sx={{ width: '100%', marginBottom: '1rem' }}></Divider>
         </Box>
       </Modal>
     </>
