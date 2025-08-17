@@ -4,10 +4,10 @@ import {
   Button,
   Chip,
   Divider,
-  Radio,
-  RadioGroup,
   Stack,
   TextField,
+  ToggleButton,
+  ToggleButtonGroup,
   Typography,
 } from '@mui/material';
 import { useNavigate } from 'react-router';
@@ -146,23 +146,27 @@ const SongListView = () => {
           <Typography variant="body1" color="text.secondary">
             Filtrovat podle značek
           </Typography>
-          <RadioGroup
+          <ToggleButtonGroup
+            color="primary"
+            exclusive
             sx={{ display: 'flex', flexDirection: 'column' }}
             aria-labelledby="tag filter type"
             value={shouldIncludeAllFilters}
-            onChange={() =>
-              setShouldIncludeAllFilters(!shouldIncludeAllFilters)
-            }
+            onChange={(_e, val) => {
+              if (val == null) return;
+              setShouldIncludeAllFilters(!shouldIncludeAllFilters);
+            }}
           >
-            <Typography variant="body2">
-              <Radio value={true} aria-label="should include all tags" />
+            <ToggleButton value={true} aria-label="should include all tags">
               Obsahuje všechny vybrané
-            </Typography>
-            <Typography variant="body2">
-              <Radio value={false} aria-label="should include at least one" />
-              Obsahuje alespoň jeden
-            </Typography>
-          </RadioGroup>
+            </ToggleButton>
+            <ToggleButton
+              value={false}
+              aria-label="should include at least one"
+            >
+              Obsahuje alespoň jednu vybranou
+            </ToggleButton>
+          </ToggleButtonGroup>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
             {Object.values(SongTags).map((t, tIdx) => (
@@ -191,7 +195,7 @@ const SongListView = () => {
           onChange={(e) => filterByText(e)}
         />
         {displaySongs?.map((song, idx) => (
-          <>
+          <div key={idx}>
             <Button
               sx={{ placeContent: 'space-between', textAlign: 'start' }}
               key={idx}
@@ -214,7 +218,7 @@ const SongListView = () => {
                 />
               ))}
             </Stack>
-          </>
+          </div>
         ))}
       </Stack>
     </>
