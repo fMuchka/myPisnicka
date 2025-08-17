@@ -2,10 +2,11 @@
   color: var(--mui-palette-primary-main);
   font-weight: bold;
   position: relative;
-  top: calc(var(--fontSize) * -1.75);
-  width: 0;
+  top: calc(var(--fontSize) * var(--chordTopPositionMultiplier));
+  width: var(--chordWidth);
   display: inline-block;
   visibility: var(--chordVisibility);
+  font-size: var(--chordFontSize);
 }
 
 .richDisplay {

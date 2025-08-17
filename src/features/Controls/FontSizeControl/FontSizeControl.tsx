@@ -1,14 +1,14 @@
-import { ArrowDropDown, FormatSize, Remove, Add } from '@mui/icons-material';
+import { Remove, Add } from '@mui/icons-material';
 import {
   Box,
-  Accordion,
-  AccordionSummary,
-  Typography,
-  AccordionDetails,
   ButtonGroup,
   Button,
+  Stack,
+  Typography,
+  ToggleButtonGroup,
+  ToggleButton,
 } from '@mui/material';
-import { useEffect } from 'react';
+import { useEffect, type MouseEvent } from 'react';
 import { CookieAcceptState, CookieKeys } from '../../Cookies/enums';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
@@ -17,16 +17,28 @@ import {
   incrementFontSize,
   resetFontSize,
   initialState,
+  decrementChordSize,
+  incrementChordSize,
+  resetChordSize,
+  setChordPosition,
 } from './fontSizeSlice';
-import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
-import type { ControlProps } from '../../../components/AppBars/SideBar/types';
 
-const FontSizeToggle = (props: ControlProps) => {
-  const { fontSize } = useSelector((state: RootState) => state.fontSizeReducer);
+const FontSizeToggle = () => {
+  const { fontSize, chordPosition, chordSize } = useSelector(
+    (state: RootState) => state.fontSizeReducer
+  );
   const { cookieAcceptState } = useSelector(
     (state: RootState) => state.cookieReducer
   );
   const dispatch = useDispatch();
+
+  const changeChordPosition = (
+    _e: MouseEvent<HTMLElement, globalThis.MouseEvent>,
+    value: typeof initialState.chordPosition
+  ) => {
+    if (value == null) return;
+    dispatch(setChordPosition(value));
+  };
 
   useEffect(() => {
     document.documentElement.style.setProperty('--fontSize', `${fontSize}px`);
@@ -35,6 +47,37 @@ const FontSizeToggle = (props: ControlProps) => {
       localStorage.setItem(CookieKeys.FONT_SIZE, fontSize.toString());
     }
   }, [fontSize, cookieAcceptState]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--chordFontSize',
+      `${chordSize}px`
+    );
+
+    if (cookieAcceptState === CookieAcceptState.ACCEPTED) {
+      localStorage.setItem(CookieKeys.CHORD_SIZE, chordSize.toString());
+    }
+  }, [chordSize, cookieAcceptState]);
+
+  useEffect(() => {
+    let chordWidth, chordTopPositionMultiplier: string;
+    if (chordPosition === 'above') {
+      chordWidth = '0';
+      chordTopPositionMultiplier = '-1.75';
+    } else {
+      chordWidth = 'unset';
+      chordTopPositionMultiplier = '0';
+    }
+    document.documentElement.style.setProperty('--chordWidth', chordWidth);
+    document.documentElement.style.setProperty(
+      '--chordTopPositionMultiplier',
+      chordTopPositionMultiplier
+    );
+
+    if (cookieAcceptState === CookieAcceptState.ACCEPTED) {
+      localStorage.setItem(CookieKeys.CHORD_POSITION, chordPosition.toString());
+    }
+  }, [chordPosition, cookieAcceptState]);
 
   return (
     <Box
@@ -49,30 +92,9 @@ const FontSizeToggle = (props: ControlProps) => {
         minHeight: '56px',
       }}
     >
-      <Accordion
-        expanded={props.expandedControl === ListOfControls.FONT_SIZE}
-        onChange={() => props.setExpandedControl(ListOfControls.FONT_SIZE)}
-        sx={{ width: '100%' }}
-      >
-        <AccordionSummary
-          expandIcon={<ArrowDropDown />}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography
-            color="primary"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              placeItems: 'center',
-              width: '100%',
-            }}
-          >
-            Velikost písma {fontSize}px
-            <FormatSize color="primary" />
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
+      <Stack spacing={4} direction={'column'}>
+        <Stack spacing={2}>
+          <Typography>Velikost písma: {fontSize}px</Typography>
           <ButtonGroup>
             <Button
               disabled={fontSize === initialState.fontSize}
@@ -90,8 +112,39 @@ const FontSizeToggle = (props: ControlProps) => {
               <Add />
             </Button>
           </ButtonGroup>
-        </AccordionDetails>
-      </Accordion>
+        </Stack>
+        <Stack spacing={2}>
+          <Typography>Velikost akordů: {chordSize}px</Typography>
+          <ButtonGroup>
+            <Button
+              disabled={chordSize === initialState.chordSize}
+              onClick={() => dispatch(resetChordSize())}
+            >
+              Reset
+            </Button>
+            <Button
+              disabled={chordSize === 5}
+              onClick={() => dispatch(decrementChordSize())}
+            >
+              <Remove />
+            </Button>
+            <Button onClick={() => dispatch(incrementChordSize())}>
+              <Add />
+            </Button>
+          </ButtonGroup>
+        </Stack>
+        <ToggleButtonGroup
+          exclusive
+          value={chordPosition}
+          color="primary"
+          onChange={(e, value) =>
+            changeChordPosition(e, value as typeof initialState.chordPosition)
+          }
+        >
+          <ToggleButton value={'above'}>Akordy nad textem</ToggleButton>
+          <ToggleButton value={'inline'}>Akordy v textu</ToggleButton>
+        </ToggleButtonGroup>
+      </Stack>
     </Box>
   );
 };
