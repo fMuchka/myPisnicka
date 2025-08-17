@@ -9,7 +9,7 @@ const ScrollTop = (props: ScrollTopProps) => {
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 200,
+    threshold: 25,
   });
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {

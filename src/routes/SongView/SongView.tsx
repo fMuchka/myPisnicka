@@ -2,7 +2,14 @@ import { ChordFormatter } from '../../components/ChordFormatter/ChordFormatter';
 import LoadingSongScreen from './LoadingSongView/LoadingSongView';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
-import { Button, ButtonGroup, Card, Stack, Typography } from '@mui/material';
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  Stack,
+  ToggleButton,
+  Typography,
+} from '@mui/material';
 import { Add, PlayArrow, Pause, Remove } from '@mui/icons-material';
 import {
   decrementScrollSpeed,
@@ -12,6 +19,7 @@ import {
   resetScrollSpeed,
   resetScrollStartDelay,
   setScrollDuration,
+  setStopScrollOnTouchScroll,
 } from '../../features/Controls/ScrollControl/scrollSlice';
 import { useAutoScroll } from '../../hooks/useAutoScroll';
 import { gsap } from 'gsap';
@@ -25,8 +33,13 @@ const SongView = () => {
   const { selectedSong, songs } = useSelector(
     (state: RootState) => state.songReducer
   );
-  const { scrollSpeed, scrollStartDelay, isScrolling, scrollDuration } =
-    useSelector((state: RootState) => state.scrollReducer);
+  const {
+    scrollSpeed,
+    scrollStartDelay,
+    isScrolling,
+    scrollDuration,
+    stopScrollOnTouchScroll,
+  } = useSelector((state: RootState) => state.scrollReducer);
 
   const { chordPosition } = useSelector(
     (state: RootState) => state.fontSizeReducer
@@ -110,9 +123,9 @@ const SongView = () => {
         <Card>
           <Stack direction={'row'} spacing={2}>
             <Stack
-              spacing={4}
+              spacing={2}
               direction={'column'}
-              width={'50%'}
+              width={'100%'}
               sx={{ padding: '0.5rem 1rem' }}
             >
               <div>
@@ -144,6 +157,20 @@ const SongView = () => {
               <Typography variant="body2" color="text.secondary">
                 Doba posunu: {convertDurationToTime(scrollDuration)}
               </Typography>
+
+              <ToggleButton
+                size="small"
+                value={true}
+                color="primary"
+                selected={stopScrollOnTouchScroll}
+                onChange={() => {
+                  dispatch(
+                    setStopScrollOnTouchScroll(!stopScrollOnTouchScroll)
+                  );
+                }}
+              >
+                Přerušit na manuální posun
+              </ToggleButton>
             </Stack>
 
             <Stack

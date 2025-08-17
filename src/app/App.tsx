@@ -54,7 +54,7 @@ function App() {
   const { primaryColor, colorScheme } = useSelector(
     (state: RootState) => state.themeReducer
   );
-  const { isScrolling } = useSelector(
+  const { isScrolling, stopScrollOnTouchScroll } = useSelector(
     (state: RootState) => state.scrollReducer
   );
   const { songs } = useSelector((state: RootState) => state.songReducer);
@@ -107,6 +107,7 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
+    if (stopScrollOnTouchScroll === false) return;
     if (!isScrolling) return;
 
     const handleUserScroll = () => {
@@ -123,7 +124,7 @@ function App() {
       window.removeEventListener('touchmove', handleUserScroll);
       window.removeEventListener('keydown', handleUserScroll);
     };
-  }, [isScrolling, stopScroll]);
+  }, [isScrolling, stopScroll, stopScrollOnTouchScroll]);
 
   useEffect(() => {
     if (!songs) {
