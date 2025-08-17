@@ -10,46 +10,33 @@ gsap.registerPlugin(ScrollToPlugin);
 export function useAutoScroll() {
   const tweenRef = useRef<gsap.core.Tween | null>(null);
 
-  const { scrollSpeed, isScrolling } = useSelector(
+  const { isScrolling, scrollDuration } = useSelector(
     (state: RootState) => state.scrollReducer
   );
 
   const dispatch = useDispatch();
 
   const startScroll = useCallback(() => {
-    console.log('START');
-    console.log('isScrolling: ', isScrolling);
-    console.log('tweenRef before start:', tweenRef.current);
-
     // Avoid double-starts
     if (tweenRef.current?.isActive() && isScrolling) {
       return;
     } else {
-      const { scrollTop, scrollHeight, clientHeight } =
-        document.documentElement;
-      const distance = scrollHeight - clientHeight - scrollTop;
-      if (distance <= 0) return;
-      console.log(isScrolling);
+      const { scrollHeight, clientHeight } = document.documentElement;
+
       dispatch(setScrollStatus(true));
-
-      // duration in seconds for constant pixel/second speed
-      const duration = distance / (scrollSpeed * 10);
-
       tweenRef.current = gsap.to(window, {
         scrollTo: scrollHeight - clientHeight,
-        ease: 'none',
-        duration,
+        ease: 'linear',
+        duration: scrollDuration,
         onComplete: () => {
           tweenRef.current = null;
           dispatch(setScrollStatus(false));
         },
       });
     }
-  }, [dispatch, isScrolling, scrollSpeed]);
+  }, [dispatch, isScrolling, scrollDuration]);
 
   const stopScroll = useCallback(() => {
-    console.log('STOP');
-
     // Kill the specific tween first
     if (tweenRef.current) {
       tweenRef.current.kill();

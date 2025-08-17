@@ -30,6 +30,11 @@ const songSlice = createSlice({
       if (state.selectedSong !== null)
         state.selectedSong.firstChord = action.payload;
     },
+
+    setSelectedSongNumberOfLines: (state, action: PayloadAction<number>) => {
+      if (state.selectedSong !== null)
+        state.selectedSong.numberOfLines = action.payload;
+    },
   },
 });
 
@@ -54,8 +59,12 @@ export const loadSongs = async (
   dispatch(setSelectedSong(refinedSongs[0]));
 };
 
-export const { setSelectedSong, setSongs, setSelectedSongFirstChord } =
-  songSlice.actions;
+export const {
+  setSelectedSong,
+  setSongs,
+  setSelectedSongFirstChord,
+  setSelectedSongNumberOfLines,
+} = songSlice.actions;
 
 export const selectedSong = (state: RootState) =>
   state.songReducer.selectedSong;

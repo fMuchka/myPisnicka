@@ -8,6 +8,7 @@ export type RefinedSong = {
   text: string[];
   id: string;
   firstChord: string;
+  numberOfLines: number;
 };
 
 function refine(rawSong: RawSong): RefinedSong {
@@ -33,6 +34,7 @@ function refine(rawSong: RawSong): RefinedSong {
   tags.forEach((e, idx) => (tags[idx] = e.trim()));
 
   return {
+    numberOfLines: 0,
     author,
     tags,
     title,
