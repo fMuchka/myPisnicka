@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Button, Typography } from '@mui/material';
 import HideOnScroll from '../../MUIAppBarUtils/HideOnScroll/HideOnScroll';
 import { useState } from 'react';
-import { ArrowBack, Audiotrack, Info } from '@mui/icons-material';
+import { ArrowBack, Audiotrack, Info, Settings } from '@mui/icons-material';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
 
@@ -33,7 +33,7 @@ const TopBar = () => {
               margin: 'auto',
               placeContent: 'space-between',
               gridTemplateAreas: `'menu song other'`,
-              gridTemplateColumns: '1fr 170px 1fr',
+              gridTemplateColumns: '150px 170px 125px',
             }}
           >
             <Button
@@ -90,10 +90,16 @@ const TopBar = () => {
                 gridArea: 'other',
                 color: getColor(),
               }}
-              endIcon={<Audiotrack />}
+              endIcon={
+                location.pathname.includes('SongView') ? (
+                  <Audiotrack />
+                ) : (
+                  <Settings />
+                )
+              }
               onClick={() => setOpenSettings(true)}
             >
-              Akordy
+              {location.pathname.includes('SongView') ? 'Akordy' : 'Nastavení'}
             </Button>
           </div>
         </Toolbar>
