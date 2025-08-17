@@ -36,7 +36,11 @@ import {
 import TopBar from '../components/AppBars/TopBar/TopBar';
 
 import { setScrollSpeed } from '../features/Controls/ScrollControl/scrollSlice';
-import { setFontSize } from '../features/Controls/FontSizeControl/fontSizeSlice';
+import {
+  setChordPosition,
+  setChordSize,
+  setFontSize,
+} from '../features/Controls/FontSizeControl/fontSizeSlice';
 import { updateCookieAcceptState } from '../features/Cookies/cookieSlice';
 import { HashRouter, Route } from 'react-router';
 import SongView from '../routes/SongView/SongView';
@@ -79,7 +83,17 @@ function App() {
     }
     const cookieFontSize = localStorage.getItem(CookieKeys.FONT_SIZE);
     if (cookieFontSize) {
-      setFontSize(parseInt(cookieFontSize));
+      dispatch(setFontSize(parseInt(cookieFontSize)));
+      cookiesPresentCheck = true;
+    }
+    const cookieChordFontSize = localStorage.getItem(CookieKeys.CHORD_SIZE);
+    if (cookieChordFontSize) {
+      dispatch(setChordSize(parseInt(cookieChordFontSize)));
+      cookiesPresentCheck = true;
+    }
+    const cookieChordPosition = localStorage.getItem(CookieKeys.CHORD_POSITION);
+    if (cookieChordPosition) {
+      dispatch(setChordPosition(cookieChordPosition as 'above' | 'inline'));
       cookiesPresentCheck = true;
     }
     const cookieScrollSpeed = localStorage.getItem(CookieKeys.SCROLL_SPEED);

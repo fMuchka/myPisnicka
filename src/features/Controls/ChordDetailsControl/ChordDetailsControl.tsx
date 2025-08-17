@@ -1,24 +1,13 @@
-import {
-  ArrowDropDown,
-  Audiotrack,
-  Visibility,
-  VisibilityOff,
-} from '@mui/icons-material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import {
   Box,
-  Accordion,
-  AccordionSummary,
   Typography,
-  AccordionDetails,
   Stack,
-  RadioGroup,
-  Radio,
   ToggleButtonGroup,
   ToggleButton,
-  FormControlLabel,
   Button,
 } from '@mui/material';
-import { useEffect, type ChangeEvent } from 'react';
+import { useEffect, type MouseEvent } from 'react';
 import { ChordVisibility, HSystem, Notes } from './enums';
 import { useDispatch, useSelector } from 'react-redux';
 import { currentSongTransposition, type RootState } from '../../../app/store';
@@ -34,11 +23,9 @@ import {
   getToneCountDifference,
   transposeChord,
 } from '../../../utils/transposeChord';
-import { ListOfControls } from '../../../components/AppBars/SideBar/enums';
-import type { ControlProps } from '../../../components/AppBars/SideBar/types';
 import useTranspositionMarks from '../../../hooks/useTranspositionMarks';
 
-const ChordDetailsToggle = (props: ControlProps) => {
+const ChordDetailsToggle = () => {
   const { hSystem, chordVisibility, currentChords, firstChord } = useSelector(
     (state: RootState) => state.chordDetailsReducer
   );
@@ -61,9 +48,10 @@ const ChordDetailsToggle = (props: ControlProps) => {
   };
 
   const handleChordVisibilityChange = (
-    _event: ChangeEvent<HTMLInputElement>,
+    _event: MouseEvent<HTMLElement, globalThis.MouseEvent>,
     newState: ChordVisibility
   ) => {
+    if (newState == null) return;
     dispatch(setChordVisibility(newState));
 
     document.documentElement.style.setProperty(
@@ -73,9 +61,10 @@ const ChordDetailsToggle = (props: ControlProps) => {
   };
 
   const handleHSystemChange = (
-    _event: ChangeEvent<HTMLInputElement>,
+    _event: MouseEvent<HTMLElement, globalThis.MouseEvent>,
     newState: HSystem
   ) => {
+    if (newState == null) return;
     dispatch(setHSystem(newState));
   };
 
@@ -118,7 +107,6 @@ const ChordDetailsToggle = (props: ControlProps) => {
       sx={{
         display: 'flex',
         width: '100%',
-        maxWidth: '400px',
         alignItems: 'center',
         justifyContent: 'center',
         bgcolor: 'background.default',
@@ -127,140 +115,88 @@ const ChordDetailsToggle = (props: ControlProps) => {
         minHeight: '56px',
       }}
     >
-      <Accordion
-        expanded={props.expandedControl === ListOfControls.CHORD_DETAILS}
-        onChange={() => props.setExpandedControl(ListOfControls.CHORD_DETAILS)}
-        sx={{ width: '100%' }}
-      >
-        <AccordionSummary
-          expandIcon={<ArrowDropDown />}
-          aria-controls="panel2-content"
-          id="panel2-header"
+      <Stack spacing={2}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignSelf: 'center',
+            flexDirection: 'column',
+            paddingBottom: '1rem',
+            width: '100%',
+          }}
         >
-          <Typography
-            color="primary"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              placeItems: 'center',
-              width: '100%',
-            }}
+          <Button
+            style={{ marginBottom: '1rem', width: '80px' }}
+            variant="outlined"
+            onClick={() => handleResetTransposition()}
+            disabled={
+              firstChord == null
+                ? true
+                : selectedSong?.firstChord ===
+                  firstChord.root + firstChord.suffix
+            }
           >
-            Akordy
-            <Audiotrack color="primary" />
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Stack spacing={2}>
-            <Typography variant="body2" color="text.secondary">
-              Viditelnost akordů
-            </Typography>
-            <RadioGroup
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-              }}
-              aria-labelledby="chord-visibility-toggle"
-              value={chordVisibility}
-              onChange={(e, value) =>
-                handleChordVisibilityChange(e, value as ChordVisibility)
-              }
-            >
-              <Radio
-                value={ChordVisibility.UNSET}
-                aria-label="visible"
-                icon={<Visibility />}
-                checkedIcon={<Visibility />}
-              />
-              <Radio
-                value={ChordVisibility.HIDDEN}
-                aria-label="hidden"
-                icon={<VisibilityOff />}
-                checkedIcon={<VisibilityOff />}
-              />
-            </RadioGroup>
-            <Typography variant="body2" color="text.secondary">
-              Zápis H a B
-            </Typography>
-            <RadioGroup
-              sx={{ display: 'flex', flexDirection: 'row' }}
-              aria-labelledby="hSystem-toggle"
-              value={hSystem}
-              onChange={(e, value) => handleHSystemChange(e, value as HSystem)}
-            >
-              <FormControlLabel
-                value={HSystem.WORLD}
-                aria-label="world"
-                control={<Radio size="small" sx={{ fontSize: '8px' }} />}
-                label="Anglosaské B / A#"
-                labelPlacement="top"
-              />
-              <FormControlLabel
-                value={HSystem.CZECH}
-                aria-label="czech"
-                control={<Radio size="small" />}
-                label="České (německé) H / B"
-                labelPlacement="top"
-              />
-            </RadioGroup>
-            <Typography variant="body2" color="text.secondary">
-              Transpozice
-            </Typography>
+            Reset
+          </Button>
+          <ToggleButtonGroup
+            color="primary"
+            value={firstChord == null ? '' : firstChord.root}
+            disabled={firstChord == null}
+            exclusive
+            onChange={handleTranspositionChange}
+            sx={{ gridTemplateColumns: 'repeat(6, 1fr)', display: 'grid' }}
+          >
+            {transpositionMarks.map((e) => (
+              <ToggleButton value={e.value}>{e.label}</ToggleButton>
+            ))}
+          </ToggleButtonGroup>
+        </Box>
 
-            <Box
-              sx={{
-                display: 'flex',
-                alignSelf: 'center',
-                flexDirection: 'column',
-                paddingBottom: '1rem',
-                width: '100%',
-              }}
-            >
-              <Button
-                style={{ marginBottom: '1rem', width: '80px' }}
-                variant="outlined"
-                onClick={() => handleResetTransposition()}
-                disabled={
-                  firstChord == null
-                    ? true
-                    : selectedSong?.firstChord ===
-                      firstChord.root + firstChord.suffix
-                }
-              >
-                Reset
-              </Button>
-              <ToggleButtonGroup
-                color="primary"
-                value={firstChord == null ? '' : firstChord.root}
-                disabled={firstChord == null}
-                exclusive
-                onChange={handleTranspositionChange}
-                sx={{ gridTemplateColumns: 'repeat(6, 1fr)', display: 'grid' }}
-              >
-                {transpositionMarks.map((e) => (
-                  <ToggleButton value={e.value}>{e.label}</ToggleButton>
-                ))}
-              </ToggleButtonGroup>
-            </Box>
+        <Typography variant="body2" color="text.secondary">
+          Akordy v písni
+        </Typography>
+        <Stack
+          className={styles.chordPreview}
+          sx={{ gridTemplateColumns: 'repeat(3, 1fr)', display: 'grid' }}
+        >
+          {currentChords.map((chord, idx) => (
+            <Chord
+              chord={chord.root + chord.suffix}
+              key={idx}
+              useRichDisplay={true}
+            />
+          ))}
+        </Stack>
+        <Stack direction={'row'} spacing={2}>
+          <ToggleButtonGroup
+            exclusive
+            size="small"
+            value={chordVisibility}
+            color="primary"
+            onChange={(e, value) =>
+              handleChordVisibilityChange(e, value as ChordVisibility)
+            }
+          >
+            <ToggleButton value={ChordVisibility.HIDDEN}>
+              <VisibilityOff />
+            </ToggleButton>
+            <ToggleButton value={ChordVisibility.UNSET}>
+              <Visibility />
+            </ToggleButton>
+          </ToggleButtonGroup>
 
-            <Typography variant="body2" color="text.secondary">
-              Akordy v písni
-            </Typography>
-            <Stack
-              className={styles.chordPreview}
-              sx={{ gridTemplateColumns: 'repeat(3, 1fr)', display: 'grid' }}
-            >
-              {currentChords.map((chord, idx) => (
-                <Chord
-                  chord={chord.root + chord.suffix}
-                  key={idx}
-                  useRichDisplay={true}
-                />
-              ))}
-            </Stack>
-          </Stack>
-        </AccordionDetails>
-      </Accordion>
+          <ToggleButtonGroup
+            exclusive
+            size="small"
+            value={hSystem}
+            color="primary"
+            onChange={(e, value) => handleHSystemChange(e, value as HSystem)}
+          >
+            <ToggleButton value={HSystem.WORLD}>Anglické B</ToggleButton>
+            <ToggleButton value={HSystem.CZECH}>České H</ToggleButton>
+          </ToggleButtonGroup>
+        </Stack>
+      </Stack>
     </Box>
   );
 };

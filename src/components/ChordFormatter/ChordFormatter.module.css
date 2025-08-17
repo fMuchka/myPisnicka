@@ -1,11 +1,11 @@
 :root {
   --fontSize: 16px;
+  --chordFontSize: 20px;
+  --lineHeightMultiplier: 4;
+  --chordTopPositionMultiplier: -1.75;
   --chordVisibility: 'unset';
+  --chordWidth: 0;
 }
-
-/* .lyrics {
-    font-size: 2em;
-} */
 
 .lyricsWrapper {
   margin: 0;
@@ -24,7 +24,7 @@
 }
 
 .interlude {
-  padding-left: 1rem;
+  padding: 0 0 0 1rem !important;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr;
@@ -36,7 +36,7 @@
 .section {
   text-wrap-style: balance;
   text-align: left;
-  line-height: calc(var(--fontSize) * 4);
+  line-height: calc(var(--fontSize) * var(--lineHeightMultiplier));
   padding: 1.25rem;
   margin-top: 2rem;
   margin-bottom: 2rem;

@@ -5,6 +5,7 @@ export interface ScrollState {
   isScrolling: boolean;
   scrollIntervalId: NodeJS.Timeout | null;
   scrollStartDelay: number;
+  scrollDuration: number;
 }
 
 const initialState: ScrollState = {
@@ -12,6 +13,7 @@ const initialState: ScrollState = {
   isScrolling: false,
   scrollIntervalId: null,
   scrollStartDelay: 3,
+  scrollDuration: 0,
 };
 
 export const scrollSlice = createSlice({
@@ -22,11 +24,11 @@ export const scrollSlice = createSlice({
       state.isScrolling = action.payload;
     },
     incrementScrollSpeed: (state) => {
-      state.scrollSpeed++;
+      state.scrollSpeed += 0.25;
     },
 
     decrementScrollSpeed: (state) => {
-      state.scrollSpeed--;
+      state.scrollSpeed -= 0.25;
     },
 
     resetScrollSpeed: (state) => {
@@ -48,6 +50,10 @@ export const scrollSlice = createSlice({
     resetScrollStartDelay: (state) => {
       state.scrollStartDelay = initialState.scrollStartDelay;
     },
+
+    setScrollDuration: (state, action: PayloadAction<number>) => {
+      state.scrollDuration = action.payload;
+    },
   },
 });
 
@@ -62,5 +68,6 @@ export const {
   setScrollSpeed,
   // startScroll,
   // stopScroll,
+  setScrollDuration,
 } = scrollSlice.actions;
 export default scrollSlice.reducer;

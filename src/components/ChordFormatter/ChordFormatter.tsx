@@ -11,7 +11,10 @@ import {
   getToneCountDifference,
   transposeChord,
 } from '../../utils/transposeChord';
-import { setSelectedSongFirstChord } from '../../features/Songs/songsSlice';
+import {
+  setSelectedSongFirstChord,
+  setSelectedSongNumberOfLines,
+} from '../../features/Songs/songsSlice';
 import type { Notes } from '../../features/Controls/ChordDetailsControl/enums';
 
 export const ChordFormatter = (props: ChordFormatterProps) => {
@@ -28,7 +31,9 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
   const uniqueChords = new Map<string, boolean>();
   let firstChordSet = false;
 
-  const dispatchChords = () => {
+  const dispatchChords = (nOfLines: number) => {
+    dispatch(setSelectedSongNumberOfLines(nOfLines));
+
     if (currentChords.length === 0) {
       const chords: { root: string; suffix: string }[] = [];
 
@@ -44,6 +49,8 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
 
   const formatChords = (song: RefinedSong) => {
     const result: JSX.Element[] = [];
+
+    let nOfLines = 0;
 
     song.text.forEach((e) => {
       if (e.includes('chorus')) {
@@ -121,6 +128,7 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
           lyrics = '';
         }
 
+        nOfLines++;
         replacedSection.push(<br key={`br${idx}`}></br>);
       });
 
@@ -134,7 +142,7 @@ export const ChordFormatter = (props: ChordFormatterProps) => {
       );
     }
 
-    dispatchChords();
+    dispatchChords(nOfLines);
 
     return result;
   };
