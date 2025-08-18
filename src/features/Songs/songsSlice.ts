@@ -4,14 +4,29 @@ import fileLoader from '../../utils/fileLoader';
 import rawSongRefiner from '../../utils/rawSongRefiner';
 import type { RootState } from '../../app/store';
 
+export enum SongTags {
+  CESKE = 'České',
+  PLOUZAK = 'Ploužák',
+  TABOROVA = 'Táborová',
+  POHADKY = 'Pohádky',
+  MODERNI = 'Moderní',
+  LIDOVKA = 'Lidovka',
+}
+
 export interface SongState {
   songs: RefinedSong[] | null;
   selectedSong: RefinedSong | null;
+  tagFilters: SongTags[];
+  textFilter: string;
+  shouldIncludeAllFilters: boolean;
 }
 
 const initialState: SongState = {
   selectedSong: null,
   songs: null,
+  tagFilters: [],
+  textFilter: '',
+  shouldIncludeAllFilters: true,
 };
 
 const songSlice = createSlice({
@@ -34,6 +49,18 @@ const songSlice = createSlice({
     setSelectedSongNumberOfLines: (state, action: PayloadAction<number>) => {
       if (state.selectedSong !== null)
         state.selectedSong.numberOfLines = action.payload;
+    },
+
+    setTagFilters: (state, action: PayloadAction<SongTags[]>) => {
+      state.tagFilters = action.payload;
+    },
+
+    setTextFilter: (state, action: PayloadAction<string>) => {
+      state.textFilter = action.payload;
+    },
+
+    toggleInclusionFilterType: (state) => {
+      state.shouldIncludeAllFilters = !state.shouldIncludeAllFilters;
     },
   },
 });
@@ -64,6 +91,9 @@ export const {
   setSongs,
   setSelectedSongFirstChord,
   setSelectedSongNumberOfLines,
+  setTagFilters,
+  setTextFilter,
+  toggleInclusionFilterType,
 } = songSlice.actions;
 
 export const selectedSong = (state: RootState) =>

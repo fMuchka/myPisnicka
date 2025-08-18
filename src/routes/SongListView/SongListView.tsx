@@ -12,20 +12,17 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
-import { setSelectedSong } from '../../features/Songs/songsSlice';
+import {
+  setSelectedSong,
+  setTagFilters,
+  setTextFilter,
+  SongTags,
+  toggleInclusionFilterType,
+} from '../../features/Songs/songsSlice';
 
 import { indigo, red, pink, green, amber, cyan } from '@mui/material/colors';
 import { ColorScheme } from '../../features/Controls/ThemeControl/theme/enums';
 import { useEffect, useState, type ChangeEvent } from 'react';
-
-enum SongTags {
-  CESKE = 'České',
-  PLOUZAK = 'Ploužák',
-  TABOROVA = 'Táborová',
-  POHADKY = 'Pohádky',
-  MODERNI = 'Moderní',
-  LIDOVKA = 'Lidovka',
-}
 
 const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
   switch (tag) {
@@ -51,13 +48,11 @@ const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
 };
 
 const SongListView = () => {
-  const { songs } = useSelector((state: RootState) => state.songReducer);
+  const { songs, tagFilters, textFilter, shouldIncludeAllFilters } =
+    useSelector((state: RootState) => state.songReducer);
 
   const { colorScheme } = useSelector((state: RootState) => state.themeReducer);
-  const [tagFilter, setTagFilter] = useState<SongTags[]>([]);
   const [displaySongs, setDisplaySongs] = useState<RefinedSong[]>(songs ?? []);
-  const [shouldIncludeAllFilters, setShouldIncludeAllFilters] = useState(true);
-  const [textFilter, setTextFilter] = useState('');
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -68,17 +63,18 @@ const SongListView = () => {
   };
 
   const filterByTag = (tag: SongTags) => {
-    if (tagFilter.includes(tag)) {
-      setTagFilter((prev) => prev.filter((e) => e !== tag));
+    if (tagFilters.includes(tag)) {
+      const newTags = tagFilters.filter((e) => e !== tag);
+      dispatch(setTagFilters(newTags));
     } else {
-      setTagFilter((prev) => [...prev, tag]);
+      dispatch(setTagFilters([...tagFilters, tag]));
     }
   };
 
   const filterByText = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setTextFilter(e.target.value);
+    dispatch(setTextFilter(e.target.value));
   };
 
   function songNameSorter(a: RefinedSong, b: RefinedSong) {
@@ -106,22 +102,22 @@ const SongListView = () => {
         );
       }
 
-      if (tagFilter.length > 0) {
+      if (tagFilters.length > 0) {
         const filtered: RefinedSong[] = [];
         songsFilteredByText?.forEach((s) => {
           const matchesAtLeastOneFilter = s.tags.some((t) =>
-            tagFilter.includes(t as SongTags)
+            tagFilters.includes(t as SongTags)
           );
           if (shouldIncludeAllFilters) {
-            const matchesAllFilters = tagFilter.every((tF) =>
+            const matchesAllFilters = tagFilters.every((tF) =>
               s.tags.includes(tF)
             );
 
-            if (tagFilter.length === 1 && matchesAtLeastOneFilter) {
+            if (tagFilters.length === 1 && matchesAtLeastOneFilter) {
               filtered.push(s);
             }
 
-            if (tagFilter.length > 1 && matchesAllFilters) {
+            if (tagFilters.length > 1 && matchesAllFilters) {
               filtered.push(s);
             }
           } else {
@@ -137,7 +133,7 @@ const SongListView = () => {
         setDisplaySongs(songsFilteredByText ?? []);
       }
     }
-  }, [tagFilter, songs, shouldIncludeAllFilters, textFilter]);
+  }, [tagFilters, songs, shouldIncludeAllFilters, textFilter]);
 
   return (
     <>
@@ -154,7 +150,7 @@ const SongListView = () => {
             value={shouldIncludeAllFilters}
             onChange={(_e, val) => {
               if (val == null) return;
-              setShouldIncludeAllFilters(!shouldIncludeAllFilters);
+              dispatch(toggleInclusionFilterType());
             }}
           >
             <ToggleButton value={true} aria-label="should include all tags">
@@ -172,7 +168,7 @@ const SongListView = () => {
             {Object.values(SongTags).map((t, tIdx) => (
               <Chip
                 size="small"
-                variant={tagFilter.includes(t) ? 'filled' : 'outlined'}
+                variant={tagFilters.includes(t) ? 'filled' : 'outlined'}
                 sx={{
                   color: TAG_COLOR_MAP(t as SongTags, colorScheme),
                   margin: '0.5em',
@@ -193,6 +189,7 @@ const SongListView = () => {
           placeholder="Hledej píseň"
           aria-label={'hledej píseň'}
           onChange={(e) => filterByText(e)}
+          value={textFilter}
         />
         {displaySongs?.map((song, idx) => (
           <div key={idx}>
