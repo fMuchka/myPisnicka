@@ -1,0 +1,75 @@
+Author:Pokáč
+Title:Zejtra je taky den
+
+Tags: České, Moderní
+
+{chorus_1_start}
+Občas [C]chtěl bych chtěl bych [G]hned
+začít [Am]měnit měnit [Em]svět
+zkusit jít [F]do sebe místo na pivo
+dělat z [Fm]planety země lepší místo [G]pro život
+a pak si [C]řeknu čert to [G]vem
+dyť on je [Am]zejtra taky [E]den
+na jedno [F]se stavim
+aspoň se [G]mentálně připravim
+{chorus_1_end}
+
+{chorus_2_start}
+Občas [C]chtěl bych chtěl bych [G]hned
+začít [Am]měnit měnit [Em]svět
+zkusit jít [F]do sebe místo na pivo
+dělat z [Fm]planety země lepší místo [G]pro život
+a pak si [C]řeknu čert to [G]vem
+dyť on je [Am]zejtra taky Eden
+na jedno [F]se stavim
+aspoň se [G]mentálně...
+{chorus_2_end}
+
+{verse_1_start}
+Vim o tom [C]že by svědčilo mi [E]necivět furt na sitcomy
+a z [Am]gauče vstát jít si zaběhat
+když můžou [F]bejt fit ti vypatlanci v [G]telce tak proč ne i [C]já
+koupim si [C]značkový potítka, [E]permanentku do fitka
+a [Am]lednici nacpu brokolicí
+dneska [F]nová éra zdravýho [G]lajfstajlu začíná[C]
+{verse_1_end}
+
+{verse_2_start}
+Mohl bych [C]jednou ráno vstát trošku [E]dřív než ve dvanáct
+[Am]neflákat školu a zamakat trochu
+pro [F]svou drahou natrhat [G]růže jen proto že ji mám [C]rád
+zkusit si [C]sám něco uvařit [E]jít konečně k zubaři
+a [Am]za sto let si poprvý srovnat bordel na stole
+[F]vrhnu se na to [G]jen co tenhle díl dokoukám[C]
+{verse_2_end}
+
+{verse_3_start}
+[E]V pul pátý ráno [Am]se vracim z jednoho domů
+[E]před očima rozmazáno [Am]a hlavou se mi k tomu
+[F]honí všechno [G]to co mám [F]dneska dokázat[G]
+[F]jáááá [Fm]však ono to do [G]zejtra počká snad
+{verse_3_end}
+
+{verse_4_start}
+[F]aspoň se na to [G]mentálně...
+občas [C]chtěl bych chtěl bych [G](chtěl bych chtěl bych hned)
+začít [Am]měnit měnit [F](měnit měnit svět)....
+občas [C]chtěl bych chtěl bych [G](chtěl bych chtěl bych hned)
+začít [Am]měnit měnit [F](měnit měnit svět)...
+občas [C]chtěl bych chtěl bych [G](chtěl bych chtěl bych hned)
+začít [Am]měnit měnit [F](měnit měnit svět)..
+občas [C]chtěl bych chtěl bych [G](chtěl bych chtěl bych hned)
+začít [Am]měnit měnit [F](měnit měnit svět).
+{verse_4_end}
+
+{text_start}
+
+CAPO 2
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_2}
+{verse_4}
+{text_end}

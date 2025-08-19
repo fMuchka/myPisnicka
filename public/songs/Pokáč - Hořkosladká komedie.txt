@@ -1,0 +1,84 @@
+Author:Pokáč
+Title:Hořkosladká komedie
+
+Tags: České, Moderní
+
+{chorus_1_start}
+Život je [G]hořko[D]sladká [F#]komedi[Hm]e
+co tě [G]před titulka[A7]ma zabi[D]je
+{chorus_1_end}
+
+{chorus_2_start}
+Život je [G]hořko[D]sladká [F#]komedi[Hm]e
+co tě [G]před titulka[A7]ma zabi[D]je ...[D7]
+{chorus_2_end}
+
+{chorus_3_start}
+Život je [G]hořko[D]sladká [F#]komedi[Hm]e
+co tě [G]před titulka[A7]ma zabi[D]je ...[Hm]
+{chorus_3_end}
+
+
+{verse_1_start}
+[D] Jaroušek [A]zhynul na mor v [Hm]Afri--[G]ce
+[D] Pepíček [A]oběsil se [Hm]na kli[G]ce
+[D] Tomášek [A]ve státech si [Hm]plní-- [G]sny
+bože jak je ten svět [A7]úžas[D]ný 
+{verse_1_end}
+
+{verse_2_start}
+[D] Verunka [A]prohrála boj s [Hm]depre[G]sí
+[D] Anička [A]právě žíly [Hm]řeže [G]si
+[D] v zoo se [A]narodily [Hm]tygřát[G]ka
+ach ten život, to je [A7]pohá[D]dka[D7]
+{verse_2_end}
+
+{verse_3_start}
+[D] Matýsek [A]na dně moře [Hm]uto--[G]nul
+[D] František [A]kamionu [Hm]neuh[G]nul
+[D] na Jendu [A]pořád lepí [Hm]se sle[G]čny
+bože jak je ten svět [A7]báje[D]čný
+{verse_3_end}
+
+{verse_4_start}
+[D] Boženka [A]odvykačku [Hm]nezvlá[G]dla
+[D] dočista [A]úplně se [Hm]pomát[G]la
+[D] Michalka [A]právě sfoukla [Hm]státni[G]ce
+ach ten svět je krás[A7]ný veli[D]ce[D7]
+{verse_4_end}
+
+{verse_5_start}
+[D] Toníček [A]vrhnul se pod [Hm]nuse[G]lák
+[D] na bezdo[A]movce Láďu [Hm]sebou [G]flák
+[D] Táňu, co [A]zdravě žila, [Hm]trefil [G]šlak
+život je občas krutý, [A7]je to [D]tak
+{verse_5_end}
+
+{verse_6_start}
+[D] Tak já bych [A]řek, že asi [Hm]stači[G]lo
+[D] podobných [A]osudů tu [Hm]dost by[G]lo
+a [D]ať skončíme [A]kladně tuhle [Hm]říkan[G]ku
+tak Lojza zemřel stářím [A7]ve spán[D]ku[D7]
+{verse_6_end}
+
+{verse_7_start}
+To je pak [G]ovšem velká [A7]tragédie[D]
+{verse_7_end}
+
+{text_start}
+
+CAPO 3
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{verse_4}
+{chorus_1}
+{verse_5}
+{verse_6}
+{chorus_2}
+{chorus_2}
+{chorus_2}
+{chorus_3}
+{verse_7}
+{text_end}

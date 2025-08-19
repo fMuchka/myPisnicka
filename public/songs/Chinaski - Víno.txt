@@ -47,9 +47,9 @@ A [D]pokud mi to D1 [A]dovolí, než minu [C]Jihlavu [G]hodím Prahu za hlavu
 {chorus_1}
 {chorus_1}
 {verse_2}
-{chorus_2}
 {chorus_3}
-{verse_3}
 {chorus_2}
+{verse_3}
+{chorus_3}
 {chorus_1}
 {text_end}

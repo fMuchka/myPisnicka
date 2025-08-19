@@ -1,0 +1,78 @@
+Author:Pokáč
+Title:Co z tebe bude
+
+Tags: České, Moderní
+
+{chorus_1_start}
+Já pane učitel chci [C]milovat já chci [Dm]poznat svět
+já chci [G]lítat na měsíc [C]a pak zpět
+já chci [Am]drink a pláž ne tvou [Dm]kancelář
+tak [G]proč se mě tak blbě [C]ptáš?
+{chorus_1_end}
+
+{chorus_2_start}
+Já chci [C]milovat já chci [Dm]poznat svět
+já chci [G]lítat na měsíc [C]a pak zpět
+já chci [Am]drink a pláž ne tvou [Dm]kancelář
+tak [G]proč se mě tak blbě [C]ptáš?
+{chorus_2_end}
+
+{chorus_3_start}
+Já chci [C]milovat já chci [Dm]poznat svět
+já chci [G]lítat na měsíc [C]a pak zpět
+já chci [Am]drink a pláž ne tvou [Dm]kancelář
+tak [G]proč se mě tak blbě
+[G]no, vážně hodně blbě
+tak [G]proč se mě tak blbě [C]ptáš?
+{chorus_3_end}
+
+{verse_1_start}
+[C]Když jsem byl prcek,[Dm] tak se mě všude
+[G]dospěláci ptali chlapče,[C] co z tebe bude
+[Am]já řek, že nevim a [Dm]div se nerozbrečel
+dyť [G]já měl sotva páru, co [C]budu dělat večer
+{verse_1_end}
+
+{verse_2_start}
+[C]Ptala se máma, zají[Dm]malo to tetu
+[G]i zoufalýho dějepi[C]sáře v kabinetu
+[Am]jo, kdyby na mě dneska [Dm]stejnej dotaz měl
+moc [G]rád bych mu odpově[C]děl 
+{verse_2_end}
+
+{verse_3_start}
+[C]Občas se zdá že [Dm]účel dospívání
+je [G]úspěšně se vyvinout ve [C]vzorný plátce daní
+[Am]možná by ale někdy [Dm]stálo za to říct
+že [G]život je i něco [C]víc 
+{verse_3_end}
+
+{verse_4_start}
+Víc než [C]do kanclu z kanclu [Dm]splácet hypotéku
+a [G]ke kafi si ráno dát tři [C]cukry a hrst léků
+[Am]život je dar tak žij ho [Dm]než uteče ti
+čekáním [G]na důchod ve stopě[C]ti 
+{verse_4_end}
+
+{verse_5_start}
+[C]uo o o [Dm]o co z tebe bude
+[G]uo o o [C]o co z tebe bude
+[Am]uo o o [Dm]o co z tebe bude
+[G]uo o o [C]o 
+{verse_5_end}
+
+{text_start}
+
+CAPO 3
+{verse_1}
+{verse_2}
+{chorus_1}
+{chorus_2}
+{verse_3}
+{verse_4}
+{chorus_2}
+{chorus_2}
+{verse_5}
+{chorus_2}
+{chorus_3}
+{text_end}

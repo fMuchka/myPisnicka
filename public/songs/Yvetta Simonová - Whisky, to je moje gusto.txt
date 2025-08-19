@@ -1,0 +1,26 @@
+Author:Yvetta Simonová
+Title:Whisky, to je moje gusto
+
+Tags: České, Lidovka
+
+{chorus_1_start}
+[C]Whisky, to je moje gusto, bez whisky mám v srdci [G7]pusto,
+[Dm]kdyby ji můj [G7]táta pil, [C] byl by [Am]tu byl [D7]mnohem dýl,[G7]
+[C]když se ve skle leskne whisky, tak má [C7]barman dobrý [F]zisky,
+život se dá [Fm]zkrátka žít, [A7] jen [C]když je co, [E7]jen [Am]když je co,
+[Fm]jeeen [C]když [Am]j----ee[Dm]ee---- [G7]co---- [C]pít.
+{chorus_1_end}
+
+{verse_1_start}
+[Cm]Tu láhev baculatou, [Fm] tu pestrou vinětu,
+tu whisky temně zlatou[Cm] pije i [G7]Manitou,
+[Cm]Kdo chce se státi mužem, [Fm] ten whisky pije rád,
+[Cm]a proto [Fm6]všichni můžem [G7]společně zazpí[C]vat:
+{verse_1_end}
+
+
+{text_start}
+{chorus_1}
+{verse_1}
+{chorus_1}
+{text_end}

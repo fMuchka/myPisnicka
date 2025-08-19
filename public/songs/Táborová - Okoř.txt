@@ -1,0 +1,42 @@
+Author:Táborová
+Title:Okoř
+
+Tags: České, Táborová, Lidovka
+
+{chorus_1_start}
+[D]Na hradě Okoři [A7]světla už nehoří,
+[D]bílá paní [A7]šla už dávno [D]spát.
+[D]Ta měla ve zvyku, [A7] podle svého budíku,
+Do půlnoci [A7]chodit straší[D]vat.
+[G]Od těch dob co jsou tam [D]trampové,
+[E]nesmí z hradu [A7]pryč.
+[D]A tak dole v podhradí [A7]se šerifem dovádí,
+[D]on jí sebral [A7]od komnaty [D]klíč.
+{chorus_1_end}
+
+{verse_1_start}
+[D]Na okoř je cesta jako žádná ze sta,
+[A7]vroubená je stroma[D]ma.
+[D]Když du po ní v létě, samoten na světě,
+[A7]sotva pletu noha[D]ma.
+[G]Na konci té cesty [D]trnité, [E]stojí krčma jako [A7]hrad.
+[D]Tam zapadli trampi, hladoví a sešlí,
+[A7]začli sobě noto[D]vat
+{verse_1_end}
+
+{verse_2_start}
+[D]Jednoho dne z rána roznesla se zpráva,
+[A7]že byl Okoř vykra[D]den.
+[D]Nikdo neví dodnes, kdo to tenkrát odnes,
+[A7]nikdo nebyl dopa[D]den.
+[G]Šerif hrál celou noc [D]mariáš [E]s bílou paní v [A7]kostnici
+[Dm]ísto aby hlídal, zuřivě ji líbal
+[A7]dostal z toho [D]zimnici
+{verse_2_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{text_end}

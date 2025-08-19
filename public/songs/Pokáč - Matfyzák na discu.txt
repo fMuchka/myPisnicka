@@ -1,0 +1,101 @@
+Author:Pokáč
+Title:Matfyzák na discu
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[Am]Potkal jsem [Dm]holku na dis[G]cu
+obliče[C]j měla na Miss[F]ku
+postavu [Hm]jako z Playbo[E7]ye
+zatáhla mě do svýho poko[Am]je
+chtěl jsem jí [Dm]pomoct s úko[G]ly
+prý už ne[C]chodí do ško[F]ly
+co bude [Hm]dál teď mám [E7]strach
+tohle jsme nebrali na přednáškách. 
+{chorus_1_end}
+
+{chorus_2_start}
+[Am]Potkal jsem [Dm]holku na dis[G]cu
+obliče[C]j měla na Miss[F]ku
+postavu [Hm]jako z Playbo[E7]ye
+zatáhla mě do svýho poko[Am]je
+chtěl jsem jí [Dm]pomoct s úko[G]ly
+prý už ne[C]chodí do ško[F]ly
+neznámou [Hm]vyřešil jsem [E7]však
+tak jako správnej Matfy[Am]zák
+{chorus_2_end}
+
+{verse_1_start}
+[Am]La la la la la la la
+[G]la la la la la la la
+[F]la la la la la la la la [E7]la la la la [Am]la 
+{verse_1_end}
+
+{verse_2_start}
+[Am] Potkal jsem jednu holku na diskošce
+[G] zašeptala, že teď a tady to chce
+[F] já se zeptal, co tím myslí přesně
+[E7] a ona, že prej po tom touží děsně
+[Am] řek jsem jí, ať to blíž specifikuje
+[G] pro tenhle input příliš outputů je
+[F] ona mě chytla svojí vlhkou dlaní
+[E7] ať prej se neptám a jdu rychle za ní
+{verse_2_end}
+
+{verse_3_start}
+[Am] Spousta očí se teď na nás dívá
+[G] hlavou se mi honí deskriptíva
+[F] asi se mě venku v tichu zeptá
+[E7] jestli bych jí půjčil svoje skripta
+[Am] Tak to máš teda holka pěknej smůloh
+[G] jsou v nich řešení domácích úloh
+[F] a přece nechtěla bys připravit se
+[E7] o pocit, když správně dosadíš do rovnice. [Am]Ou!
+{verse_3_end}
+
+{verse_4_start}
+[Am] Svůdně tančila do samby rytmu
+[G] zejtra ráno píšem z algoritmů
+[F] řekla, že teď má prej volnej bejvák
+[E7] a že se můžem jít k ní učit jen tak
+[Am] Ještě než dozněl tón jejího hlasu
+[G] ledvinku vomotal jsem kolem pasu
+[F] a vyrazil nadzvukovou rychlostí
+[E7] jako vždy lačný nových vědomostí
+{verse_4_end}
+
+{verse_5_start}
+[Am] Když jsme pak dorazili až k ní domů
+[G] nemoch jsem na mou duši věřit tomu
+[F] když místo důkazu Gaussova vzorce
+[E7] vybalila na mě svoje prsní dvorce
+[Am] ptala se, zda si na ně nechci sáhnout
+[G] já se nad ně opovážil nahnout
+[F] a plnej vzrušení si představoval
+[E7] jak bych tenhle tvar v MATLABu modeloval. [Am]Ou!
+{verse_5_end}
+
+{verse_6_start}
+[Am]Pak jsme nešli [Dm]spát až [G]do samýho [C]rána
+[F]žádná stránka [Hm]bloku nezůs[E7]tala nepo[Am]psána
+jal jsem se Newtona [Dm]číst, učit ji [G]pí na sto [C]míst
+pak jsme [F]třikrát měli [Hm]sex, teď jdu na [E7]Cviko housku[Am] jíst
+{verse_6_end}
+
+{text_start}
+
+CAPO 3
+{verse_1}
+{verse_2}
+{verse_1}
+{verse_3}
+{chorus_1}
+{verse_1}
+{verse_4}
+{verse_1}
+{verse_5}
+{chorus_1}
+{verse_6}
+{chorus_1}
+{chorus_2}
+{text_end}

@@ -1,0 +1,76 @@
+Author:Jaromír Nohavica
+Title:Hlídač krav
+
+Tags: České, Lidovka, Táborová
+
+{chorus_1_start}
+Já chci [D]mít čapku s bambulí nahoře,
+jíst kaštany, mýt se v lavoře,
+[G]od rána po celý [A7]den, zpívat si [D]jen.
+Zpívat si [D]pam pam pa dam pam padáda
+pam pam padam pam padádam
+[G]pam padada[A7]dam padada[D]dam
+{chorus_1_end}
+
+{verse_1_start}
+[D]Když jsem byl malý, říkali mi naši:
+Dobře se uč a jez chytrou kaši,
+[G]až jednou vyrosteš, [A7] budeš doktorem [D]práv.
+{verse_1_end}
+
+{verse_2_start}
+[D]Takový doktor si sedí pěkně v suchu,
+bere velký peníze a škrábe se v uchu.
+[G]Já jim ale na to řek [A7]Chci být hlídačem [D]krav.
+{verse_2_end}
+
+{verse_3_start}
+[D]K Vánocům mi kupovali hromady knih,
+co jsem ale vědět chtěl, to nevyčet jsem z nich,
+[G]nikde jsem se nedozvě[A7]děl, jak se hlídají [D]krávy.
+{verse_3_end}
+
+{verse_4_start}
+Já [D]ptal jsem se starších a ptal jsem se všech,
+každý na mě hleděl jako na pytel blech,
+[G]každý se mě opatrně [A7]tázal na moje [D]zdraví.
+{verse_4_end}
+
+{verse_5_start}
+[D]Teď už jsem starší a vím co vím,
+mnohé věci nemůžu a mnohé smím
+[G]a když je mi velmi smutno, [A7]lehnu do mokré [D]trávy.
+{verse_5_end}
+
+{verse_6_start}
+[D]S nohama křížem a rukama za hlavou,
+koukám nahoru na oblohu modravou,
+[G]kde se mezi mraky [A7]honí moje strakaté [D]krávy.
+{verse_6_end}
+
+{verse_7_start}
+[E]pam pam pa dam pam padáda
+pam pam padam pam padádam
+[A]pam padada[H7]dam padada[E]dam
+{verse_7_end}
+
+{verse_8_start}
+[F]pam pam pa dam pam padáda
+pam pam padam pam padádam
+[B]pam padada[C7]dam padada[F]dam
+{verse_8_end}
+
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{verse_4}
+{chorus_1}
+{verse_5}
+{verse_6}
+{chorus_1}
+{verse_7}
+{verse_8}
+{text_end}

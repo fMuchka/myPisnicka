@@ -1,0 +1,71 @@
+Author:Jaromír Nohavica
+Title:Když mě brali za vojáka
+
+Tags: České, Lidovka
+
+{verse_1_start}
+[Am]Když mě brali za vo[C]jáka
+[G]stříhali mě doho[C]la
+[Dm]vypadal jsem jako [Am]blbec
+[E]jak ti všichni doko[F]la-[G]la-[C]la-[G]la
+[Am]jak ti všichni [E]doko[Am]la
+{verse_1_end}
+
+{verse_2_start}
+[Am]Zavřeli mě do ka[C]sáren
+[G]začali mě uči[C]ti
+[Dm]jak mám správný voják [Am]býti
+[E]a svou zemi chráni[F]ti-[G]ti-[C]ti-[G]ti
+[Am]a svou zemi [E]chráni[Am]ti
+{verse_2_end}
+
+{verse_3_start}
+[Am]Na pokoji po ve[C]čerce
+[G]ke zdi jsem se přitu[C]lil
+[Dm]vzpomněl jsem si na svou [Am]milou
+[E]krásně jsem si zabu[F]lil-[G]lil-[C]lil-[G]lil
+[Am]krásně jsem si [E]zabu[Am]lil
+{verse_3_end}
+
+{verse_4_start}
+[Am]Když přijela po půl [C]roce
+[G]měl jsem zrovna zápal [C]plic
+[Dm]po chodbě furt někdo [Am]chodil
+[E]tak nebylo z toho [F]nic [G]nic [C]nic [G]nic
+[Am]tak nebylo [E]z toho [Am]nic
+{verse_4_end}
+
+{verse_5_start}
+[Am]Neplačte vy oči [C]móje
+[G]ona za to nemo[C]hla, protože
+[Dm]mladá holka lásku potře[Am]búje,
+[E]tak si k lásce pomoh[F]la -[G]la -[C]la -[G]la
+[Am]tak si k lásce [E]pomoh[Am]la.
+{verse_5_end}
+
+{verse_6_start}
+[Am]Major nosí velkou [C]hvězdu
+[G]před branou ho potka[C]la
+[Dm]řek jí že má zrovna volný k[Am]vartýr
+[E]tak se sbalit necha[F]la-[G]la-[C]la-[G]la
+[Am]tak se sbalit [E]necha[Am]la
+{verse_6_end}
+
+{verse_7_start}
+[Am]Co je komu do vo[C]jáka
+[G]když ho holka zradi[C]la
+[Dm]nashledanou pane Fráňo [Am]Šrámku
+[E]písnička už skonči[F]la-[G]la-[C]la-[G]la
+[E]jakpak se vám líbi[F]la-[G]la-[C]la-[G]la
+no [Am]nic moc extra [E]neby[Am]la.
+{verse_7_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{verse_3}
+{verse_4}
+{verse_5}
+{verse_6}
+{verse_7}
+{text_end}

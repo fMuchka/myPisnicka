@@ -1,0 +1,89 @@
+Author:Jaromír Nohavica
+Title:Tři čuníci
+
+Tags: České, Lidovka, Táborová
+
+{chorus_1_start}
+[C]Vi-vi vi-vi ví, ví-vi vi-vi ví, ví-vi vi-vi-ví-ví, vi-vi vi-vi-[Am]ví,
+[Dm]Ví-vi vi-vi ví, ví-vi vi-vi [G]ví,
+[Dm]ví-vi vi-vi ví-vi vi-vi, [G7]ví-vi vi-vi-ví
+{chorus_1_end}
+
+{verse_1_start}
+[C]V řadě za sebou
+tři čuníci jdou
+ťapají si v blátě
+cestou neces[Am]tou
+[Dm]kufry nemají
+cestu nezna[G]jí
+[Dm]vyšli prostě do světa
+a [G7]vesele si zpívají
+{verse_1_end}
+
+{verse_2_start}
+[C]Auta jezdí tam
+a náklaďáky sem
+tři čuníci jdou jdou
+rovnou za no[Am]sem
+[Dm]žito chřoupají
+ušima bimba[G]jí
+[Dm]vyšli prostě do světa
+a [G7]vesele si zpívají
+{verse_2_end}
+
+{verse_3_start}
+[C]Levá pravá teď
+přední zadní už
+tři čuníci jdou jdou
+jako jeden [Am]muž
+[Dm]lidé zírají
+důvod nezna[G]jí
+[Dm]proč ti malí čuníci tak [G7]vesele si zpívají
+{verse_3_end}
+
+{verse_4_start}
+[C]Když kopýtka pálí
+když jim dojde dech
+sednou ke studánce
+na vysoký [Am]břeh
+kopýtka mácha[Dm]jí
+ušima bimba[G]jí
+[Dm]chvilinku si odpočinou
+[G7]a pak dál se vydají
+{verse_4_end}
+
+{verse_5_start}
+[C]Když se spustí déšť
+roztrhne se mrak
+k sobě přitisknou se
+čumák na [Am]čumák
+[Dm]blesky blýskají
+kapky pleska[G]jí
+a [Dm]oni v dešti v nepohodě [G7]vesele si zpívají
+{verse_5_end}
+
+{verse_6_start}
+[C]Za tu spoustu let
+co je světem svět
+přešli zeměkouli
+třikrát tam a [Am]zpět
+v[Dm] řadě za sebou
+hele - támhle [G]jdou
+[Dm]pojďme s nima zazpívat si
+[G7]jejich píseň veselou
+{verse_6_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_4}
+{chorus_1}
+{verse_5}
+{chorus_1}
+{verse_6}
+{chorus_1}
+{text_end}
