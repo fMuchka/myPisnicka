@@ -1,8 +1,8 @@
 import { useEffect, useMemo } from 'react';
 import {
+  Box,
   Container,
   CssBaseline,
-  Fab,
   ThemeProvider,
   useColorScheme,
 } from '@mui/material';
@@ -25,8 +25,6 @@ import {
 } from '../features/Controls/ThemeControl/theme/enums';
 import { CookieAcceptState, CookieKeys } from '../features/Cookies/enums';
 import CookieDialog from '../features/Cookies/CookieDialog';
-import { KeyboardArrowUp } from '@mui/icons-material';
-import ScrollTop from '../components/MUIAppBarUtils/ScrollTop/ScrollTop';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from './store';
 import {
@@ -49,6 +47,9 @@ import SongListView from '../routes/SongListView/SongListView';
 import { loadSongs } from '../features/Songs/songsSlice';
 import InfoView from '../routes/InfoView/InfoView';
 import { useAutoScroll } from '../hooks/useAutoScroll';
+import Navigation from '../components/BottomNavigation/BottomNavigation';
+import { RoutesEnum } from '../routes/routes';
+import QueueView from '../routes/QueueView/QueueView';
 
 function App() {
   const { primaryColor, colorScheme } = useSelector(
@@ -60,7 +61,6 @@ function App() {
   const { songs } = useSelector((state: RootState) => state.songReducer);
 
   const dispatch = useDispatch();
-
   const { stopScroll } = useAutoScroll();
 
   const { setColorScheme: setColorSchemeMUI } = useColorScheme();
@@ -176,30 +176,23 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
-        <Container maxWidth="md" sx={{ marginTop: '5rem' }}>
+        <Container maxWidth="md">
           <HashRouter>
             <TopBar />
 
-            <Routes>
-              <Route path="/my-pisnicka/ListView" element={<SongListView />} />
-              <Route path="/my-pisnicka/SongView" element={<SongView />} />
-              <Route path="" element={<InfoView />} />
-              <Route path="/my-pisnicka/Info" element={<InfoView />} />
-            </Routes>
+            <Box sx={{ marginBottom: '5rem' }}>
+              <Routes>
+                <Route path={RoutesEnum.SONG_LIST} element={<SongListView />} />
+                <Route path={RoutesEnum.SONG} element={<SongView />} />
+                <Route path={RoutesEnum.INFO} element={<InfoView />} />
+                <Route path={RoutesEnum.HOME} element={<InfoView />} />
+                <Route path={RoutesEnum.SONG_QUEUE} element={<QueueView />} />
+              </Routes>
+            </Box>
+
+            {!isScrolling && <Navigation />}
           </HashRouter>
         </Container>
-
-        <ScrollTop>
-          <Fab
-            size="small"
-            aria-label="scroll back to top"
-            id="back-to-top-button"
-            color="primary"
-          >
-            <KeyboardArrowUp />
-          </Fab>
-        </ScrollTop>
-
         <CookieDialog />
       </CssBaseline>
     </ThemeProvider>

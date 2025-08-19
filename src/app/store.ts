@@ -7,6 +7,7 @@ import chordDetailsReducer, {
 } from '../features/Controls/ChordDetailsControl/chordDetailsSlice';
 import cookieReducer from '../features/Cookies/cookieSlice';
 import songReducer, { selectedSong } from '../features/Songs/songsSlice';
+import queueReducer from '../features/Queue/queueSlice';
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     chordDetailsReducer,
     cookieReducer,
     songReducer,
+    queueReducer,
   },
 });
 

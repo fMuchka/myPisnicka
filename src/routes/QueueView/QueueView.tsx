@@ -1,0 +1,61 @@
+import { useDispatch, useSelector } from 'react-redux';
+import type { RootState } from '../../app/store';
+import { Button, Chip, Stack } from '@mui/material';
+import { setSelectedSong } from '../../features/Songs/songsSlice';
+import type { RefinedSong } from '../../utils/rawSongRefiner';
+import { RoutesEnum } from '../routes';
+import { useNavigate } from 'react-router';
+import { PlaylistRemove } from '@mui/icons-material';
+import {
+  removeSongFromQueue,
+  setCurrentSongIndex,
+} from '../../features/Queue/queueSlice';
+
+const QueueView = () => {
+  const { queue } = useSelector((state: RootState) => state.queueReducer);
+  const { selectedSong } = useSelector((state: RootState) => state.songReducer);
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleSongClick = (song: RefinedSong) => {
+    navigate(RoutesEnum.SONG, { viewTransition: true });
+    dispatch(setSelectedSong(song));
+    dispatch(setCurrentSongIndex(queue.findIndex((s) => s.id === song.id)));
+  };
+
+  const removeFromQueue = (song: RefinedSong) => {
+    dispatch(removeSongFromQueue(song));
+  };
+
+  if (queue.length === 0) {
+    return <div style={{ marginTop: '5rem' }}>Žádná píseň ve frontě</div>;
+  }
+
+  return (
+    <div style={{ marginTop: '5rem' }}>
+      <Stack spacing={2}>
+        {queue.map((song, index) => (
+          <Stack direction="row" spacing={2} key={index}>
+            <Button
+              sx={{ placeContent: 'space-between', textAlign: 'start' }}
+              onClick={() => handleSongClick(song)}
+              fullWidth
+              variant={song.id === selectedSong?.id ? 'contained' : 'outlined'}
+            >
+              {song.id}
+            </Button>
+            <Chip
+              icon={<PlaylistRemove />}
+              label="Fronta"
+              variant="outlined"
+              onClick={() => removeFromQueue(song)}
+            />
+          </Stack>
+        ))}
+      </Stack>
+    </div>
+  );
+};
+
+export default QueueView;

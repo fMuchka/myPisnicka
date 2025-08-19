@@ -83,7 +83,6 @@ export const loadSongs = async (
   refinedSongs.forEach((e, idx) => (e.id = `${idx + 1}) ${e.id}`));
 
   dispatch(setSongs(refinedSongs));
-  dispatch(setSelectedSong(refinedSongs[0]));
 };
 
 export const {

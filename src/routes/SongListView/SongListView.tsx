@@ -10,6 +10,7 @@ import {
   ToggleButtonGroup,
   Typography,
 } from '@mui/material';
+import { PlaylistAdd, PlaylistRemove } from '@mui/icons-material';
 import { useNavigate } from 'react-router';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
 import {
@@ -23,6 +24,11 @@ import {
 import { indigo, red, pink, green, amber, cyan } from '@mui/material/colors';
 import { ColorScheme } from '../../features/Controls/ThemeControl/theme/enums';
 import { useEffect, useState, type ChangeEvent } from 'react';
+import { RoutesEnum } from '../routes';
+import {
+  addSongToQueue,
+  removeSongFromQueue,
+} from '../../features/Queue/queueSlice';
 
 const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
   switch (tag) {
@@ -43,13 +49,18 @@ const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
     case SongTags.LIDOVKA:
       return scheme === ColorScheme.LIGHT ? cyan[900] : cyan[100];
   }
-
-  return 'gold';
 };
 
 const SongListView = () => {
-  const { songs, tagFilters, textFilter, shouldIncludeAllFilters } =
-    useSelector((state: RootState) => state.songReducer);
+  const {
+    songs,
+    tagFilters,
+    textFilter,
+    shouldIncludeAllFilters,
+    selectedSong,
+  } = useSelector((state: RootState) => state.songReducer);
+
+  const { queue } = useSelector((state: RootState) => state.queueReducer);
 
   const { colorScheme } = useSelector((state: RootState) => state.themeReducer);
   const [displaySongs, setDisplaySongs] = useState<RefinedSong[]>(songs ?? []);
@@ -58,7 +69,7 @@ const SongListView = () => {
   const dispatch = useDispatch();
 
   const handleSongClick = (song: RefinedSong) => {
-    navigate('/my-pisnicka/SongView', { viewTransition: true });
+    navigate(RoutesEnum.SONG, { viewTransition: true });
     dispatch(setSelectedSong(song));
   };
 
@@ -91,6 +102,14 @@ const SongListView = () => {
     // names must be equal
     return 0;
   }
+
+  const addToQueue = (song: RefinedSong) => {
+    dispatch(addSongToQueue(song));
+  };
+
+  const removeFromQueue = (song: RefinedSong) => {
+    dispatch(removeSongFromQueue(song));
+  };
 
   useEffect(() => {
     if (songs != null) {
@@ -136,13 +155,14 @@ const SongListView = () => {
   }, [tagFilters, songs, shouldIncludeAllFilters, textFilter]);
 
   return (
-    <>
+    <div style={{ marginTop: '5rem' }}>
       <Stack spacing={5} direction={'row'}>
         <Stack spacing={2} direction={'column'} width={'100%'}>
           <Typography variant="body1" color="text.secondary">
             Filtrovat podle značek
           </Typography>
           <ToggleButtonGroup
+            size="small"
             color="primary"
             exclusive
             sx={{ display: 'flex', flexDirection: 'column' }}
@@ -183,6 +203,7 @@ const SongListView = () => {
       </Stack>
 
       <Divider sx={{ margin: '0.5rem 0 1rem 0' }}></Divider>
+
       <Stack spacing={2} marginBottom={5}>
         <TextField
           size="small"
@@ -191,34 +212,61 @@ const SongListView = () => {
           onChange={(e) => filterByText(e)}
           value={textFilter}
         />
-        {displaySongs?.map((song, idx) => (
-          <div key={idx}>
-            <Button
-              sx={{ placeContent: 'space-between', textAlign: 'start' }}
-              key={idx}
-              onClick={() => handleSongClick(song)}
-              fullWidth
-            >
-              {song.id}
-            </Button>
-            <Stack direction={'row'}>
-              {song.tags.map((t, tIdx) => (
-                <Chip
-                  size="small"
-                  variant={'filled'}
+        <Stack spacing={2}>
+          {displaySongs?.map((song, idx) => (
+            <Stack spacing={1} key={idx}>
+              <Stack direction={'row'}>
+                <Button
                   sx={{
-                    color: TAG_COLOR_MAP(t.trim() as SongTags, colorScheme),
-                    marginLeft: '0.5em',
+                    placeContent: 'space-between',
+                    textAlign: 'start',
+                    width: '75%',
+                    marginRight: '1em',
                   }}
-                  label={t}
-                  key={tIdx}
-                />
-              ))}
+                  key={idx}
+                  onClick={() => handleSongClick(song)}
+                  variant={
+                    song.id === selectedSong?.id ? 'contained' : 'outlined'
+                  }
+                >
+                  {song.id}
+                </Button>
+                {queue.includes(song) ? (
+                  <Chip
+                    icon={<PlaylistRemove />}
+                    label="Fronta"
+                    variant="outlined"
+                    onClick={() => removeFromQueue(song)}
+                  />
+                ) : (
+                  <Chip
+                    icon={<PlaylistAdd />}
+                    label="Fronta"
+                    variant="filled"
+                    onClick={() => addToQueue(song)}
+                  />
+                )}
+              </Stack>
+
+              <Stack direction={'row'}>
+                {song.tags.map((t, tIdx) => (
+                  <Chip
+                    size="small"
+                    variant={'filled'}
+                    sx={{
+                      color: TAG_COLOR_MAP(t.trim() as SongTags, colorScheme),
+                      marginLeft: '0.5em',
+                    }}
+                    label={t}
+                    key={tIdx}
+                  />
+                ))}
+              </Stack>
             </Stack>
-          </div>
-        ))}
+          ))}
+        </Stack>
       </Stack>
-    </>
+    </div>
   );
 };
 

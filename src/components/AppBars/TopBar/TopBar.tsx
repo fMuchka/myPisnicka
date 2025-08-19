@@ -1,12 +1,16 @@
-import { AppBar, Toolbar, Button, Typography } from '@mui/material';
+import { AppBar, Toolbar, Button } from '@mui/material';
 import HideOnScroll from '../../MUIAppBarUtils/HideOnScroll/HideOnScroll';
-import { useState } from 'react';
-import { ArrowBack, Audiotrack, Info, Settings } from '@mui/icons-material';
-import { useSelector } from 'react-redux';
+import { ArrowBack, ArrowForward, Done } from '@mui/icons-material';
+import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../../app/store';
 
-import ControlModal from '../../../features/Controls/ControlModal/ControlModal';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation } from 'react-router';
+import { RoutesEnum } from '../../../routes/routes';
+import { setSelectedSong } from '../../../features/Songs/songsSlice';
+import {
+  removeSongFromQueue,
+  setCurrentSongIndex,
+} from '../../../features/Queue/queueSlice';
 
 const TopBar = () => {
   const { primaryColor, colorScheme } = useSelector(
@@ -14,12 +18,51 @@ const TopBar = () => {
   );
   const { selectedSong } = useSelector((state: RootState) => state.songReducer);
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { queue, currentSongIndex } = useSelector(
+    (state: RootState) => state.queueReducer
+  );
 
-  const [openSettings, setOpenSettings] = useState(false);
+  const location = useLocation();
+  const dispatch = useDispatch();
 
   const getColor = () => (colorScheme == 'dark' ? primaryColor : '#FFFFFF');
+
+  const handleBackClick = () => {
+    if (queue.length > 0) {
+      const prevSongIndex = currentSongIndex - 1;
+
+      if (prevSongIndex > -1) {
+        dispatch(setSelectedSong(queue[prevSongIndex]));
+        dispatch(setCurrentSongIndex(prevSongIndex));
+      }
+    }
+  };
+
+  const handleForwardClick = () => {
+    if (queue.length > 0) {
+      const nextSongIndex = currentSongIndex + 1;
+
+      if (nextSongIndex < queue.length) {
+        dispatch(setSelectedSong(queue[nextSongIndex]));
+        dispatch(setCurrentSongIndex(nextSongIndex));
+      }
+    }
+  };
+
+  const songTitleClick = () => {
+    if (queue.length > 0 && selectedSong) {
+      dispatch(removeSongFromQueue(selectedSong));
+
+      handleForwardClick();
+    }
+  };
+
+  if (
+    location.pathname == RoutesEnum.HOME ||
+    location.pathname == RoutesEnum.INFO ||
+    location.pathname == RoutesEnum.SETTINGS
+  )
+    return null;
 
   return (
     <HideOnScroll>
@@ -33,77 +76,58 @@ const TopBar = () => {
               margin: 'auto',
               placeContent: 'space-between',
               gridTemplateAreas: `'menu song other'`,
-              gridTemplateColumns: '1fr 170px 1fr',
+              gridTemplateColumns: '1fr 3fr 1fr',
             }}
           >
+            {currentSongIndex > 0 && location.pathname === RoutesEnum.SONG && (
+              <Button
+                size="small"
+                sx={{
+                  justifyContent: 'start',
+                  gridArea: 'menu',
+                  color: getColor(),
+                  fontSize: '10px',
+                }}
+                startIcon={<ArrowBack />}
+                onClick={() => handleBackClick()}
+              >
+                Fronta
+              </Button>
+            )}
             <Button
-              size="small"
-              sx={{
-                display: location.pathname.includes('ListView')
-                  ? 'none'
-                  : 'flex',
-                justifyContent: 'start',
-                gridArea: 'menu',
-                color: getColor(),
-              }}
-              startIcon={<ArrowBack />}
-              onClick={() =>
-                navigate('/my-pisnicka/ListView', { viewTransition: true })
-              }
-            >
-              Písně
-            </Button>
-
-            <Button
-              size="small"
-              sx={{
-                display: location.pathname.includes('ListView')
-                  ? 'flex'
-                  : 'none',
-                justifyContent: 'start',
-                gridArea: 'menu',
-                color: getColor(),
-              }}
-              onClick={() => {
-                navigate('/my-pisnicka/Info', { viewTransition: true });
-              }}
-              startIcon={<Info />}
-            >
-              Info
-            </Button>
-            <Typography
-              variant="subtitle2"
-              sx={{
-                display: 'grid',
-                gridArea: 'song',
-                maxWidth: '170px',
-                textAlign: 'center',
-              }}
-            >
-              {selectedSong?.id}
-            </Typography>
-            <Button
-              size="small"
+              variant={queue.length === 0 ? 'text' : 'outlined'}
               sx={{
                 display: 'flex',
-                justifyContent: 'end',
-                gridArea: 'other',
+                gridArea: 'song',
+                textAlign: 'center',
+                alignContent: 'center',
+                fontSize: '12px',
                 color: getColor(),
               }}
-              endIcon={
-                location.pathname.includes('SongView') ? (
-                  <Audiotrack />
-                ) : (
-                  <Settings />
-                )
-              }
-              onClick={() => setOpenSettings(true)}
+              endIcon={queue.length > 0 && <Done />}
+              onClick={() => songTitleClick()}
             >
-              {location.pathname.includes('SongView') ? 'Akordy' : 'Nastavení'}
+              {selectedSong?.id}
             </Button>
+
+            {currentSongIndex < queue.length - 1 &&
+              location.pathname === RoutesEnum.SONG && (
+                <Button
+                  size="small"
+                  sx={{
+                    justifyContent: 'end',
+                    gridArea: 'other',
+                    color: getColor(),
+                    fontSize: '10px',
+                  }}
+                  endIcon={<ArrowForward />}
+                  onClick={() => handleForwardClick()}
+                >
+                  Fronta
+                </Button>
+              )}
           </div>
         </Toolbar>
-        <ControlModal open={openSettings} setOpen={setOpenSettings} />
       </AppBar>
     </HideOnScroll>
   );
