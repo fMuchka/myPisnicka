@@ -1,5 +1,6 @@
 import { Button, Stack, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
+import { RoutesEnum } from '../routes';
 
 const InfoView = () => {
   const navigate = useNavigate();
@@ -66,9 +67,7 @@ const InfoView = () => {
         sx={{ marginBottom: '3rem' }}
         variant="outlined"
         fullWidth
-        onClick={() =>
-          navigate('/my-pisnicka/ListView', { viewTransition: true })
-        }
+        onClick={() => navigate(RoutesEnum.SONG_LIST, { viewTransition: true })}
       >
         Přejít na písně
       </Button>
