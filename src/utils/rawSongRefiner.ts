@@ -33,8 +33,6 @@ function refine(rawSong: RawSong): RefinedSong {
 
   tags.forEach((e, idx) => (tags[idx] = e.trim()));
 
-  tags.sort();
-
   return {
     numberOfLines: 0,
     author,

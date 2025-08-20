@@ -102,6 +102,12 @@ const SongListView = () => {
     // names must be equal
     return 0;
   }
+  function sortCzechStrings<T extends string>(arr: T[]): T[] {
+    const arrCopy = [...arr];
+    return arrCopy.sort((a, b) =>
+      a.localeCompare(b, 'cs', { sensitivity: 'base' })
+    );
+  }
 
   const addToQueue = (song: RefinedSong) => {
     dispatch(addSongToQueue(song));
@@ -185,7 +191,7 @@ const SongListView = () => {
           </ToggleButtonGroup>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
-            {Object.values(SongTags).map((t, tIdx) => (
+            {sortCzechStrings(Object.values(SongTags)).map((t, tIdx) => (
               <Chip
                 size="small"
                 variant={tagFilters.includes(t) ? 'filled' : 'outlined'}
@@ -249,7 +255,7 @@ const SongListView = () => {
               </Stack>
 
               <Stack direction={'row'}>
-                {song.tags.map((t, tIdx) => (
+                {sortCzechStrings(song.tags).map((t, tIdx) => (
                   <Chip
                     size="small"
                     variant={'filled'}
