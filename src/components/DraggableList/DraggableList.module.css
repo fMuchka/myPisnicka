@@ -1,0 +1,50 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  touch-action: none;
+}
+
+/* Styles for each draggable item's container */
+.list-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: grab;
+  /* Prevent text selection and context menus on touch */
+  user-select: none;
+  -webkit-touch-callout: none;
+  /* This helps dnd-kit know where to apply focus rings for keyboard nav */
+  position: relative;
+  touch-action: none;
+  display: flex;
+  flex-direction: row;
+}
+
+/* This is the inner content that you defined in App.tsx */
+.item-content {
+  padding: 15px;
+}
+
+.item-content strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.item-content p {
+  margin: 0;
+  color: #555;
+}
+
+/* dnd-kit applies focus styles for accessibility */
+.list-item:focus-visible {
+  outline: 2px solid #4c9aff;
+  outline-offset: 2px;
+}
+
+.dragging-overlay {
+  cursor: grabbing;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02); /* Make it slightly bigger */
+  touch-action: manipulation;
+}

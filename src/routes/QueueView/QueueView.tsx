@@ -5,11 +5,13 @@ import { setSelectedSong } from '../../features/Songs/songsSlice';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
 import { RoutesEnum } from '../routes';
 import { useNavigate } from 'react-router';
-import { PlaylistRemove } from '@mui/icons-material';
+import { DragHandle, PlaylistRemove } from '@mui/icons-material';
 import {
   removeSongFromQueue,
   setCurrentSongIndex,
+  setQueue,
 } from '../../features/Queue/queueSlice';
+import DraggableList from '../../components/DraggableList/DraggableList';
 
 const QueueView = () => {
   const { queue } = useSelector((state: RootState) => state.queueReducer);
@@ -35,7 +37,32 @@ const QueueView = () => {
   return (
     <div style={{ marginTop: '5rem' }}>
       <Stack spacing={2}>
-        {queue.map((song, index) => (
+        <DraggableList
+          items={queue}
+          setItems={(newQueue) => dispatch(setQueue(newQueue))}
+          renderItem={(song) => (
+            <Stack direction="row" spacing={2}>
+              <DragHandle />
+              <Button
+                sx={{ placeContent: 'space-between', textAlign: 'start' }}
+                onClick={() => handleSongClick(song)}
+                fullWidth
+                variant={
+                  song.id === selectedSong?.id ? 'contained' : 'outlined'
+                }
+              >
+                {song.id}
+              </Button>
+              <Chip
+                icon={<PlaylistRemove />}
+                label="Fronta"
+                variant="outlined"
+                onClick={() => removeFromQueue(song)}
+              />
+            </Stack>
+          )}
+        />
+        {/* {queue.map((song, index) => (
           <Stack direction="row" spacing={2} key={index}>
             <Button
               sx={{ placeContent: 'space-between', textAlign: 'start' }}
@@ -52,7 +79,7 @@ const QueueView = () => {
               onClick={() => removeFromQueue(song)}
             />
           </Stack>
-        ))}
+        ))} */}
       </Stack>
     </div>
   );
