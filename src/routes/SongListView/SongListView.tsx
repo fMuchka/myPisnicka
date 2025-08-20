@@ -1,6 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Button,
   Chip,
   Divider,
@@ -10,7 +13,12 @@ import {
   ToggleButtonGroup,
   Typography,
 } from '@mui/material';
-import { PlaylistAdd, PlaylistRemove } from '@mui/icons-material';
+import {
+  Clear,
+  ExpandMore,
+  PlaylistAdd,
+  PlaylistRemove,
+} from '@mui/icons-material';
 import { useNavigate } from 'react-router';
 import type { RefinedSong } from '../../utils/rawSongRefiner';
 import {
@@ -162,62 +170,77 @@ const SongListView = () => {
 
   return (
     <div style={{ marginTop: '5rem' }}>
-      <Stack spacing={5} direction={'row'}>
-        <Stack spacing={2} direction={'column'} width={'100%'}>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMore />}>
           <Typography variant="body1" color="text.secondary">
-            Filtrovat podle značek
+            Filtr podle typu
           </Typography>
-          <ToggleButtonGroup
-            size="small"
-            color="primary"
-            exclusive
-            sx={{ display: 'flex', flexDirection: 'column' }}
-            aria-labelledby="tag filter type"
-            value={shouldIncludeAllFilters}
-            onChange={(_e, val) => {
-              if (val == null) return;
-              dispatch(toggleInclusionFilterType());
-            }}
-          >
-            <ToggleButton value={true} aria-label="should include all tags">
-              Obsahuje všechny vybrané
-            </ToggleButton>
-            <ToggleButton
-              value={false}
-              aria-label="should include at least one"
-            >
-              Obsahuje alespoň jednu vybranou
-            </ToggleButton>
-          </ToggleButtonGroup>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
-            {sortCzechStrings(Object.values(SongTags)).map((t, tIdx) => (
-              <Chip
+        </AccordionSummary>
+        <AccordionDetails>
+          <Stack spacing={5} direction={'row'}>
+            <Stack spacing={2} direction={'column'} width={'100%'}>
+              <ToggleButtonGroup
                 size="small"
-                variant={tagFilters.includes(t) ? 'filled' : 'outlined'}
-                sx={{
-                  color: TAG_COLOR_MAP(t as SongTags, colorScheme),
-                  margin: '0.5em',
+                color="primary"
+                exclusive
+                sx={{ display: 'flex', flexDirection: 'column' }}
+                aria-labelledby="tag filter type"
+                value={shouldIncludeAllFilters}
+                onChange={(_e, val) => {
+                  if (val == null) return;
+                  dispatch(toggleInclusionFilterType());
                 }}
-                onClick={() => filterByTag(t)}
-                label={t}
-                key={tIdx}
-              />
-            ))}
-          </div>
-        </Stack>
-      </Stack>
+              >
+                <ToggleButton value={true} aria-label="should include all tags">
+                  Obsahuje všechny vybrané
+                </ToggleButton>
+                <ToggleButton
+                  value={false}
+                  aria-label="should include at least one"
+                >
+                  Obsahuje alespoň jednu vybranou
+                </ToggleButton>
+              </ToggleButtonGroup>
+
+              <div
+                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
+              >
+                {sortCzechStrings(Object.values(SongTags)).map((t, tIdx) => (
+                  <Chip
+                    size="small"
+                    variant={tagFilters.includes(t) ? 'filled' : 'outlined'}
+                    sx={{
+                      color: TAG_COLOR_MAP(t as SongTags, colorScheme),
+                      margin: '0.5em',
+                    }}
+                    onClick={() => filterByTag(t)}
+                    label={t}
+                    key={tIdx}
+                  />
+                ))}
+              </div>
+            </Stack>
+          </Stack>
+        </AccordionDetails>
+      </Accordion>
 
       <Divider sx={{ margin: '0.5rem 0 1rem 0' }}></Divider>
 
       <Stack spacing={2} marginBottom={5}>
-        <TextField
-          size="small"
-          placeholder="Hledej píseň"
-          aria-label={'hledej píseň'}
-          onChange={(e) => filterByText(e)}
-          value={textFilter}
-        />
+        <Stack direction={'row'} width={'100%'}>
+          <TextField
+            size="small"
+            placeholder="Hledej píseň"
+            aria-label={'hledej píseň'}
+            onChange={(e) => filterByText(e)}
+            value={textFilter}
+            fullWidth
+          />
+
+          <Button onClick={() => dispatch(setTextFilter(''))}>
+            <Clear />
+          </Button>
+        </Stack>
         <Stack spacing={2}>
           {displaySongs?.map((song, idx) => (
             <Stack spacing={1} key={idx}>
