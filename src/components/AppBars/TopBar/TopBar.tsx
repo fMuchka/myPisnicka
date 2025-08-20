@@ -39,23 +39,36 @@ const TopBar = () => {
   };
 
   const handleForwardClick = () => {
-    if (queue.length > 0) {
-      const nextSongIndex = currentSongIndex + 1;
+    if (!currentSongIsInQueue()) {
+      dispatch(setSelectedSong(queue[0]));
+      dispatch(setCurrentSongIndex(0));
+    } else {
+      if (queue.length > 0) {
+        const nextSongIndex = currentSongIndex + 1;
 
-      if (nextSongIndex < queue.length) {
-        dispatch(setSelectedSong(queue[nextSongIndex]));
-        dispatch(setCurrentSongIndex(nextSongIndex));
+        if (nextSongIndex < queue.length) {
+          dispatch(setSelectedSong(queue[nextSongIndex]));
+          dispatch(setCurrentSongIndex(nextSongIndex));
+        }
       }
     }
   };
 
   const songTitleClick = () => {
+    const nextSongIndex = currentSongIndex + 1;
+
+    if (!currentSongIsInQueue()) return false;
     if (queue.length > 0 && selectedSong) {
       dispatch(removeSongFromQueue(selectedSong));
 
-      handleForwardClick();
+      if (nextSongIndex < queue.length) {
+        dispatch(setSelectedSong(queue[nextSongIndex]));
+      }
     }
   };
+
+  const currentSongIsInQueue = () =>
+    queue.find((e) => e.id === selectedSong?.id) != null;
 
   if (
     location.pathname == RoutesEnum.HOME ||
@@ -95,7 +108,13 @@ const TopBar = () => {
               </Button>
             )}
             <Button
-              variant={queue.length === 0 ? 'text' : 'outlined'}
+              variant={
+                queue.length === 0 ||
+                selectedSong === null ||
+                !currentSongIsInQueue()
+                  ? 'text'
+                  : 'outlined'
+              }
               sx={{
                 display: 'flex',
                 gridArea: 'song',
@@ -104,7 +123,11 @@ const TopBar = () => {
                 fontSize: '12px',
                 color: getColor(),
               }}
-              endIcon={queue.length > 0 && <Done />}
+              endIcon={
+                queue.length > 0 &&
+                location.pathname === RoutesEnum.SONG &&
+                currentSongIsInQueue() && <Done />
+              }
               onClick={() => songTitleClick()}
             >
               {selectedSong?.id}
