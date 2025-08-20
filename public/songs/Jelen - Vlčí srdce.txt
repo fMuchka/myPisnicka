@@ -1,0 +1,47 @@
+Author:Jelen
+Title:Vlčí srdce
+
+Tags: České, Moderní
+
+{chorus_1_start}
+Máš [Em]vlčí srdce[C] a hlavu [G]psí
+[Em]holý ruce s [C]trním zápa[G]sí
+a [Em]celej svět ti [C]říká co se [G]smí
+když máš [Em]vlčí srdce[C] a hlavu [G]psí
+{chorus_1_end}
+
+{chorus_2_start}
+[C] .... Oooó, ooo[G]ó
+[C] .... oooó, ooo[Em]ó,  oo[D]ó  
+oo[G]ó
+{chorus_2_end}
+
+{verse_1_start}
+[G]Sešli jsme z kopců do plání
+stvoření lesa do měst vyhnaní
+v [C]duších vítr a listí spada[G]ný
+[G]a každým rokem a každým dnem
+každým krokem se vzdalujem
+svým [C]kořenům i sobě navzá[G]jem
+A [D]někde v dálce [C]slunce zapa[G]dá
+[D]za obzor se [C]sklání
+{verse_1_end}
+
+{verse_2_start}
+[G]A černý peří z křídel vran
+padá z nebe rovnou do varhan
+a z [C]kostelů zaznívá Otče[G]náš
+A [D]málokdo se [C]zeptá jak se [G]máš
+když se z [D]dálky domů [C]vracíš
+{verse_2_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{chorus_2}
+{verse_2}
+{chorus_1}
+{chorus_2}
+{chorus_1}
+{chorus_1}
+{text_end}

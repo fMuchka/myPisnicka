@@ -1,0 +1,51 @@
+Author:Jelen & Tuční
+Title:Spím v obilí
+
+Tags: České, Moderní, Táborová
+
+{chorus_1_start}
+[A]Ó ládylí, ještě [D]mám fůru [A]času
+[D]mám fůru [A]času, a tak [E]spím v obilí
+a [A]zdá se mi sen plný [D]dívek a [A]dětí
+[D]dívek a [A]dětí, a je [E]líný letní [A]den
+{chorus_1_end}
+
+{chorus_2_start}
+[A]Ó ládylí, ještě [D]mám fůru [A]času
+[C#]mám fůru času, a tak [F#m]spím v obi[F#m]lí
+a [D]zdá se mi sen plný [A]dí-----[E]vek a [F#m]dětí
+[F#m]............[D].........[Hm7]dí----------[D]vek a [A]dětí, [F#m]...... a je [Hm7]líný..... [E]letní den
+{chorus_2_end}
+
+{verse_1_start}
+[A]Kam půjdu dál, až se [D]probudím a [A]vstanu
+[D]probudím a [A]vstanu, na to [E]ještě nemyslím
+já [A]spím v obilí a [D]zdá se mi [A]právě
+[D]sen, jak přímo [A]z láhve starou [E]režnou popí[A]jím
+{verse_1_end}
+
+{verse_2_start}
+[A]Za chvíli vstanu, mám ještě [D]stihnout kdesi [A]cosi
+[D]slyším zvonit [A]kosy, už mi [E]kosí obilí
+já [A]vím, strniště, [D] jak nůž do zad [A]tlačí
+[D]děkuju, to [A]stačí, vzbudi[E]li mě právě [A]včas
+{verse_2_end}
+
+{verse_3_start}
+V uších mi [Am]pořád zněly tvoje něžný [Dm]věty
+a do vla[G]sů ti sedal bílej [C]sníh[C]
+z oblohy [Am]černý jak díra mezi [Dm]světy
+se na mě [E]snášel a studil na dla[Am]ních.....[G]
+{verse_3_end}
+
+
+{text_start}
+{chorus_1}
+{verse_1}
+{chorus_1}
+{chorus_1}
+{verse_2}
+{chorus_2}
+{chorus_1}
+{chorus_1}
+{text_end}

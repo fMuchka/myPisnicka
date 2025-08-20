@@ -1,0 +1,33 @@
+Author:Argema
+Title:Jarošovský pivovar
+
+Tags: České, Ploužák
+
+{chorus_1_start}
+[C]Bíla [D]pěna, lá[G]hev oro[Em]sená
+[C]chmelový [D]nektar já [G]znám
+[C]jen jsem to [D]zkusil a [G]jednou se [Em]napil
+[C]od těch dob [D]žízeň [G]mám.
+{chorus_1_end}
+
+{verse_1_start}
+[G]Léta tam [D]stál, [C] stojí tam dál[G]
+pivovar u [D]cesty, [C] každý ho znal[D]
+[G]léta tam [D]stál, [C] stát bude dál[G]
+ten kdo zná [D]Jarošov, [C] zná pivovar.[G]
+{verse_1_end}
+
+{verse_2_start}
+[G]Bída a [D]hlad, [C] kolem šel [G]strach
+když bylo piva [D]dost, [C] mohlo ses [D]smát
+[G]třista let [D]stál, [C] stát bude [G]dál
+ten kdo zná [D]Jarošov [C]zná [G]pivovar.
+{verse_2_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{chorus_1}
+{text_end}

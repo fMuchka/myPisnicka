@@ -1,0 +1,48 @@
+Author:Ivan Hlas
+Title:Jednou mi fotr povídá
+
+Tags: České
+
+{chorus_1_start}
+Já [E]šel, šel dál baby, [A7] kam mě pán Bůh zval
+já [E]šel, šel dál baby a [D7]furt jen tancoval
+[A7]Na každý divný hranici
+[D7]na policejní stanici
+[E]hrál jsem jenom rock´n roll [A7]for you[D7]........[E7]
+{chorus_1_end}
+
+{verse_1_start}
+[A7]Jednou mi fotr povídá
+[D7]zůstali jsme už sami dva
+[E]že si chce začít taky trochu [A7]žít
+[A7]Nech si to projít palicí
+[D7]a nevracej se s vopicí
+[E]snaž se mě hochu trochu pocho[A7]pit
+{verse_1_end}
+
+{verse_2_start}
+[A7]Přiletěl se mnou černej čáp
+[D7]zobákem dělal klapy klap
+[E]a nad kolíbkou Elvis Presley [A7]stál
+[A7]Obrovskej bourák v ulici
+[D7]po boku krásnou slepici
+a [E]lidi šeptaj přijel nějakej [A7]král
+{verse_2_end}
+
+{verse_3_start}
+[A7]Pořád tak nějak nemohu
+[D7]chytit štěstí za nohu
+[E]a nemůžu si najít klidnej [A7]kout
+[A7]Blázniví ptáci začnou řvát
+[D7]a nový ráno šacovat
+a [E]do mě vždycky pustí silnej [A7]proud[D7]........[E7]
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{chorus_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{text_end}

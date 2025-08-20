@@ -1,0 +1,50 @@
+Author:Jelen
+Title:A co bylo dál
+
+Tags: České, Moderní
+
+{chorus_1_start}
+[C]A co bylo dál, jenom [Am]vítr, áaa
+[F]po nebi se [G]mraky honi[C]ly
+[C]a co bylo dál, jenom [Am]vítr, áaa
+[F]a stromy se až k [G]zemi skloni[Am]ly
+{chorus_1_end}
+
+{verse_1_start}
+Někdy si [Am]říkám, jestli ještě znáš mý [Dm]jméno
+a jak [G]často na mě myslíš, když jdeš [C]spát
+na zítřek v [Am]televizi hlásí zata[Dm]ženo
+a v mý [E]hlavě už tak bude napo[Am]řád
+{verse_1_end}
+
+{verse_2_start}
+Život jde [Am]dál, lásko, musíme si [Dm]zvykat
+a není [G]dobrý na tý cestě zůstat [C]sám
+pro jeden [Am]smutek nemá cenu stokrát [Dm]vzlykat
+když má svět [E]otevřenou náruč doko[Am]řán.....[G]
+{verse_2_end}
+
+{verse_3_start}
+V uších mi [Am]pořád zněly tvoje něžný [Dm]věty
+a do vla[G]sů ti sedal bílej [C]sníh[C]
+z oblohy [Am]černý jak díra mezi [Dm]světy
+se na mě [E]snášel a studil na dla[Am]ních.....[G]
+{verse_3_end}
+
+{verse_4_start}
+V tom baru [Am]nevěděli, že je venku [Dm]krize
+z rádia [G]zpíval Cohen "Lásko, jsem tvůj [C]muž"
+tys vešla [Am]dovnitř jak zhmotnění [Dm]mý vize
+jako když [E]do srdce mi někdo vrazí [Am]nůž.....[G]
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_4}
+{chorus_1}
+{chorus_1}
+{text_end}

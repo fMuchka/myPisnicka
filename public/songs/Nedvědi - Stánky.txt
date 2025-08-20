@@ -1,0 +1,41 @@
+Author:Nedvědi
+Title:Stánky
+
+Tags: České, Táborové
+
+{chorus_1_start}
+Jen [G]zahlídli svět - maj[A7] na duši vrásky,
+tak [D]málo je, tak [Gm]málo je lásky,
+[D]ztracená víra [A7]hrozny z vinic neposbírá.[D]
+{chorus_1_end}
+
+{verse_1_start}
+[D]U stánků [G]na levnou krásu,
+[D]postávaj a[Gm] smějou se času,
+s[D] cigaretou a s[A7] holkou, co nemá kam jít.[D]
+{verse_1_end}
+
+{verse_2_start}
+[D]Skleniček pár a [G]pár tahů z trávy,
+[D]uteče den jak[Gm] večerní zprávy,
+[D]neuměj žít a[A7] bouřej se a neposlouchaj.[D]
+
+[D7]
+{verse_2_end}
+
+{verse_3_start}
+[D]U stánkůG na levnou krásu
+[D]postávaj a [Gm]ze slov a hlasů 
+[D]poznávám, jak A7málo jsme jim stačili dát[D].
+
+[D7]
+{verse_3_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{chorus_1}
+{text_end}
