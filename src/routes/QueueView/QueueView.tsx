@@ -35,13 +35,13 @@ const QueueView = () => {
   }
 
   return (
-    <div style={{ marginTop: '5rem' }}>
+    <div style={{ marginTop: '2rem' }}>
       <Stack spacing={2}>
         <DraggableList
           items={queue}
           setItems={(newQueue) => dispatch(setQueue(newQueue))}
           renderItem={(song) => (
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2} alignItems={'center'}>
               <DragHandle />
               <Button
                 sx={{ placeContent: 'space-between', textAlign: 'start' }}
@@ -57,6 +57,7 @@ const QueueView = () => {
                 icon={<PlaylistRemove />}
                 label="Fronta"
                 variant="outlined"
+                sx={{ borderRadius: 'var(--mui-shape-borderRadius)' }}
                 onClick={() => removeFromQueue(song)}
               />
             </Stack>
