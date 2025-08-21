@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.14.1",
     "@gsap/react": "^2.1.2",
     "@mui/material": "^7.2.0",
+    "@mui/x-tree-view": "^8.10.2",
     "@reduxjs/toolkit": "^2.8.2",
     "@tombatossals/react-chords": "^0.2.10",
     "gsap": "^3.13.0",
