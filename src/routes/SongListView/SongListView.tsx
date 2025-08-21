@@ -139,14 +139,11 @@ const SongListView = () => {
     return songs?.filter((s) => s.tags.includes(tag)) ?? [];
   };
 
-  const handleItemExpand = (itemId: string) => {
-    setExpandedItems((prev) => {
-      if (prev.includes(itemId)) {
-        return prev.filter((id) => id !== itemId);
-      } else {
-        return [...prev, itemId];
-      }
-    });
+  const handleItemExpand = (
+    _event: React.SyntheticEvent | null,
+    itemIds: string[]
+  ) => {
+    setExpandedItems(itemIds);
   };
 
   useEffect(() => {
@@ -318,14 +315,12 @@ const SongListView = () => {
           </Button>
         </Stack>
         <Stack spacing={2}>
-          <SimpleTreeView expandedItems={expandedItems}>
+          <SimpleTreeView
+            expandedItems={expandedItems}
+            onExpandedItemsChange={handleItemExpand}
+          >
             {displaySongs?.map((group, idx) => (
-              <TreeItem
-                itemId={idx.toString()}
-                key={idx}
-                label={group.author}
-                onClick={() => handleItemExpand(idx.toString())}
-              >
+              <TreeItem itemId={idx.toString()} key={idx} label={group.author}>
                 {group.songs.map((song, idx) => (
                   <TreeItem
                     itemId={`${idx}-${song.id}`}
