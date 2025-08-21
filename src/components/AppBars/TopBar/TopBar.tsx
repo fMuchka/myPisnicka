@@ -70,12 +70,7 @@ const TopBar = () => {
   const currentSongIsInQueue = () =>
     queue.find((e) => e.id === selectedSong?.id) != null;
 
-  if (
-    location.pathname == RoutesEnum.HOME ||
-    location.pathname == RoutesEnum.INFO ||
-    location.pathname == RoutesEnum.SETTINGS
-  )
-    return null;
+  if (location.pathname !== RoutesEnum.SONG) return null;
 
   return (
     <HideOnScroll>
@@ -92,7 +87,7 @@ const TopBar = () => {
               gridTemplateColumns: '1fr 3fr 1fr',
             }}
           >
-            {currentSongIndex > 0 && location.pathname === RoutesEnum.SONG && (
+            {currentSongIndex > 0 && (
               <Button
                 size="small"
                 sx={{
@@ -133,22 +128,21 @@ const TopBar = () => {
               {selectedSong?.id}
             </Button>
 
-            {currentSongIndex < queue.length - 1 &&
-              location.pathname === RoutesEnum.SONG && (
-                <Button
-                  size="small"
-                  sx={{
-                    justifyContent: 'end',
-                    gridArea: 'other',
-                    color: getColor(),
-                    fontSize: '10px',
-                  }}
-                  endIcon={<ArrowForward />}
-                  onClick={() => handleForwardClick()}
-                >
-                  Fronta
-                </Button>
-              )}
+            {currentSongIndex < queue.length - 1 && (
+              <Button
+                size="small"
+                sx={{
+                  justifyContent: 'end',
+                  gridArea: 'other',
+                  color: getColor(),
+                  fontSize: '10px',
+                }}
+                endIcon={<ArrowForward />}
+                onClick={() => handleForwardClick()}
+              >
+                Fronta
+              </Button>
+            )}
           </div>
         </Toolbar>
       </AppBar>
