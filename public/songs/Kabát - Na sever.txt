@@ -1,0 +1,57 @@
+Author:Kabát
+Title:Na sever
+
+Tags: České, Moderní, Táborová
+
+{chorus_1_start}
+Cestu [G]znám a [C]neměním [G]směr
+dojdu k řece [Em]plný ryb až [D]tam na sever[G]
+cestu znám a [C]neměním [G]směr
+dojdu k řece [Em]plný ryb až [D]tam na sever[G] 
+{chorus_1_end}
+
+{chorus_2_start}
+Cestu [A]znám a [D]neměním [A]směr
+dojdu k řece [F#mi]plný ryb až [E]tam na sever[A]
+cestu znám a [D]neměním [A]směr
+dojdu k řece [F#mi]plný ryb až [E]tam na sever[A] 
+{chorus_2_end}
+
+{verse_1_start}
+[G]No tak mi [Em]zatancuj, ať [D]náladu [G]mám
+a dej mi [Em]celou noc, já [D]nechci bejt [G]sám
+hlavní je neu[Em]hnout, dobře [D]zvolit svůj [G]směr
+a teď holka musím [Em]jít až [D]tam na sever[G] 
+{verse_1_end}
+
+{verse_2_start}
+[G]Procházím [Em]krajinou a [D]lidi mě zvou[G]
+čím těžší[Em] víno, lehčí [D]holky tu jsou[G]
+jedna z nich poví[Em]dá „Dokud [D]dávám, tak ber.“[G]
+já jí jenom polí[Em]bil a [D]šel na sever[G]
+{verse_2_end}
+
+{verse_3_start}
+[G]Mám nohy [Em]bolavý, už [D]nechtěj se h[G]nout
+tou temnou [Em]vodou nechám [D]tělo svý plo[G]ut[
+zakončim s noble[Em]sou, ze všech [D]poslední den[G]
+kam mě vlny done[Em]sou, tam [D]vsákne mě zem[G] 
+{verse_3_end}
+
+{verse_4_start}
+Ta [D]cesta byla rovná, místy rozbitá
+[C]číše vína plná, jindy celá vylitá
+už [D]nevrátím se zpátky, ubejvá mi sil
+tak [C]řekněte jí, prosím, že [D]jsem tady byl 
+{verse_4_end}
+
+{text_start}
+{verse_1}
+{verse_2}
+{chorus_1}
+{verse_3}
+{chorus_1}
+{verse_4}
+{chorus_2}
+{chorus_2}
+{text_end}
