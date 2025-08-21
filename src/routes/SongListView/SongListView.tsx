@@ -4,6 +4,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Badge,
   Button,
   Chip,
   Divider,
@@ -37,6 +38,7 @@ import {
   addSongToQueue,
   removeSongFromQueue,
 } from '../../features/Queue/queueSlice';
+import { SimpleTreeView, TreeItem } from '@mui/x-tree-view';
 
 const TAG_COLOR_MAP = (tag: SongTags, scheme: ColorScheme): string => {
   switch (tag) {
@@ -71,7 +73,14 @@ const SongListView = () => {
   const { queue } = useSelector((state: RootState) => state.queueReducer);
 
   const { colorScheme } = useSelector((state: RootState) => state.themeReducer);
-  const [displaySongs, setDisplaySongs] = useState<RefinedSong[]>(songs ?? []);
+  const [displaySongs, setDisplaySongs] = useState<
+    {
+      author: string;
+      songs: RefinedSong[];
+    }[]
+  >([]);
+
+  const [nOfAvailableSongs, setNOfAvailableSongs] = useState<number>(0);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -125,6 +134,10 @@ const SongListView = () => {
     dispatch(removeSongFromQueue(song));
   };
 
+  function getSongsByTag(tag: SongTags): RefinedSong[] {
+    return songs?.filter((s) => s.tags.includes(tag)) ?? [];
+  }
+
   useEffect(() => {
     if (songs != null) {
       let songsFilteredByText: RefinedSong[] = songs;
@@ -161,20 +174,60 @@ const SongListView = () => {
         });
 
         filtered.sort((a, b) => songNameSorter(a, b));
-        setDisplaySongs(filtered);
+
+        const groupedByAuthor: {
+          [key: string]: { songs: RefinedSong[]; author: string };
+        } = {};
+        filtered.forEach((song) => {
+          if (!groupedByAuthor[song.author]) {
+            groupedByAuthor[song.author] = {
+              songs: [],
+              author: song.author,
+            };
+          }
+          groupedByAuthor[song.author].songs.push(song);
+        });
+
+        setNOfAvailableSongs(filtered.length);
+        setDisplaySongs(Object.values(groupedByAuthor));
       } else {
-        setDisplaySongs(songsFilteredByText ?? []);
+        const groupedByAuthor: {
+          [key: string]: { songs: RefinedSong[]; author: string };
+        } = {};
+        songsFilteredByText.forEach((song) => {
+          if (!groupedByAuthor[song.author]) {
+            groupedByAuthor[song.author] = {
+              songs: [],
+              author: song.author,
+            };
+          }
+          groupedByAuthor[song.author].songs.push(song);
+        });
+
+        setNOfAvailableSongs(songsFilteredByText.length);
+        setDisplaySongs(Object.values(groupedByAuthor) ?? []);
       }
     }
   }, [tagFilters, songs, shouldIncludeAllFilters, textFilter]);
 
   return (
-    <div style={{ marginTop: '5rem' }}>
+    <div style={{ marginTop: '2rem' }}>
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMore />}>
-          <Typography variant="body1" color="text.secondary">
-            Filtr podle typu
-          </Typography>
+          <Badge
+            badgeContent={
+              tagFilters.length > 0
+                ? nOfAvailableSongs > 0
+                  ? nOfAvailableSongs
+                  : ':-('
+                : 0
+            }
+            color="primary"
+          >
+            <Typography variant="body1" color="text.secondary">
+              Filtr podle typu
+            </Typography>
+          </Badge>
         </AccordionSummary>
         <AccordionDetails>
           <Stack spacing={5} direction={'row'}>
@@ -206,17 +259,23 @@ const SongListView = () => {
                 style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
               >
                 {sortCzechStrings(Object.values(SongTags)).map((t, tIdx) => (
-                  <Chip
-                    size="small"
-                    variant={tagFilters.includes(t) ? 'filled' : 'outlined'}
-                    sx={{
-                      color: TAG_COLOR_MAP(t as SongTags, colorScheme),
-                      margin: '0.5em',
-                    }}
-                    onClick={() => filterByTag(t)}
-                    label={t}
+                  <Badge
+                    badgeContent={getSongsByTag(t as SongTags).length}
+                    sx={{ width: '100%' }}
                     key={tIdx}
-                  />
+                  >
+                    <Chip
+                      size="small"
+                      variant={tagFilters.includes(t) ? 'filled' : 'outlined'}
+                      sx={{
+                        color: TAG_COLOR_MAP(t as SongTags, colorScheme),
+                        margin: '0.5em',
+                        width: '100%',
+                      }}
+                      onClick={() => filterByTag(t)}
+                      label={t}
+                    />
+                  </Badge>
                 ))}
               </div>
             </Stack>
@@ -242,57 +301,68 @@ const SongListView = () => {
           </Button>
         </Stack>
         <Stack spacing={2}>
-          {displaySongs?.map((song, idx) => (
-            <Stack spacing={1} key={idx}>
-              <Stack direction={'row'}>
-                <Button
-                  sx={{
-                    placeContent: 'space-between',
-                    textAlign: 'start',
-                    width: '75%',
-                    marginRight: '1em',
-                  }}
-                  key={idx}
-                  onClick={() => handleSongClick(song)}
-                  variant={
-                    song.id === selectedSong?.id ? 'contained' : 'outlined'
-                  }
-                >
-                  {song.id}
-                </Button>
-                {queue.includes(song) ? (
-                  <Chip
-                    icon={<PlaylistRemove />}
-                    label="Fronta"
-                    variant="outlined"
-                    onClick={() => removeFromQueue(song)}
-                  />
-                ) : (
-                  <Chip
-                    icon={<PlaylistAdd />}
-                    label="Fronta"
-                    variant="filled"
-                    onClick={() => addToQueue(song)}
-                  />
-                )}
-              </Stack>
-
-              <Stack direction={'row'}>
-                {sortCzechStrings(song.tags).map((t, tIdx) => (
-                  <Chip
-                    size="small"
-                    variant={'filled'}
-                    sx={{
-                      color: TAG_COLOR_MAP(t.trim() as SongTags, colorScheme),
-                      marginLeft: '0.5em',
-                    }}
-                    label={t}
-                    key={tIdx}
-                  />
+          <SimpleTreeView
+            expandedItems={
+              tagFilters.length > 0 || textFilter !== ''
+                ? displaySongs.map((_, idx) => idx.toString())
+                : []
+            }
+          >
+            {displaySongs?.map((group, idx) => (
+              <TreeItem itemId={idx.toString()} key={idx} label={group.author}>
+                {group.songs.map((song, idx) => (
+                  <TreeItem
+                    itemId={`${idx}-${song.id}`}
+                    key={`${idx}-${song.id}`}
+                    label={
+                      <Stack spacing={1} key={idx}>
+                        <Stack direction={'row'} alignItems={'center'}>
+                          <Button
+                            sx={{
+                              placeContent: 'space-between',
+                              textAlign: 'start',
+                              width: '75%',
+                              marginRight: '1em',
+                            }}
+                            key={idx}
+                            onClick={() => handleSongClick(song)}
+                            variant={
+                              song.id === selectedSong?.id
+                                ? 'contained'
+                                : 'outlined'
+                            }
+                          >
+                            {song.id}
+                          </Button>
+                          {queue.includes(song) ? (
+                            <Chip
+                              icon={<PlaylistRemove />}
+                              label="Fronta"
+                              variant="outlined"
+                              sx={{
+                                borderRadius: 'var(--mui-shape-borderRadius)',
+                              }}
+                              onClick={() => removeFromQueue(song)}
+                            />
+                          ) : (
+                            <Chip
+                              icon={<PlaylistAdd />}
+                              label="Fronta"
+                              variant="filled"
+                              sx={{
+                                borderRadius: 'var(--mui-shape-borderRadius)',
+                              }}
+                              onClick={() => addToQueue(song)}
+                            />
+                          )}
+                        </Stack>
+                      </Stack>
+                    }
+                  ></TreeItem>
                 ))}
-              </Stack>
-            </Stack>
-          ))}
+              </TreeItem>
+            ))}
+          </SimpleTreeView>
         </Stack>
       </Stack>
     </div>
