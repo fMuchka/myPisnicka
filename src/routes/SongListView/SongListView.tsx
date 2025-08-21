@@ -81,6 +81,7 @@ const SongListView = () => {
   >([]);
 
   const [nOfAvailableSongs, setNOfAvailableSongs] = useState<number>(0);
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -105,7 +106,7 @@ const SongListView = () => {
     dispatch(setTextFilter(e.target.value));
   };
 
-  function songNameSorter(a: RefinedSong, b: RefinedSong) {
+  const songNameSorter = (a: RefinedSong, b: RefinedSong) => {
     // sort by song number, rest is sorted alphabetically on load
     const songA = parseInt(a.id.split(')')[0]);
     const songB = parseInt(b.id.split(')')[0]);
@@ -118,13 +119,13 @@ const SongListView = () => {
 
     // names must be equal
     return 0;
-  }
-  function sortCzechStrings<T extends string>(arr: T[]): T[] {
+  };
+  const sortCzechStrings = <T extends string>(arr: T[]): T[] => {
     const arrCopy = [...arr];
     return arrCopy.sort((a, b) =>
       a.localeCompare(b, 'cs', { sensitivity: 'base' })
     );
-  }
+  };
 
   const addToQueue = (song: RefinedSong) => {
     dispatch(addSongToQueue(song));
@@ -134,9 +135,19 @@ const SongListView = () => {
     dispatch(removeSongFromQueue(song));
   };
 
-  function getSongsByTag(tag: SongTags): RefinedSong[] {
+  const getSongsByTag = (tag: SongTags): RefinedSong[] => {
     return songs?.filter((s) => s.tags.includes(tag)) ?? [];
-  }
+  };
+
+  const handleItemExpand = (itemId: string) => {
+    setExpandedItems((prev) => {
+      if (prev.includes(itemId)) {
+        return prev.filter((id) => id !== itemId);
+      } else {
+        return [...prev, itemId];
+      }
+    });
+  };
 
   useEffect(() => {
     if (songs != null) {
@@ -188,6 +199,7 @@ const SongListView = () => {
           groupedByAuthor[song.author].songs.push(song);
         });
 
+        setExpandedItems(filtered.map((_, idx) => idx.toString()));
         setNOfAvailableSongs(filtered.length);
         setDisplaySongs(Object.values(groupedByAuthor));
       } else {
@@ -204,6 +216,11 @@ const SongListView = () => {
           groupedByAuthor[song.author].songs.push(song);
         });
 
+        if (textFilter !== '') {
+          setExpandedItems(songsFilteredByText.map((_, idx) => idx.toString()));
+        } else {
+          setExpandedItems([]);
+        }
         setNOfAvailableSongs(songsFilteredByText.length);
         setDisplaySongs(Object.values(groupedByAuthor) ?? []);
       }
@@ -301,15 +318,14 @@ const SongListView = () => {
           </Button>
         </Stack>
         <Stack spacing={2}>
-          <SimpleTreeView
-            expandedItems={
-              tagFilters.length > 0 || textFilter !== ''
-                ? displaySongs.map((_, idx) => idx.toString())
-                : []
-            }
-          >
+          <SimpleTreeView expandedItems={expandedItems}>
             {displaySongs?.map((group, idx) => (
-              <TreeItem itemId={idx.toString()} key={idx} label={group.author}>
+              <TreeItem
+                itemId={idx.toString()}
+                key={idx}
+                label={group.author}
+                onClick={() => handleItemExpand(idx.toString())}
+              >
                 {group.songs.map((song, idx) => (
                   <TreeItem
                     itemId={`${idx}-${song.id}`}
@@ -332,7 +348,7 @@ const SongListView = () => {
                                 : 'outlined'
                             }
                           >
-                            {song.id}
+                            {song.title}
                           </Button>
                           {queue.includes(song) ? (
                             <Chip
