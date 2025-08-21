@@ -31,8 +31,6 @@ Nánana [Hm]nánana, nánana [D]nánana
 nánana [A]nánana, nánana [E]nánana
 nánana [Hm]nánana, nánana [D]nánana
 nánana [A]nánana, nánana [E]nánana
-jaký si to [G]uděláš, [C]takový to [Em7]máš
-jaký si to [G]uděláš, [C]takový to [Em7]máš
 {chorus_2_end}
 
 {text_start}
@@ -42,6 +40,6 @@ jaký si to [G]uděláš, [C]takový to [Em7]máš
 {chorus_1}
 [G][C][Em7]
 [G][C][Em7]
-{chorus}
 {chorus_2}
+{chorus_1}
 {text_end}
