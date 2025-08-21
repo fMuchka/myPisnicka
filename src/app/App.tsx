@@ -179,7 +179,6 @@ function App() {
         <Container maxWidth="md">
           <HashRouter>
             <TopBar />
-
             <Box sx={{ marginBottom: '5rem' }}>
               <Routes>
                 <Route path={RoutesEnum.SONG_LIST} element={<SongListView />} />
@@ -189,7 +188,6 @@ function App() {
                 <Route path={RoutesEnum.SONG_QUEUE} element={<QueueView />} />
               </Routes>
             </Box>
-
             {!isScrolling && <Navigation />}
           </HashRouter>
         </Container>
